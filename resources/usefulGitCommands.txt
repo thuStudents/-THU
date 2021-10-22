@@ -32,3 +32,4 @@ git remote update origin --prune ---- update branches
 git branch -a --show all branches
 
 git checkout #branchName --- change branches
+
