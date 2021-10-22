@@ -1,0 +1,32 @@
+git commit -m "signup and login" -- put it locally master
+git push origin master -- put it online master
+
+git pull
+
+git checkout -b task#111 -- create branch
+git push -u origin testAsh  -- put local branch and create in remote
+
+
+git branch -d ash --delete
+
+git merge master -- from master to my branch
+
+git push origin 
+
+
+the follow:
+
+git status -- check changes
+git add -- add new files if needed
+git commit -m "#c" -- commit changes to local current branch
+
+-- go to master and pull new changes before push
+
+git pull -- get new changes
+-- go to branch I want
+git merge master -- from master to my branch
+
+git push origin #branchName
+
+git remote update origin --prune ---- update branches
+git branch -a --show all branches
