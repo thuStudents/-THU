@@ -2,6 +2,7 @@ package de.thu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,5 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Toast.makeText(MainActivity.this, "Firebase Connection Success",Toast.LENGTH_LONG).show();
+      //Intent intent = new Intent(this, LoginActivity.class);
+    //startActivity(intent);
+
+        Intent intent = new Intent(this, ForumActivity.class);
+       startActivity(intent);
     }
 }

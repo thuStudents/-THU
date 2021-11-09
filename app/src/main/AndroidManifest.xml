@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".HochschuleInformation"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForumActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

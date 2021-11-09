@@ -7,6 +7,15 @@
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/checked_icon.xml" value="0.13703703703703704" />
+        <entry key="app/src/main/res/drawable/ic_forum_black_24dp.xml" value="0.13703703703703704" />
+        <entry key="app/src/main/res/drawable/ic_search_black.xml" value="0.13703703703703704" />
+        <entry key="app/src/main/res/layout/activity_forum.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_hochschule_information.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_post.xml" value="0.34064854207786815" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>
