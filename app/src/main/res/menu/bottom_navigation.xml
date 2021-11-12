@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/forum"
-        android:icon="@drawable/ic_forum_black_24dp"
-
-        android:title="Forum"/>
-    <item
         android:id="@+id/home"
         android:icon="@drawable/ic_home_black"
-        android:title="Home"/>
-
+        android:title="Home" />
     <item
         android:id="@+id/add"
         android:icon="@drawable/ic_add_black"
-        android:title="Add question"/>
-    <item
-        android:id="@+id/search"
-        android:icon="@drawable/ic_search_black"
-        android:title="Search"/>
+        android:title="Post"/>
     <item
         android:id="@+id/find"
-        android:icon="@drawable/ic_people_black_24dp"
-        android:title="Search Profile"/>
+        android:icon="@drawable/ic_people_24dp"
+        android:title="Profile"/>
 </menu>

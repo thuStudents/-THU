@@ -7,15 +7,46 @@
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_register.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/cell_shape.xml" value="0.258974358974359" />
         <entry key="app/src/main/res/drawable/checked_icon.xml" value="0.13703703703703704" />
         <entry key="app/src/main/res/drawable/ic_forum_black_24dp.xml" value="0.13703703703703704" />
+        <entry key="app/src/main/res/drawable/ic_home_black.xml" value="0.258974358974359" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/drawable/ic_people_24dp.xml" value="0.258974358974359" />
+        <entry key="app/src/main/res/drawable/ic_profileperson_manydp.xml" value="0.258974358974359" />
         <entry key="app/src/main/res/drawable/ic_search_black.xml" value="0.13703703703703704" />
+        <entry key="app/src/main/res/drawable/input_bg.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout/activity_accommodation.xml" value="0.22407407407407406" />
+        <entry key="app/src/main/res/layout/activity_acommodation.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_applying.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_bafog.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_banking.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_cafe.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_cafeteria_mensa.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_city_map.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_fees.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_forum.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_hochschule_information.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_hochschule.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_hochschule_information.xml" value="0.23333333333333334" />
+        <entry key="app/src/main/res/layout/activity_important_dates.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_legal_advice.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_library.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_markets.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_night_life.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_offered_courses.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_offices.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_post.xml" value="0.34064854207786815" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.17552083333333332" />
-        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/activity_services_card.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_subjects_tips.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_transport.xml" value="0.2328125" />
+        <entry key="app/src/main/res/layout/activity_ulm_information.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/fragment_office_card.xml" value="0.2242817423540315" />
+        <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.258974358974359" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.258974358974359" />
       </map>
     </option>
   </component>

@@ -31,10 +31,6 @@ public class ForumActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.forum:
-
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new ForumFragment()).commit();
-                        break;
                     case R.id.home:
 //                    Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);
 //                    startActivity(intent);
@@ -45,9 +41,6 @@ public class ForumActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
 //                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new AddButtonQue()).commit();
-                        break;
-                    case R.id.search:
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new SearchQuestionFragment()).commit();
                         break;
                     case R.id.find:
 //                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new FindFriend()).commit();
