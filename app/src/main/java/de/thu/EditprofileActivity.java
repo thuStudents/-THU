@@ -26,6 +26,7 @@ public class EditprofileActivity extends AppCompatActivity {
 
         bottomNavigationView.setSelectedItemId(R.id.find);
 
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
