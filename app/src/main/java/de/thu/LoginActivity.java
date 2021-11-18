@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     FirebaseUser mUser;
 
+    TextView createNewAccount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         loginPassword=findViewById(R.id.inputPassword);
         buttonLogin=findViewById(R.id.buttonLogin);
         progressDialog = new ProgressDialog(this);
+        createNewAccount = findViewById(R.id.createNewAccount);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -50,6 +54,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+        createNewAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , RegisterActivity.class));
+                overridePendingTransition(0,0);
+
+            }
+        });
 
     }
 
