@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +41,7 @@ public class HomeActivity extends AppCompatActivity {
         event_rec_view = findViewById(R.id.event_rec_view);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.find);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -51,7 +53,9 @@ public class HomeActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.add:
-                        Toast.makeText(HomeActivity.this, "Add button pressed", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         Toast.makeText(HomeActivity.this, "Home", Toast.LENGTH_SHORT).show();
@@ -62,18 +66,54 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        ImageView schoolInfoImageView=(ImageView)findViewById(R.id.schoolInfoImageView);
+        ImageView cityInfoImageView=(ImageView)findViewById(R.id.cityInfoImageView);
+        ImageView forumImageView=(ImageView)findViewById(R.id.forumImageView);
+        ImageView newsEventsImageView=(ImageView)findViewById(R.id.newsEventsImageView);
 
+        schoolInfoImageView.setOnClickListener(new OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , HochschuleGeneralActivity.class));
+                overridePendingTransition(0,0);
+
+            }});
+
+        cityInfoImageView.setOnClickListener(new OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , UlmInformationActivity.class));
+                overridePendingTransition(0,0);
+
+            }});
+
+        forumImageView.setOnClickListener(new OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , ForumActivity.class));
+                overridePendingTransition(0,0);
+
+            }});
+
+        newsEventsImageView.setOnClickListener(new OnClickListener(){
+            public void onClick(View view) {
+
+                Toast.makeText(HomeActivity.this, "In development",Toast.LENGTH_LONG).show();
+/*                startActivity(new Intent(getApplicationContext()
+                        , HochschuleGeneralActivity.class));
+                overridePendingTransition(0,0);*/
+
+            }});
+/*        cityInfoImageView.setOnClickListener(this);
+        forumImageView.setOnClickListener(this);
+        newsEventsImageView.setOnClickListener(this);*/
 
         setRV();
 
     }
-
-
-
-
-
-
-
 
     private void setRV() {
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);

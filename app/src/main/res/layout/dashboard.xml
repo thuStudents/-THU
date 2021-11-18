@@ -46,6 +46,7 @@
                 <!--image 1 scuola -->
 
                 <ImageView
+                    android:id="@+id/schoolInfoImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
@@ -71,6 +72,7 @@
 
 
                 <ImageView
+                    android:id="@+id/cityInfoImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
@@ -106,6 +108,7 @@
                 <!--forum-->
 
                 <ImageView
+                    android:id="@+id/forumImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="5dp"
@@ -126,6 +129,7 @@
                 <!--news and events-->
 
                 <ImageView
+                    android:id="@+id/newsEventsImageView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="5dp"
