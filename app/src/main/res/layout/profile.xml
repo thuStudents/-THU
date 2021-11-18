@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/thu_blue"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+    <Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thu_blue"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+<!--        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24" />-->
+
+        <TextView
+            android:id="@+id/profile_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:text="@string/profile"
+            android:textColor="@color/white" />
+    </Toolbar>
+
+    <!--profile pic -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/sym_def_app_icon"
+        android:id="@+id/profile_picture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <!-- full name(title)-->
+    <TextView
+        android:id="@+id/full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_picture"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Full name"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- display full name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_fullname"
+        android:layout_below="@id/full_name"
+        android:textSize="15sp"
+        android:layout_marginTop="3dp"
+        android:text="Display user full name"
+        android:layout_marginStart="15dp"/>
+
+    <!-- user name (title) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name"
+        android:layout_below="@+id/full_name"
+        android:layout_marginTop="40dp"
+        android:text="@string/user_name"
+        android:textSize="15sp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"/>
+
+    <!-- display user name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_username"
+        android:layout_below="@id/user_name"
+        android:textSize="15sp"
+        android:layout_marginTop="3dp"
+        android:text="Display user username"
+        android:layout_marginStart="15dp"/>
+
+    <!-- email (title) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="40dp"
+        android:text="Email"
+        android:textSize="15sp"
+        android:layout_marginStart="15dp"
+        android:textStyle="bold"/>
+
+    <!-- display email -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_email"
+        android:layout_below="@id/email"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:text="Display user email"
+        android:layout_marginStart="15dp"/>
+
+    <!-- edit profile button-->
+    <Button
+        android:id="@+id/editprofile_bttn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="40dp"
+        android:background="@color/thu_blue"
+        android:text="Edit profile"
+        android:textColor="@color/white" />
+
+    <!-- change password button-->
+    <Button
+        android:id="@+id/changepassword_bttn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editprofile_bttn"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:text="Chage password"
+        android:background="@color/thu_blue"/>
+
+    <!-- log out button-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout_bttn"
+        android:layout_below="@+id/changepassword_bttn"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/white"
+        android:background="@color/thu_blue"
+        android:text="Log out"/>
+
+</RelativeLayout>
