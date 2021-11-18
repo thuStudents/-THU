@@ -10,12 +10,81 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".NightLifeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CafeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BafogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarketsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TransportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LegalAdviceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CityMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BankingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccommodationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LibraryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HochschuleInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ServicesCardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SubjectsTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CafeteriaMensaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OfficesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ImportantDatesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FeesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ApplyingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OfferedCoursesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UlmInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HochschuleGeneralActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true">
         </activity>
 
         <activity
             android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForumActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

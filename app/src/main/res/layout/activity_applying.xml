@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplyingActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_applyInfo_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/thuColor"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Applying for a Bachelor's degree program with a foreign higher education entrance qualification"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/applyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_applyInfo_toolbar"
+        android:scrollbars = "vertical"
+        android:text="Make sure you apply to the Studienkolleg Konstanz sufficiently in advance for recognition of your higher education entrance qualification. We can only include you in the selection process if you submit this 'recognition' with your Application for Admission (German citizens with a foreign higher education entrance qualification should apply to the Regierungspräsidium Stuttgart).\n
+Please ensure you can provide documentary evidence of the required language proficiency (at least level B2) and submit this with your application.\n
+Please register yourself on hochschulstart.de. There you will find all you need to know about DoSV, the new Germany-wide admissions process.\n
+Select your desired degree program.\n
+Fill out the Application for Admission, print it, sign it and send it to Ulm University of Applied Sciences (SSC) with the required accompanying documentation.\n
+If you receive an offer from Ulm University of Applied Sciences after the close of applications, you must actively accept this on the hochschulstart.de website. Your Notification of Admission letter will inform you about everything else which is important for your enrollment.\n
+Do you believe you might not have to pay the fees for international students? Then find out more here.'recognition' with your Application for Admission (German citizens with a foreign higher education entrance qualification should apply to the Regierungspräsidium Stuttgart).\n
+Please ensure you can provide documentary evidence of the required language proficiency (at least level B2) and submit this with your application.\n
+Please register yourself on hochschulstart.de. There you will find all you need to know about DoSV, the new Germany-wide admissions process.\n
+Select your desired degree program.\n
+Fill out the Application for Admission, print it, sign it and send it to Ulm University of Applied Sciences (SSC) with the required accompanying documentation.\n
+If you receive an offer from Ulm University of Applied Sciences after the close of applications, you must actively accept this on the hochschulstart.de website. Your Notification of Admission letter will inform you about everything else which is important for your enrollment.\n
+Do you believe you might not have to pay the fees for international students? Then find out more here.\n"
+        android:textStyle="bold" />
+
+</RelativeLayout>
