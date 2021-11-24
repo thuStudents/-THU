@@ -1,10 +1,8 @@
 package de.thu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ApplyingActivity extends AppCompatActivity {
 
@@ -12,7 +10,8 @@ public class ApplyingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applying);
-        TextView txt = findViewById(R.id.applyInfo);
-        txt.setMovementMethod(new ScrollingMovementMethod());
+//        TextView txt = findViewById(R.id.certificate);
+//        txt.setMovementMethod(new ScrollingMovementMethod());
     }
+
 }

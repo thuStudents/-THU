@@ -1,13 +1,13 @@
 package de.thu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -82,10 +82,10 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
                         intent = new Intent(HochschuleGeneralActivity.this, LibraryActivity.class);
                         startActivity(intent);
                         break;
-//                    case 9: // Important Websites
-//                        intent = new Intent(HochschuleInformationActivity.this, ImportantDatesActivity.class);
-//                        startActivity(intent);
-//                        break;
+                    case 9: // Important Websites
+                        intent = new Intent(HochschuleGeneralActivity.this, ImportantLinksActivity.class);
+                        startActivity(intent);
+                        break;
                     default:
                         break;
                 }

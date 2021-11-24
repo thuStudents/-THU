@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".CafeteriaFragment"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Cafeteria"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/cafeteria" />
+
+        <TextView
+            android:id="@+id/cafeteriaHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Cafeteria"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:text="CAFETERIA"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cafeteriaHeading"
+            android:layout_centerHorizontal="true"
+            android:text="The Studierendenwerk Ulm operates the cafeteria of the Technical University of Ulm on the Prittwitzstrasse campus.
+
+\nOur small but fine cafeteria is located in the B building of the university. Bright yellow and cool blue are its colors. The small, sunny terrace with a view of the green adds to the fresh atmosphere." />
+
+        <TextView
+            android:id="@+id/Payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:text="Payment:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/secondParagraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Payment"
+            android:layout_centerHorizontal="true"
+            android:text="Payment is made with the student ID (THU card), the credit of which is topped up in the entrance area of ​​the cafeteria with cash or in the cafeteria with an EC card (Prittwitzstraße). On the Albert-Einstein-Allee campus, it is possible to upgrade the THU card with cash in the cafeteria." />
+
+
+        <TextView
+            android:id="@+id/openingHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondParagraph"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:text="Opening Hours:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/thirdParagraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/openingHours"
+            android:text="Monday to Friday 07.30 a.m - 10.30 a.m, 11.00 a.m - 02.00 p.m" />
+
+        <TextView
+            android:id="@+id/mealPlans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thirdParagraph"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:text="Meal Plans:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/forthParagraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mealPlans"
+            android:layout_centerHorizontal="true"
+            android:text="Cafeteria and snack offer" />
+        <!--        add the link at the keyword here-->
+
+        <TextView
+            android:id="@+id/ContactPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forthParagraph"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="11dp"
+            android:text="Contact Person:"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fifthParagraph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ContactPerson"
+            android:layout_centerHorizontal="true"
+            android:text="Matthias Auciello\nTel. 0731 50-28218 \nmatthias.auciello@studierendenwerk-ulm.de" />
+
+
+    </RelativeLayout>
+</ScrollView>

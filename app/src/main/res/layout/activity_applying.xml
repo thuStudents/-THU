@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,7 +20,7 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,24 +31,124 @@
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
-        android:id="@+id/applyInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_applyInfo_toolbar"
-        android:scrollbars = "vertical"
-        android:text="Make sure you apply to the Studienkolleg Konstanz sufficiently in advance for recognition of your higher education entrance qualification. We can only include you in the selection process if you submit this 'recognition' with your Application for Admission (German citizens with a foreign higher education entrance qualification should apply to the Regierungspräsidium Stuttgart).\n
-Please ensure you can provide documentary evidence of the required language proficiency (at least level B2) and submit this with your application.\n
-Please register yourself on hochschulstart.de. There you will find all you need to know about DoSV, the new Germany-wide admissions process.\n
-Select your desired degree program.\n
-Fill out the Application for Admission, print it, sign it and send it to Ulm University of Applied Sciences (SSC) with the required accompanying documentation.\n
-If you receive an offer from Ulm University of Applied Sciences after the close of applications, you must actively accept this on the hochschulstart.de website. Your Notification of Admission letter will inform you about everything else which is important for your enrollment.\n
-Do you believe you might not have to pay the fees for international students? Then find out more here.'recognition' with your Application for Admission (German citizens with a foreign higher education entrance qualification should apply to the Regierungspräsidium Stuttgart).\n
-Please ensure you can provide documentary evidence of the required language proficiency (at least level B2) and submit this with your application.\n
-Please register yourself on hochschulstart.de. There you will find all you need to know about DoSV, the new Germany-wide admissions process.\n
-Select your desired degree program.\n
-Fill out the Application for Admission, print it, sign it and send it to Ulm University of Applied Sciences (SSC) with the required accompanying documentation.\n
-If you receive an offer from Ulm University of Applied Sciences after the close of applications, you must actively accept this on the hochschulstart.de website. Your Notification of Admission letter will inform you about everything else which is important for your enrollment.\n
-Do you believe you might not have to pay the fees for international students? Then find out more here.\n"
-        android:textStyle="bold" />
+        android:textSize="14dp"
+        android:id="@+id/we_are"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/my_applyInfo_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="11dp"
+        android:text="We are delighted you are interested in the degree programme Computer Science (CTS). We hope the following information will help you successfully secure a place at our University of Applied Sciences."
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/how_to"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/we_are"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="How to apply in three steps:"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/if_you"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/how_to"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="🔷 If you have a foreign entrance qualification, you need to apply to the “Studienkolleg Konstanz” for recognition of your certificates."
+        android:textSize="14dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/go_to"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/if_you"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="🔷 Go to hochschulstart.de. Select “Login to application portal” and register an account. This portal will open in April each year."
+        android:textSize="14dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/go_to"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="🔷 Login and make your application through hochschulstart.de, print it, sign it and send it to Ulm University of Applied Sciences with the required documentation."
+        android:textSize="14dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/application"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/login"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="Application Deadline:"
+        android:textSize="15dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/applications"
+        android:layout_width="400dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/application"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="
+Applications for the degree programme Computer Science (CTS) at Ulm University of Applied Sciences can be made until July 31.
+\nRecognition of your certificates by the “Studienkolleg Konstanz” can take some weeks, and if one or more documents are missing, it will take even longer. Therefore we advise you to start this paperwork as soon as possible, since you need to have this certificate in order to apply through hochschulstart.de"
+        android:textSize="14dp">
+    </TextView>
+
+    <TextView
+        android:id="@+id/required"
+        android:layout_width="400dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/applications"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="Required Documents:"
+        android:textSize="15dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/certificate"
+        android:layout_width="400dp"
+        android:layout_height="210dp"
+        android:layout_below="@+id/required"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="11dp"
+        android:text="🔵 Certificate of your entrance qualification
+        \n🔵 If you have a foreign entrance qualification: recognition of your certificate by the Studienkolleg Konstanz \n🔵 Certificate of language proficiency in English (TOEFL, Cambridge Certificate, …), level B2 or higher \n🔵 Completed form regarding your level of German language skills \n🔵 Statement of Purpose (your motivation to study Computer Science at Ulm University of Applied Sciences) \n🔵 Curriculum Vitae \n🔵 Photocopy of passport (if applicable) "
+        android:textSize="14dp"></TextView>
 
 </RelativeLayout>
+</ScrollView>
