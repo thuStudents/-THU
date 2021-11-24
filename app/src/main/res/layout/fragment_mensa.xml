@@ -104,8 +104,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/mealPlans"
         android:layout_centerHorizontal="true"
-        android:text="You can find the current Menu here" />
-    <!--        add the link at the keyword here-->
+        android:text="You can find the current Menu here"
+        android:textColor="@color/teal_700" />
+
 
     <TextView
         android:id="@+id/ContactPerson"

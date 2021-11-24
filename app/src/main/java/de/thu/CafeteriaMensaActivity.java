@@ -3,7 +3,6 @@ package de.thu;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -34,7 +33,6 @@ public class CafeteriaMensaActivity extends AppCompatActivity {
                 mensaBtn.setTextColor(getResources().getColor(R.color.white));
                 cafeteriaBtn.setBackground(getResources().getDrawable(R.drawable.events_notselected_button));
                 cafeteriaBtn.setTextColor(getResources().getColor(R.color.thuColor));
-                Toast.makeText(CafeteriaMensaActivity.this, "Here", Toast.LENGTH_SHORT).show();
 
                 replaceFragment(newsFrg);
             }
