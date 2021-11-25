@@ -1,14 +1,13 @@
 package de.thu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -22,16 +21,14 @@ public class UlmInformationActivity extends AppCompatActivity {
         ulmMenu = findViewById(R.id.ulmInfoMenu);
 
         ArrayList<String> ulmMenuList = new ArrayList<>();
-
         ulmMenuList.add("Accommodation");
         ulmMenuList.add("Banking");
         ulmMenuList.add("City Map");
         ulmMenuList.add("Legal Advice");
         ulmMenuList.add("Transport");
         ulmMenuList.add("Markets");
-        ulmMenuList.add("BAföG");
         ulmMenuList.add("Café");
-        ulmMenuList.add("Night Life");
+        ulmMenuList.add("The Fun Part");
 
         ArrayAdapter<String> ulmMenuAdapter = new ArrayAdapter<>(
                 this,
@@ -70,15 +67,11 @@ public class UlmInformationActivity extends AppCompatActivity {
                         intent = new Intent(UlmInformationActivity.this, MarketsActivity.class);
                         startActivity(intent);
                         break;
-                    case 6: // BAföG
-                        intent = new Intent(UlmInformationActivity.this, BafogActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 7: // Café
+                    case 6: // Café
                         intent = new Intent(UlmInformationActivity.this, CafeActivity.class);
                         startActivity(intent);
                         break;
-                    case 8: // Night Life
+                    case 7: // Night Life
                         intent = new Intent(UlmInformationActivity.this, NightLifeActivity.class);
                         startActivity(intent);
                         break;

@@ -3,6 +3,8 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -43,5 +45,23 @@ public class AccommodationActivity extends AppCompatActivity {
             }
         });
 
+        ImageView resbul_imageView = findViewById(R.id.resbul_imageView);
+        ImageView privroom_imageView = findViewById(R.id.privroom_imageView);
+
+        resbul_imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , RensidentialBuildingsActivity.class));
+                overridePendingTransition(0,0);
+            }});
+
+        privroom_imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , PrivateBuildingActivity.class));
+                overridePendingTransition(0,0);
+            }});
     }
 }

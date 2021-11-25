@@ -41,19 +41,20 @@
 
     <!--residential buildings image-->
     <ImageView
-        android:id="@+id/rent"
+        android:id="@+id/resbul_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/residences"
         android:layout_below="@+id/accommodation_toolbar"
         android:layout_marginTop="13dp"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:src="@drawable/residences" />
 
     <!--private rooms image-->
     <ImageView
+        android:id="@+id/privroom_imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rent"
+        android:layout_below="@+id/resbul_imageView"
         android:adjustViewBounds="true"
         android:layout_marginBottom="30dp"
         android:src="@drawable/private_room" />
