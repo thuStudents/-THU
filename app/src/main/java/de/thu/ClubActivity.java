@@ -3,8 +3,6 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,9 +25,6 @@ public class ClubActivity extends AppCompatActivity {
 
         funRecView =findViewById(R.id.RecView);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        textView.setText("The Fun Part");
 
         ArrayList<ClubItems> funitem = new ArrayList<>();
         funitem.add(new ClubItems("Rules", "this place is cool", R.drawable.rulesclub));
