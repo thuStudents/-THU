@@ -1,14 +1,16 @@
-package de.thu;
-
-import androidx.appcompat.app.AppCompatActivity;
+package de.thu.ulm.cafe;
 
 import android.os.Bundle;
 
-public class MarketsActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+import de.thu.R;
+
+public class CafeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_markets);
+        setContentView(R.layout.activity_cafe);
     }
 }

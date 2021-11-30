@@ -1,4 +1,4 @@
-package de.thu;
+package de.thu.ulm;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,16 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
+
+import de.thu.R;
+import de.thu.ulm.accomodation.AccommodationActivity;
+import de.thu.ulm.banking.BankingActivity;
+import de.thu.ulm.cafe.CafeActivity;
+import de.thu.ulm.legal.LegalAdviceActivity;
+import de.thu.ulm.map.CityMapActivity;
+import de.thu.ulm.market.MarketsActivity;
+import de.thu.ulm.night.NightLifeActivity;
+import de.thu.ulm.transport.TransportActivity;
 
 public class UlmInformationActivity extends AppCompatActivity {
     ListView ulmMenu;

@@ -1,8 +1,10 @@
-package de.thu;
+package de.thu.ulm.banking;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import de.thu.R;
 
 public class BankingActivity extends AppCompatActivity {
 

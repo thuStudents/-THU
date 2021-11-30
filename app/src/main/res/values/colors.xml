@@ -9,5 +9,18 @@
     <color name="thu_blue">#0055A2</color>
     <color name="thuColor">#0055A2</color>
     <color name="white">#FFFFFF</color>
+    <color name="off_white">#FAF9F6</color>
+    <color name="parchment">#FCF5E5</color>
+    <color name="bone_white">#F9F6EE</color>
     <color name="light_white">#FFFFF7</color>
+    <color name="dark_greenish">#264653</color>
+    <color name="greenish">#287271</color>
+    <color name="blugreenish">#2A9D8F</color>
+    <color name="green">#709041</color>
+    <color name="mustard_yellow">#E9C46A</color>
+    <color name="sunset_yellow">#ECBC68</color>
+    <color name="orangy_yellow">#F4A261</color>
+    <color name="orange">#EE8959</color>
+    <color name="reddish">#E76F51</color>
+    <color name="off_black">#272b2e</color>
 </resources>

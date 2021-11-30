@@ -1,4 +1,4 @@
-package de.thu;
+package de.thu.ulm.night;
 
 public class NightLifeItems {
     private String nightName;

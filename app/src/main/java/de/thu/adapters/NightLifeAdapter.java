@@ -1,4 +1,4 @@
-package de.thu;
+package de.thu.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +15,10 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import de.thu.ulm.night.ClubActivity;
+import de.thu.ulm.night.NightLifeItems;
+import de.thu.R;
 
 public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.ViewHolder> {
 
@@ -96,7 +100,7 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
             super(itemView);
             nightlife_name =itemView.findViewById(R.id.nightlife_name);
             nightlife_des = itemView.findViewById(R.id.nightlife_des);
-            nightlife_imageView = itemView.findViewById(R.id.nightlife_imageView);
+            nightlife_imageView = itemView.findViewById(R.id.nightlife_imageview);
             parent = itemView.findViewById(R.id.parent);
 
         }

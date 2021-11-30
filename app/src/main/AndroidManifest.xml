@@ -10,31 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".NightLifeActivity"
+            android:name=".ulm.night.NightLifeActivity"
             android:exported="false" />
         <activity
-            android:name=".CafeActivity"
+            android:name=".ulm.cafe.CafeActivity"
             android:exported="false" />
         <activity
             android:name=".BafogActivity"
             android:exported="false" />
         <activity
-            android:name=".MarketsActivity"
+            android:name=".ulm.market.MarketsActivity"
             android:exported="false" />
         <activity
-            android:name=".TransportActivity"
+            android:name=".ulm.transport.TransportActivity"
             android:exported="false" />
         <activity
-            android:name=".LegalAdviceActivity"
+            android:name=".ulm.legal.LegalAdviceActivity"
             android:exported="false" />
         <activity
-            android:name=".CityMapActivity"
+            android:name=".ulm.map.CityMapActivity"
             android:exported="false" />
         <activity
-            android:name=".BankingActivity"
+            android:name=".ulm.banking.BankingActivity"
             android:exported="false" />
         <activity
-            android:name=".AccommodationActivity"
+            android:name=".ulm.accomodation.AccommodationActivity"
             android:exported="false" />
         <activity
             android:name=".LibraryActivity"
@@ -67,8 +67,17 @@
             android:name=".OfferedCoursesActivity"
             android:exported="false" />
         <activity
-            android:name=".UlmInformationActivity"
-            android:exported="false" />
+            android:name=".ulm.UlmInformationActivity"
+            android:exported="true" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity
             android:name=".HochschuleGeneralActivity"
             android:exported="false" />
@@ -79,10 +88,10 @@
             android:name=".LoginActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".PrivateBuildingActivity"
+            android:name=".ulm.accomodation.PrivateBuildingActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".RensidentialBuildingsActivity"
+            android:name=".ulm.accomodation.RensidentialBuildingsActivity"
             android:exported="true"></activity>
         <activity
             android:name=".RegisterActivity"
@@ -98,7 +107,10 @@
             android:exported="true"></activity>
         <activity
             android:name=".HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+
+        </activity>
         <activity
             android:name=".EditprofileActivity"
             android:exported="true"></activity>
@@ -106,13 +118,9 @@
             android:name=".ChangepasswordActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".ClubActivity"
+            android:name=".ulm.night.ClubActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

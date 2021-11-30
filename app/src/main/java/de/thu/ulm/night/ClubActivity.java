@@ -1,12 +1,14 @@
-package de.thu;
+package de.thu.ulm.night;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -14,38 +16,40 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class NightLifeActivity extends AppCompatActivity {
+import de.thu.HomeActivity;
+import de.thu.PostActivity;
+import de.thu.Profile;
+import de.thu.R;
+import de.thu.adapters.ClubAdapter;
 
-    private RecyclerView nightRecView;
+public class ClubActivity extends AppCompatActivity {
+
+    private RecyclerView funRecView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview);
 
-        nightRecView =findViewById(R.id.RecView);
+        funRecView =findViewById(R.id.RecView);
 
-
-        /*
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        textView.setText("The Fun Part");
+        textView.setText("Clubs");
 
-         */
+        ArrayList<ClubItems> funitem = new ArrayList<>();
+        funitem.add(new ClubItems("Rules", "this place is cool", R.drawable.rulesclub));
+        funitem.add(new ClubItems("Theatro", "this place is cool", R.drawable.theatroclub));
+        funitem.add(new ClubItems("Gleis44", "this place is cool", R.drawable.gleis44club));
+        funitem.add(new ClubItems("Cabaret Club Eden", "this place is cool", R.drawable.edenclub));
+        funitem.add(new ClubItems("M-Club", "this place is cool", R.drawable.mclub));
 
-        ArrayList<NightLifeItems> nightitem = new ArrayList<>();
-        nightitem.add(new NightLifeItems("Clubs", "Go clubbing its cool", R.drawable.clubs));
-        nightitem.add(new NightLifeItems("Bars", "Also Bars are cool", R.drawable.bars));
-        nightitem.add(new NightLifeItems("Cinemas", "Also Cinemas are cool", R.drawable.cinemas));
-        nightitem.add(new NightLifeItems("Restaurants", "Also Restaurants are cool", R.drawable.restaurants));
+        ClubAdapter adapter=new ClubAdapter(this);
+        adapter.setContacts(funitem);
 
-
-        NightLifeAdapter adapter=new NightLifeAdapter(this);
-        adapter.setContacts(nightitem);
-
-        nightRecView.setAdapter(adapter);
-        nightRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        //nightRecView.setLayoutManager(new LinearLayoutManager(this));
+        funRecView.setAdapter(adapter);
+        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 

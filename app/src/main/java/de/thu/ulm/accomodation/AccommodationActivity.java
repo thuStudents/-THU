@@ -1,4 +1,4 @@
-package de.thu;
+package de.thu.ulm.accomodation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import de.thu.HomeActivity;
+import de.thu.Profile;
+import de.thu.R;
 
 public class AccommodationActivity extends AppCompatActivity {
 
