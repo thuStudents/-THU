@@ -49,8 +49,9 @@ public class AccommodationActivity extends AppCompatActivity {
             }
         });
 
-        ImageView resbul_imageView = findViewById(R.id.resbul_imageView);
-        ImageView privroom_imageView = findViewById(R.id.privroom_imageView);
+
+        ImageView resbul_imageView = findViewById(R.id.private_rooms_image);
+        ImageView privroom_imageView = findViewById(R.id.shared_room_image);
 
         resbul_imageView.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
@@ -67,5 +68,8 @@ public class AccommodationActivity extends AppCompatActivity {
                         , PrivateBuildingActivity.class));
                 overridePendingTransition(0,0);
             }});
+
+
+
     }
 }

@@ -23,4 +23,9 @@
     <color name="orange">#EE8959</color>
     <color name="reddish">#E76F51</color>
     <color name="off_black">#272b2e</color>
+    <color name="dark_gray">#565656 </color>
+    <color name="light_green">#A7C957</color>
+    <color name="sage_green">#C0CB77</color>
+    <color name="may_green">#618B4A</color>
+    <color name="tash_green">#8EC732</color>
 </resources>

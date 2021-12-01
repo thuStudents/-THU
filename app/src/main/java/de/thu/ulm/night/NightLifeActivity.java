@@ -3,7 +3,7 @@ package de.thu.ulm.night;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -34,8 +34,10 @@ public class NightLifeActivity extends AppCompatActivity {
         adapter.setContacts(nightitem);
 
         nightRecView.setAdapter(adapter);
-        nightRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        //nightRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         //nightRecView.setLayoutManager(new LinearLayoutManager(this));
+        nightRecView.setLayoutManager(new GridLayoutManager(this, 2));
+
 
 
 

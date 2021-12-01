@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:background="@color/bone_white"
-    android:layout_height="match_parent">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <!-- title and search bar-->
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/bone_white"
+        android:orientation="vertical">
 
-        >
 
-        <!--header-->
-        <TextView
-            android:id="@+id/homepage_title"
-            android:layout_width="wrap_content"
+        <!-- title and search bar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/myfont2"
-            android:text="@string/app_name"
-            android:textColor="@color/off_black"
-            android:textSize="32sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="10dp"
 
+            >
 
-        <!--search bar-->
+            <!--header-->
+            <TextView
+                android:id="@+id/homepage_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/myfont2bold"
+                android:text="@string/app_name"
+                android:textColor="@color/off_black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <!--
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -45,137 +48,191 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="search..." />
-
+                android:text="search..." />-->
 
         </RelativeLayout>
 
 
-    </RelativeLayout>
-
-    <!--4 buttons-->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="120dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <!--school-->
+        <!--4 buttons-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="120dp"
-            android:orientation="vertical">
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:elevation="10dp"
-                android:background="@drawable/card_2"
-                android:layout_margin="10dp">
+            <!--school-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/school" />
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/HP_school"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/school" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:text="My Hochschule" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:text="My \n Hochschule"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--city-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_city"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/city" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:gravity="center"
+                    android:text="My City"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--forum-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_forum"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/forum" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:gravity="center"
+                    android:text="Feed"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--news-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_news"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/news" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:text="News and Events"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 
-        <!--city-->
+        <!--scrollable events-->
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:elevation="10dp"
-                android:background="@drawable/card_3"
-                android:layout_margin="10dp">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/city" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/myfont2"
+                    android:text="Latest Updates"
+                    android:textColor="@color/off_black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
 
             </RelativeLayout>
 
-            <TextView
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/latest_updates"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="My City" />
-
-        </LinearLayout>
-
-        <!--forum-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:elevation="10dp"
-                android:background="@drawable/card_4"
-                android:layout_margin="10dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/forum" />
-
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:text="Forum" />
-
-        </LinearLayout>
-
-        <!--news-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:elevation="10dp"
-                android:background="@drawable/card_5"
-                android:layout_margin="10dp">
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/news" />
-
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAlignment="center"
-                android:text="News and Events" />
+                android:layout_height="280dp" />
 
 
         </LinearLayout>
@@ -183,52 +240,17 @@
 
     </LinearLayout>
 
-    <!--scrollable events-->
-    <LinearLayout
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_marginLeft="20dp">
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        android:elevation="50dp"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/myfont2"
-                android:text="Latest Updates"
-                android:textColor="@color/off_black"
-                android:textSize="17sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"/>
-
-
-
-
-
-
-        </RelativeLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:id="@+id/latest_updates"
-            android:layout_height="280dp"/>
-
-
-
-
-
-
-    </LinearLayout>
-
-
-
-
-</LinearLayout>
+</RelativeLayout>
