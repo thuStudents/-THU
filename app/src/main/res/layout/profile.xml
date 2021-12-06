@@ -110,14 +110,14 @@
 
     <!-- display email -->
     <TextView
+        android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/user_email"
         android:layout_below="@id/email"
-        android:textSize="15sp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:text="Display user email"
-        android:layout_marginStart="15dp"/>
+        android:textSize="15sp" />
 
     <!-- edit profile button-->
     <Button

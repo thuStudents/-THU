@@ -2,9 +2,11 @@ package de.thu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,9 +14,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 
 public class Profile extends AppCompatActivity {
 
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,8 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.profile);
         editProfile();
         changePassword();
+        getUserInfo();
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -50,26 +60,11 @@ public class Profile extends AppCompatActivity {
 
     }
 
-    public void editProfile() {
-        Button editProfile;
-        editProfile = findViewById(R.id.editprofile_bttn);
-        editProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent editProfileActivity;
-                editProfileActivity = new Intent(Profile.this, EditprofileActivity.class);
-                startActivity(editProfileActivity);
-            }
-        });
+    private void changePassword() {
 
-
-    }
-
-
-    public void changePassword() {
-        Button changePassword;
-        changePassword = findViewById(R.id.changepassword_bttn);
-        changePassword.setOnClickListener(new View.OnClickListener() {
+        Button changePasswordButton;
+        changePasswordButton = findViewById(R.id.changepassword_bttn);
+        changePasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent changepasswordActivity;
@@ -78,7 +73,40 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void editProfile() {
+
+        Button editProfileButton;
+        editProfileButton = findViewById(R.id.editprofile_bttn);
+        editProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent editProfileActivity;
+                editProfileActivity = new Intent(Profile.this, EditprofileActivity.class);
+                startActivity(editProfileActivity);
+            }
+        });
 
     }
+
+    private void getUserInfo() {
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        if (mUser != null) {
+            for (UserInfo profile : mUser.getProviderData()) {
+
+                Log.d("Current user info", String.valueOf(profile));
+
+                TextView tv1 = (TextView)findViewById(R.id.user_email);
+                tv1.setText(String.valueOf(profile.getEmail()));
+
+            }
+
+        }
+    }
+
 
 }
