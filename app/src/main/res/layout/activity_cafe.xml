@@ -53,9 +53,13 @@
         android:padding="8dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_bank"
+            android:id="@+id/recycler_cafe"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="15dp"
+
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 

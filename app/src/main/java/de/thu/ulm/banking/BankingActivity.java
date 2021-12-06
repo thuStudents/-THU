@@ -13,8 +13,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-import de.thu.BankAdapter;
-import de.thu.BankItems;
 import de.thu.HomeActivity;
 import de.thu.PostActivity;
 import de.thu.Profile;

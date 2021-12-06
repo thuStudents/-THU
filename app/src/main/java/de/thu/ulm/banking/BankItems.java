@@ -1,4 +1,4 @@
-package de.thu;
+package de.thu.ulm.banking;
 
 public class BankItems {
 

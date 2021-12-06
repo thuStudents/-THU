@@ -1,4 +1,4 @@
-package de.thu.ulm.banking;
+package de.thu.ulm.cafe;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.thu.R;
-import de.thu.ulm.cafe.CafeItems;
 
 public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder> {
 
@@ -36,14 +35,12 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
 
 
         CafeItems cafeItems = cafeLocations.get(position);
-        holder.bankNameTxt.setText(bankLocations.get(position).getBank_name());
-        holder.phoneTxt.setText(bankLocations.get(position).getBank_phone());
-        holder.addressTxt.setText(bankLocations.get(position).getBank_address());
-        holder.emailTxt.setText(bankLocations.get(position).getBank_email());
-        holder.bankLogo.setImageResource(bankLocations.get(position).getBank_logo());
+        holder.cafe_name.setText(cafeLocations.get(position).getCafe_name());
+        holder.cafe_time.setText(cafeLocations.get(position).getCafe_time());
+        holder.cafe_image.setImageResource(cafeLocations.get(position).getCafe_image());
 
-        boolean isExpanded = bankLocations.get(position).isExpanded();
-        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+        boolean isExpanded = cafeLocations.get(position).isExpanded_c();
+        holder.expandableLayout_c.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
@@ -53,7 +50,7 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
     }
 
 
-    public class BankViewHolder extends RecyclerView.ViewHolder {
+    public class CafeViewHolder extends RecyclerView.ViewHolder {
 
         TextView cafe_name, cafe_time;
         ImageView cafe_image;
@@ -66,17 +63,17 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
 
             cafe_name = itemView.findViewById(R.id.cafe_name);
             cafe_time = itemView.findViewById(R.id.cafe_time);
-            cafe_image = itemView.findViewById(R.id.);
+            cafe_image = itemView.findViewById(R.id.cafe_image);
 
 
-            linearLayout = itemView.findViewById(R.id.linear_layout1);
-            expandableLayout = itemView.findViewById(R.id.expandable_layout);
+            linearLayout_c = itemView.findViewById(R.id.linear_layout2);
+            expandableLayout_c = itemView.findViewById(R.id.expandable_cafe);
 
-            linearLayout.setOnClickListener(new View.OnClickListener() {
+            linearLayout_c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    BankItems bankItems = bankLocations.get(getAdapterPosition());
-                    bankItems.setExpanded(!bankItems.isExpanded());
+                    CafeItems cafeItems = cafeLocations.get(getAdapterPosition());
+                    cafeItems.setExpanded_c(!cafeItems.isExpanded_c());
                     notifyItemChanged(getAdapterPosition());
                 }
             });
