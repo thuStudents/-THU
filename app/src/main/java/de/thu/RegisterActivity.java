@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText registerEmail, registerUsername, registerPassword, registerConfirmPassword;
     Button buttonRegister;
     ProgressDialog progressDialog;
+    TextView alreadyHaveAnAccount;
 
     String emailPattern = "[a-zA-Z0-9._]-+@[a-z]+\\.+[a-z]";
 
@@ -39,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerConfirmPassword=findViewById(R.id.confirmPassword);
         buttonRegister=findViewById(R.id.buttonRegister);
         progressDialog = new ProgressDialog(this);
+        alreadyHaveAnAccount = findViewById(R.id.alreadyHaveAccount);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -47,6 +50,17 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 registerAuth();
+            }
+        });
+
+        alreadyHaveAnAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , LoginActivity.class));
+                overridePendingTransition(0,0);
+
             }
         });
 

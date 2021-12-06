@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".LibraryActivity">
 
+    <!--bottom nav bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/thu_blue"
+        app:itemIconTint="#FFFFFF"
+        app:itemTextColor="#FFFFFF"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_navigation_bar" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_library_toolbar"
         android:layout_width="match_parent"
@@ -25,4 +37,138 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollViewLibrary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_library_toolbar"
+        android:layout_above="@id/bottom_navigation">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/imageLibrary"
+            android:contentDescription="content_description_media"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/library_image" />
+
+        <TextView
+            android:id="@+id/textLibrary1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageLibrary"
+            android:layout_marginTop="6dp"
+            android:text="THU portfolio includes approximately 50,000 books, journals, newspapers and media, as well as 170,000 online media. As part of campus licenses, we provide databases for specialist literature, standards and training videos as well as around 80,000 eBooks and 13,000 eJournals. We offer training courses for the effective use of our continuously updated inventory. All members of the Ulm University of Applied Sciences and external parties are authorized to use it." />
+    <TextView
+        android:id="@+id/textLibrary2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary1"
+        android:layout_marginTop="6dp"
+        android:text="The library catalog and the account function"/>
+
+            <TextView
+                android:id="@+id/textLibrary3Link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textLibrary2"
+                android:layout_marginTop="6dp"
+                android:text="[link]" />
+    <TextView
+        android:id="@+id/textLibrary4_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary3Link"
+        android:layout_marginTop="6dp"
+        android:text="Corona Rules"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textLibrary4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary4_0"
+        android:layout_marginTop="6dp"
+        android:text="• Registration online or in writing\n• Mask requirement\n• Short stays \n• Maximum of 5 people at the same time" />
+
+    <TextView
+        android:id="@+id/textLibrary5_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary4"
+        android:layout_marginTop="6dp"
+        android:text="Opening Times"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textLibrary5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary5_0"
+        android:layout_marginTop="6dp"
+        android:text="• PWS location  : Mon - Thu 8:00 a.m. to 12:00 p.m. and 1:00 p.m. to 4:00 p.m., Fri 8:00 a.m. to 1:00 p.m.
+\n• AEA location : Mon and Thu 9:00 a.m. to 12:00 p.m. "/>
+
+    <TextView
+        android:id="@+id/textLibrary6_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary5"
+        android:layout_marginTop="6dp"
+        android:text="Library Usage"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textLibrary6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary6_0"
+        android:layout_marginTop="6dp"
+        android:text="• You can extend your loan periods online using the 'My Account' function in the library catalog.
+\n• Media that are due can be returned using the return boxes.
+\n• You can place interlibrary loan orders as usual by e-mail or via the library catalog." />
+
+    <TextView
+        android:id="@+id/textLibrary7_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary6"
+        android:layout_marginTop="6dp"
+        android:text="Available Digital Offers"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textLibrary7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary7_0"
+        android:layout_marginTop="6dp"
+        android:text="• eBooks (80,000 titles) and tutorial videos (13,000 titles) : In the library catalog, limit your search to the media type 'e-book' or 'e-video'.
+\n• eJournals : Search the EZB Electronic Journals Library for specialist journals (e.g. ATZ, MTZ, Adhäsion, Brand eins, VDI-Nachrichten ... and brand new, the MIT Press eJournals and the SAGE journals )
+\n• Databases : Via DBIS , our database portal, you have access to our specialist databases.
+\n  To use our digital offers from home, log in beforehand with the VPN or log in via Shibboleth (not possible for all offers)."/>
+
+    <TextView
+        android:id="@+id/textLibrary8_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary7"
+        android:layout_marginTop="6dp"
+        android:text="Registration and Deregistration"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textLibrary8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLibrary8_0"
+        android:layout_marginTop="6dp"
+        android:text="THU students are already registered in the library when they are enrolled. The student ID is also the library ID.\n
+Send requests for de-registration (discharge stamp of the library) to bibliothek@thu.de.\n
+Contact through e-mail: bibliothek@thu.de and telephone (0731/5028113  OR  0731/50-28512) for information and help."/>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -30,4 +30,147 @@
     <string name="user_name">User name</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="coronaNewsExpanded">Participation in the on-site study program is only possible in the winter semester recovered / vaccinated / tested (with proof, max. 72 hours old). In order to follow up chains of infection, the participants must register for each face-to-face event./n
+With immediate effect, it is again mandatory to wear a medical mask in all rooms and (learning) areas of the university - also in teaching and if the minimum distance is observed (exception: lecturers)./n
+Since November 13th there have been free citizen tests again across Germany. The university cannot operate an additional test center and cannot cover the costs for corona tests./n
+You will be contacted by “your” lecturers or by the relevant deans of studies for the specific organization of the individual courses./n
+The university buildings are only open to university members and university members; the rectorate can admit other groups of people./n
+The Corona protective measures require all of us to understand each other, pragmatic solutions, timely feedback about possible difficulties as well as a large amount of personal responsibility and self-organization./n
+Stay healthy!/n
+11/23/2021 9:45 AM</string>
+    <string name="coronaNewsNotExpanded">Participation in the on-site study program is only possible...</string>
+
+    <string name="serviceRoboticsExpanded">At the first XITO user conference on October 28th and 29th, interested parties could not only find out more about the XITO platform of the THU startup Toolify, but also get an insight into the current state of the art in the field of robotics and automation./n
+To this end, Toolify was able to attract numerous speakers who used practical examples to show how and where robots are used, what role platforms play and where XITO - the marketplace for automation through robots - is already being used./n
+Dr. Alexander Tettenborn from the Federal Ministry for Economic Affairs and Energy (BMWi) said in his welcoming address that the SeRoNet project and the XITO product are taking service robotics to the next level and strengthening Germany as a business location. Prof. Dr.-Ing. Thomas Bauernhansl, director of the Fraunhofer Institute for Production Engineering and Automation, emphasized in his lecture that Germany must not lose touch and that platforms - which bring companies and people together - have a major influence today./n
+The special thing about the user conference, which took place in two separate studios, was that, parallel to the event, an intralogistics solution was set up and presented directly on site. How easy it is to change the existing application with the XITO platform was shown over the course of the second day. This is possible because the XITO platform offers a marketplace with over 110 components (building blocks) from 50 manufacturers, which can be freely selected and combined. A simple implementation of individual problems in the area of ​​automation through robotics, especially for small and medium-sized companies with a small budget, is thus possible in a targeted manner./n
+The participants in the user conference were enthusiastic about the practical examples and received a lot of inspiration to be prepared for digitization with the help of XITO./n
+About Toolify Robotics/n
+The Toolify Robotics GmbH is a young startup company, which has its beginnings in the THU. With the XITO marketplace for automation through robotics, Toolify offers a platform for realizing robotics applications with an open modular system.
+The three founders Dr. Dennis Stampfer, Matthias Lutz, M.Sc., and Dr. With the support of THU, Alex Lotz received an EXIST scholarship for their new business idea in 2020. The team has now grown to six people.The Toolify Robotics GmbH is a young startup company, which has its beginnings in the THU. With the XITO marketplace for automation through robotics, Toolify offers a platform for realizing robotics applications with an open modular system.
+The three founders Dr. Dennis Stampfer, Matthias Lutz, M.Sc., and Dr. With the support of THU, Alex Lotz received an EXIST scholarship for their new business idea in 2020. The team has now grown to six people./n
+03/11/2021 00:00</string>
+    <string name="serviceRoboticsNotExpanded">At the first XITO user conference on October 28th and 29th...</string>
+
+    <string name="newCampusExpanded">After almost three years of construction, the Landesbetrieb Vermögen und Bau Baden-Württemberg (VBA) officially handed over the new campus building on Oberen Eselsberg to the THU today. In the presence of prominent guests from politics and society, the keys to the building were handed over by Wilmuth Lindenthal, Head of VBA Office Ulm, to Rector Volker Reuter./n
+The EUR 43 million building is used by the Faculty of Electrical Engineering and Information Technology and its two institutes for Automation Systems (IAS) and Communication Technology (IKT) as well as the Institute for Energy and Drive Technology (IEA) of the Faculty of Production Technology, which was previously part of the The branch in need of renovation was housed in Eberhard-Finckh-Straße in Böfingen./n
+The building constructed in accordance with the Efficiency House Plus standard emits more energy than it needs to operate. It serves the teaching and research of several institutes and contains laboratories as well as office, meeting and seminar areas. With the Efficiency House Plus standard, the building complies with the requirements of the state of Baden-Württemberg to design its building stock to be climate-neutral by 2050./n
+Real laboratory of the energy transition/n
+The entire building serves as an energetic real laboratory in which innovations are tested in a real environment and solutions for the conversion of the energy system are developed. As a “real laboratory for the energy transition”, it brings innovative technologies into use with the aim of intelligently optimizing energy flows and researching possibilities for efficiency gains./n
+Connected to the previous campus building to form a complex
+The new building was erected as a four-story building./n
+The open space between the new and old buildings connects the two buildings to form a complex. Laboratory areas, offices and seminar areas are grouped around the two inner courtyards, which provide lighting and ventilation, with a view of Albert-Einstein-Allee and the adjoining natural area. In the basement there are numerous, high-quality furnished rooms: two workshops, a rapid prototyping room, seminar rooms, the Digital Media Innovation Lab, offices, sound studio, print lab, photo and video studio, PV test room / flasher, EMC laboratory, drive technology -Laboratory, building services center ... A spacious foyer area with a multimedia video wall can be used variably for lectures and courses./n
+Sustainable energy generation/n
+The roof areas of the building are used to generate electricity by means of photovoltaics. The photovoltaic system comprises 1135 modules with a total output of 419 kWp and an annual yield of approx. 420 kWh / a. Of the locally generated electricity, 75 percent is expected to be used in the building itself and 25 percent to be fed into the grid. A heat pump is available to cover the basic load for heating and cooling. The return of the district cooling network serves as the heat source. In summer, excess heat is fed back into the network of FUG - Fernwärme Ulm./n
+07/30/2021 13:00</string>
+    <string name="newCampusNotExpanded">After almost three years of construction, the Landesbetrieb Vermögen ...</string>
+    <string name="StudentIdCardNotExpanded"> Your Student ID card will accompany you from your very first day...</string>
+    <string name="StudentIdExpanded">Your Student ID card will accompany you from your very first day to your very last day at the Ulm University of Applied Sciences. As a multi-functional THU-Card, it gives you numerous options for making everyday student life easier: it\'s a student ID card, bus ticket, library card and students\' union prepaid cash card in one.Once the preparatory courses have started, you can get your student ID card from Student Services (SSC)./n
+
+Cashless Payments/n
+You can use your student ID card for cashless payments in the canteen (Mensa), the cafeteria, and for all the dispensing machines.To do this, you must top up your card with cash or your EC card using the machines provided in the canteen and cafeteria./n
+Printing/n
+For printing, copying and scanning: once you have registered, hold your ID card against a multi-function printer. On selecting the function "Follow-print", initially your printing tasks will wait in a queue. Only when you have logged on to one of the devices will you be able to select and print your documents.You can top up your printer account at the terminals in Rooms F34 (Prittwitzstrasse) and S202 (Albert-Einstein-Allee)./n
+
+Parking/n
+As a student, you have the option of parking free of charge at both locations of the Ulm University of Applied Sciences. Just hold your student ID card in front of the car park entrance terminal to open the barrier./n
+
+Bus Travel/n
+You can also use your student ID card to travel for free on the DING network, on weekdays from 6 pm and all day at the weekend or on public holidays./n
+
+Voting/n
+Your THU-Card serves as an election registration card for student elections./n
+
+Using the Library/n
+All the Ulm University of Applied Sciences sites have a library. Your THU-Card permits you to borrow textbooks in the fields of computing and engineering, as well as journals, newspapers and data carriers./n</string>
+    <string name="uniAccountNotExpanded">The services of the Center for Information Infrastructure and Media...</string>
+    <string name="uniAccountExpanded">The services of the Center for Information Infrastructure and Media (IMZ) can be used by all members and affiliates of Ulm University of Applied Sciences. Every Ulm University of Applied Sciences student receives their own access authorization (Hochschulaccount) and a university mailbox. The account is used for authentication to use IT services on campus or from outside./n
+
+From the 2019/20 Winter Semester, authorized applicants (Bachelor\’s and Master\’s) can enable their account themselves, before their course starts, in our Self-Service portal. After completing the enrollment process, from the start of September, authorized applicants will receive a letter by post containing their personal PIN for activating their University Account./n
+
+Please note: for organizational reasons, new students on the following courses are, for now, not included in the new procedure: CTS, students switching from other universities into a higher semester, newly enrolled students on the degree programs WI, WL, CSE and CEM, SENCE Master\’s students. Students starting these programs can get their account access details in person – from the SSC during the preparatory courses and the first week of lectures and, from the second week of lectures, from Ms. Dobisch at the IMZ, Room F41. Program students receive their account details from the IMZ, as previously.</string>
+    <string name="emailNotExpanded">Every Ulm University of Applied Sciences student gets their own university mailbox...</string>
+    <string name="emailExpanded">
+Every Ulm University of Applied Sciences student gets their own university mailbox.You should check your mailbox regularly so you don\'t miss any important information.Automatic forwarding to a private address is not permitted. However, you can set up a notification for your private e-mail addresses.You can call up your mailbox using Outlook Web Access with your username and password.</string>
+
+    <string name="wifiNotExpanded">Ulm University of Applied Sciences is a participant in the eduroam project...</string>
+    <string name="wifiExpanded">Ulm University of Applied Sciences is a participant in the eduroam project./n
+
+To use the eduroam WiFi you only need your Ulm University of Applied Sciences network login data./n
+
+eduroam Configuration Assistant Tool/n
+
+Important/n
+
+- if you have one, make sure you delete your old eduroam profile/n
+
+- Username: loginname@hs-ulm.de (this is not your e-mail address)/n
+
+- Android: FIRST download and install the App eduroam CAT (DO NOT open it); THEN download and install the configuration file/n
+
+You will find more detailed information about setting up a Wi-Fi connection in our instructions./n</string>
+    <string name="remoteAppNotExpanded">The Windows applications we offer run on the University of Applied Sciences servers…</string>
+    <string name="remoteAppExpanded">The Windows applications we offer run on the University of Applied Sciences servers. The Windows interface is sent to the computer calling up the software. The same environment (drives, printers, storage …) as for the Pool PCs and workstations is available to the application./n
+
+Advantages:/n
+
+•Can also be used outside the campus/n•Installation of the application on a local device is unnecessary/n•Direct access to the data stored at the THU without a VPN/n•Microsoft RD Client App is also available for Android, iOS and MacOS/n
+
+
+https://remoteapp.hs-ulm.de
+
+
+</string>
+    <string name="vpnNotExpanded">If you want to connect to the Ulm University of Applied Sciences...</string>
+    <string name="vpnExpanded">If you want to connect to the Ulm University of Applied Sciences network from outside the campus, you will need a VPN connection.The "virtual private network" (VPN) enables participants in a private network to connect to a different private network.You can download the VPN client here.If you need help installing the VPN client, you will find detailed instructions here. </string>
+
+    <string name="softwareForStudentNotExpanded">As a THU student, you have the chance to use a variety...</string>
+    <string name="softwareForStudentExpanded">Microsoft Azure Dev Tools for Teaching Program (formerly DreamSpark, Microsoft Imagine)/n
+
+As a THU student, you have the chance to use a variety of Microsoft software products for free. Please inquire with your department whether such a contract has been concluded./n
+
+
+Office 365 (new)/n
+The use of Office 365 incl. Teams and 1 TB storage on Onedrive is free for THU students. You can also download Office and Windows for free. To do this, you must agree to the Microsoft Azure terms and conditions of use at: www.thu.de/einwilligungserklaerung . After filling out your declaration of consent, it can take up to 30 minutes for your University Account to synchronize with Microsoft Azure. Then you can log on at office.com and start using the services./n
+
+
+MATLAB TAH campus license/n
+
+Ulm University of Applied Sciences has agreed a "TAH Campus" license contract with Mathworks®. In addition to Matlab and Simulink, the Total Academic Headcount license contains numerous additional toolboxes. You can download a personal standalone copy of the software to each computer of which you are the sole user. The Matlab portal also offers free online courses. Find out about licensing conditions and other details at /n
+
+www.thu.de/matlab/n
+
+
+LabVIEW Student Install Option/n
+
+This enables you to use the same software on your own computer as at the THU. To activate it, each student needs to set up a National Instruments user profile. Ask the system administrator in your Institute for the student option serial number./n
+
+
+VMware Academic Subscription/n
+
+VMware Fusion, VMware Workstation, VMware vSphere and VMware vRealize software and learning materials are free for students. Due to a change in the license shop on July 1, 2021, the issuing of licenses for VMware has changed. From July 23, 2021, license keys will now be issued once a week. Please send requests via e-mail to imz@thu.de stating your first name, last name and your THU e-mail address.
+
+</string>
+    <string name="lsfNotExpanded">The LSF is an online portal for students...</string>
+    <string name="lsfExpanded">The LSF is an online portal for students, would-be students, teachers and staff; displaying classes and associated information such as rooms, times and people.As a student at Ulm University of Applied Sciences you can use it, for example, to register/deregister for examinations or to sign up for elective modules.You can access the portal here. External VPN connection required.</string>
+
+    <string name="selfServiceFunctionsNotExpanded">You can update your personal details...</string>
+    <string name="selfServiceFunctionsExpanded">You can update your personal details (such as your address and telephone number) online, using the self-service function.You can use this website to see an overview of your grades, or download registration status certificates (enrollment certificates) – for example for your BAföG application.Here a word of advice: save all your registration status certificates, as various government agencies may ask for them, even many years later.</string>
+
+    <string name="eLearningNotExpanded">e-Learning should provide you with all the opportunities...</string>
+    <string name="eLearningExpanded">
+e-Learning should provide you with all the opportunities of modern communication media, to make teaching and learning at the University of Applied Sciences as effective and efficient as possible.In e-Learning you will find all the courses for your degree program, as well as other features such as evaluations or similar.You can get all the information for this from the Institute for Academic Instruction (IHD).</string>
+
+    <string name="computerScienceCardText">If you are interested in computing, are looking for a course taught in English and are aiming for an international career, then you\'ve come to the right place. The course can be formulated individually thanks to a choice of different focus topics.</string>
+    <string name="energyInformationManagementCardText">How can real-time data from renewable energy production be provided? How can the energy transition be shaped by modern communications technology?</string>
+    <string name="intelligentSystemsCardText">Acquire the skills to understand, design and implement complex, learning and decision-capable information systems – both in industry and research.</string>
+    <string name="internationalEnergyEconomicsCardText">The degree programme will give you an interdisciplinary preparation for the energy industry. Students will go to lectures on energy technology, computer science and business studies, and spend a compulsory semester abroad.</string>
+    <string name="internationalEnergyManagementCardText">How can we develop new business models for renewable energy and electromobility?How can we design supply chains in the international energy markets of the future to be economically profitable and to save CO2?</string>
+    <string name="systemsEngineeringAndManagementCardText">Gather international experience at the RHIT in the USA. Acquire engineering expertise in hardware and software, and commercial expertise in the fields of finance and human resources.</string>
+    <!--    <string name="computerScienceCardText">Interested in studying computer science at Ulm University of Applied Sciences? We are pleased to welcome you here! To provide you with useful information, we organize webinars on a regular basis before the application period ends. You will find our upcoming events here. We offer also further information and the video of the latest webinar./n-->
+    <!--        You want to experience the diversity of computer science in English? Not a problem with the degree programme Computer Science (CTS). The degree programme is aimed at both home and international applicants who wish their course to be taught in English. You may structure your programme individually, by selecting two focus topics in line with your interests./n-->
+    <!--        The degree programme CTS is characterised by its focus on both modern methods for designing software systems and methods for designing processor-supported hardware. Particular consideration is given to aspects of modelling complex technical systems and model-driven software and system development./n-->
+    <!--        In line with international practice for Bachelor's degree programmes, the programme can be completed in eight semesters. This gives you the latitude to pursue your own interests in-depth with a total of six elective courses as integral part of your programme. Furthermore, professional command of the German language is one of the fundamental outcomes of this programme, so there will be a German language module placed in each of the first three semesters.</string>-->
+
+
 </resources>

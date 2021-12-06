@@ -6,53 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".CafeteriaMensaActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_cafeteria_toolbar"
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        android:layout_height="600dp"
+        android:layout_below="@id/linearLayoutCafeteriaMensa"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cafeteria and Mensa"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/myFirstText"
+    <LinearLayout
+        android:id="@+id/linearLayoutCafeteriaMensa"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Opening is based on the requirements of the current CoronaVO of the state of Baden-Württemberg "
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/my_cafeteria_toolbar"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/mySecondText"
-        android:layout_height="wrap_content"
-        android:text="You will need to provide evidence of an up-to-date negative Corona test, or that you have been vaccinated or provide evidence that you have already recovered from coronavirus."
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/myFirstText"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="..................."
-        android:textSize="18dp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_below="@id/mySecondText"/>
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:weightSum="2">
 
+        <Button
+            android:id="@+id/mensaFragmentbtn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/news_selected_button"
+            android:text="MENSA"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
 
-
+        <Button
+            android:id="@+id/cafeteriaFragmentbtn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/events_notselected_button"
+            android:text="CAFETERIA"
+            android:textColor="@color/thuColor"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 </RelativeLayout>

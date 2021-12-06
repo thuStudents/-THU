@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thuColor"
+    tools:context=".NewsFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNews1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+                <!--                CORONA NEWS  -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/photoNews1"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/coronainfoimage" />
+
+                    <TextView
+                        android:id="@+id/newsTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/photoNews1"
+                        android:layout_marginTop="5dp"
+                        android:text="CORONA INFORMATION"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/news1text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newsTitle1"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/coronaNewsNotExpanded"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNews2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardNews1"
+                android:layout_margin="8dp">
+                <!--        Service Robotics NEWS  -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/photoNews2"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/next_level_of_service_robotics" />
+
+                    <TextView
+                        android:id="@+id/newsTitle2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/photoNews2"
+                        android:layout_marginTop="5dp"
+                        android:text="Next Level of Service Robotics"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/news2text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newsTitle2"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/serviceRoboticsNotExpanded"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNews3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardNews2"
+                android:layout_margin="8dp">
+                <!--                ? NEWS  -->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/photoNews3"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/new_campus_news" />
+
+                    <TextView
+                        android:id="@+id/newsTitle3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/photoNews3"
+                        android:layout_marginTop="5dp"
+                        android:text="New Campus Building"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/news3text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/newsTitle3"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/newCampusNotExpanded"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
