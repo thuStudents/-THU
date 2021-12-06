@@ -1,8 +1,9 @@
-package de.thu.ulm.transport;
+package de.thu.ulm.accomodation;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,20 +19,42 @@ import de.thu.HomeActivity;
 import de.thu.PostActivity;
 import de.thu.Profile;
 import de.thu.R;
-import de.thu.adapters.TransportAdapter;
+import de.thu.adapters.PrivateBAdapter;
 
-public class TransportActivity extends AppCompatActivity {
+public class PrivateBuildingActivity extends AppCompatActivity {
 
-    private RecyclerView transportBRecView;
+    private RecyclerView privateBRecView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_transport);
+        setContentView(R.layout.recyclerview);
+
+
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        TextView PR_title = (TextView)findViewById(R.id.title);
+        PR_title.setText("Find your Private Room");
+
+
+
+        privateBRecView =findViewById(R.id.RecView);
+
+        ArrayList<PrivateBItems> contacts = new ArrayList<>();
+        contacts.add(new PrivateBItems("ILive Campus Village", "lit lit", R.drawable.ilive));
+        contacts.add(new PrivateBItems("UniApart", "expencive lit", R.drawable.uniapart));
+        contacts.add(new PrivateBItems("Links from Studierendenwerk", "lit",R.drawable.studierendenwerk));
+
+        PrivateBAdapter adapter=new PrivateBAdapter(this);
+        adapter.setContacts(contacts);
+
+        privateBRecView.setAdapter(adapter);
+        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        privateBRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.find);
+
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -58,19 +81,5 @@ public class TransportActivity extends AppCompatActivity {
             }
         });
 
-        transportBRecView =findViewById(R.id.transport_recview);
-
-        ArrayList<TransportItems> means = new ArrayList<>();
-        means.add(new TransportItems("Buses and Trams", "Discover Ulm thanks to it's developed public transport system", R.drawable.bus));
-        means.add(new TransportItems("Trains", "Take advantage of the connections to many destinations in and outside Germany", R.drawable.train));
-        //means.add(new TransportItems("Trams", "Get to your destinations fast thanks to Ulms' tram system", R.drawable.tram));
-
-
-        TransportAdapter adapter=new TransportAdapter(this);
-        adapter.setContacts(means);
-
-        transportBRecView.setAdapter(adapter);
-        //transportBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        transportBRecView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }

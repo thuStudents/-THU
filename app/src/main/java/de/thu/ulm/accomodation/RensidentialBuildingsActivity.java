@@ -1,4 +1,4 @@
-package de.thu.ulm.transport;
+package de.thu.ulm.accomodation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,20 +18,39 @@ import de.thu.HomeActivity;
 import de.thu.PostActivity;
 import de.thu.Profile;
 import de.thu.R;
-import de.thu.adapters.TransportAdapter;
+import de.thu.adapters.ResidentialBAdapter;
 
-public class TransportActivity extends AppCompatActivity {
+public class RensidentialBuildingsActivity extends AppCompatActivity {
 
-    private RecyclerView transportBRecView;
+    private RecyclerView resBRecView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_transport);
+        setContentView(R.layout.recyclerview);
+
+        resBRecView =findViewById(R.id.RecView);
+
+        ArrayList<ResidentialBuildingsItems> res_elements = new ArrayList<>();
+        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", "th@email.com", R.drawable.gutenbergstr ));
+        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", "as@email.com", R.drawable.frauensteige));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße 1", "rm@email.com",R.drawable.heidenheimer1));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße 2", "rm@email.com",R.drawable.heidenheimer2));
+        res_elements.add(new ResidentialBuildingsItems("Upper West Side", "rm@email.com",R.drawable.uppperwestside));
+
+        ResidentialBAdapter adapter=new ResidentialBAdapter(this);
+        adapter.setContacts(res_elements);
+
+        resBRecView.setAdapter(adapter);
+        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        resBRecView.setLayoutManager(new GridLayoutManager(this, 2));
+
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.find);
+
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -47,7 +66,7 @@ public class TransportActivity extends AppCompatActivity {
                                 , PostActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.home:
+                        case R.id.home:
                         startActivity(new Intent(getApplicationContext()
                                 , HomeActivity.class));
                         overridePendingTransition(0,0);
@@ -58,19 +77,5 @@ public class TransportActivity extends AppCompatActivity {
             }
         });
 
-        transportBRecView =findViewById(R.id.transport_recview);
-
-        ArrayList<TransportItems> means = new ArrayList<>();
-        means.add(new TransportItems("Buses and Trams", "Discover Ulm thanks to it's developed public transport system", R.drawable.bus));
-        means.add(new TransportItems("Trains", "Take advantage of the connections to many destinations in and outside Germany", R.drawable.train));
-        //means.add(new TransportItems("Trams", "Get to your destinations fast thanks to Ulms' tram system", R.drawable.tram));
-
-
-        TransportAdapter adapter=new TransportAdapter(this);
-        adapter.setContacts(means);
-
-        transportBRecView.setAdapter(adapter);
-        //transportBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        transportBRecView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }
