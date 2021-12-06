@@ -18,6 +18,7 @@
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation_bar" />
 
+<!--    Toolbar-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_todo_toolbar"
         android:layout_width="match_parent"
