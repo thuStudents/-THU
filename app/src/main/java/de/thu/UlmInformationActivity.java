@@ -29,7 +29,6 @@ public class UlmInformationActivity extends AppCompatActivity {
         ulmMenuList.add("Legal Advice");
         ulmMenuList.add("Transport");
         ulmMenuList.add("Markets");
-        ulmMenuList.add("BAföG");
         ulmMenuList.add("Café");
         ulmMenuList.add("Night Life");
 
@@ -71,8 +70,6 @@ public class UlmInformationActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 6: // BAföG
-                        intent = new Intent(UlmInformationActivity.this, BafogActivity.class);
-                        startActivity(intent);
                         break;
                     case 7: // Café
                         intent = new Intent(UlmInformationActivity.this, CafeActivity.class);

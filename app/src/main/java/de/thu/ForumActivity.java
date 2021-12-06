@@ -27,26 +27,30 @@ public class ForumActivity extends AppCompatActivity {
 //            Toolbar toolbar=findViewById(R.id.toolbar);
 //    setSupportActionBar(toolbar);
         bottomNav = findViewById(R.id.bottom_navigation);
+
+        bottomNav.setSelectedItemId(R.id.home);
+
         bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.home:
-//                    Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);
-//                    startActivity(intent);
-//                    finish();
-                        break;
-                    case R.id.add:
-                        Intent intent=new Intent(getApplicationContext(),PostActivity.class);
-                        startActivity(intent);
-                        finish();
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new AddButtonQue()).commit();
-                        break;
+                switch(item.getItemId()){
                     case R.id.find:
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new FindFriend()).commit();
-                        break;
+                        startActivity(new Intent(getApplicationContext()
+                                , Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
-                return true;
+                return false;
             }
         });
 

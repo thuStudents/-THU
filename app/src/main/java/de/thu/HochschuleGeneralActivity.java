@@ -1,13 +1,19 @@
 package de.thu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
@@ -25,7 +31,6 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
         hsumenuGeneralList.add("Offered Courses");
         hsumenuGeneralList.add("Applying");
         hsumenuGeneralList.add("Fees");
-        hsumenuGeneralList.add("Important Dates");
         hsumenuGeneralList.add("Offices");
         hsumenuGeneralList.add("Cafeteria & Mensa");
         hsumenuGeneralList.add("Subjects & Tips");
@@ -58,27 +63,23 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
                         intent = new Intent(HochschuleGeneralActivity.this, FeesActivity.class);
                         startActivity(intent);
                         break;
-                    case 3: // important dates
-                        intent = new Intent(HochschuleGeneralActivity.this, ImportantDatesActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 4: // offices
+                    case 3: // offices
                         intent = new Intent(HochschuleGeneralActivity.this, OfficesActivity.class);
                         startActivity(intent);
                         break;
-                    case 5: // Cafeteria & Mensa
+                    case 4: // Cafeteria & Mensa
                         intent = new Intent(HochschuleGeneralActivity.this, CafeteriaMensaActivity.class);
                         startActivity(intent);
                         break;
-                    case 6: // Subjects & Tips
+                    case 5: // Subjects & Tips
                         intent = new Intent(HochschuleGeneralActivity.this, SubjectsTipsActivity.class);
                         startActivity(intent);
                         break;
-                    case 7: // IT-Services & THU-Card
+                    case 6: // IT-Services & THU-Card
                         intent = new Intent(HochschuleGeneralActivity.this, ServicesCardActivity.class);
                         startActivity(intent);
                         break;
-                    case 8: // Library
+                    case 7: // Library
                         intent = new Intent(HochschuleGeneralActivity.this, LibraryActivity.class);
                         startActivity(intent);
                         break;
@@ -89,6 +90,35 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
                     default:
                         break;
                 }
+            }
+        });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.find:
+                        startActivity(new Intent(getApplicationContext()
+                                , Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
             }
         });
 

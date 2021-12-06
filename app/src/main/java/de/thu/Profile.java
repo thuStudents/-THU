@@ -35,7 +35,9 @@ public class Profile extends AppCompatActivity {
                         Toast.makeText(Profile.this, "Profile", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.add:
-                        Toast.makeText(Profile.this, "Add button pressed", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
@@ -77,6 +79,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(changepasswordActivity);
             }
         });
+
 
 
     }

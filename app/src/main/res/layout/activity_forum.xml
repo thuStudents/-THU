@@ -38,9 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/thuColor"
-        app:itemIconTint="#000000"
-        app:itemTextColor="#000000"
-        app:labelVisibilityMode="selected"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation" />
 
 </RelativeLayout>
