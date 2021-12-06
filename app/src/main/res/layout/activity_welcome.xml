@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/thuColor"
+    tools:context=".WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/photoWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:contentDescription="content_description_media"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/welcome_image" />
+
+    <ImageView
+        android:id="@+id/iconTHU"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@id/photoWelcome"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="-6dp"
+        android:contentDescription="content_description_media"
+        app:srcCompat="@drawable/thu_icon" />
+
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iconTHU"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text=" An App for Students by Students"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonLoginWelcome"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:text="Log In"
+        android:textColor="@color/thuColor"
+        android:textSize="27dp" />
+    <Button
+        android:id="@+id/buttonSignupWelcome"
+        android:layout_width="300dp"
+        android:textSize="27dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/white"
+        android:text="Sign Up"
+        android:textColor="@color/thuColor"
+        android:layout_below="@id/buttonLoginWelcome"/>
+    <TextView
+        android:id="@+id/guestTextClickable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Continue as Guest"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="27dp"
+        android:layout_below="@id/buttonSignupWelcome"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

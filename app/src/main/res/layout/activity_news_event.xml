@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsEventActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_below="@id/linearLayout1"
+        android:layout_above="@id/bottom_navigation"/>
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="0dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/newsFragmentbtn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/news_selected_button"
+            android:text="NEWS"
+            android:textColor="@color/white"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/eventsFragmentbtn"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/events_notselected_button"
+            android:text="EVENTS"
+            android:textColor="@color/thuColor"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -6,29 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".HochschuleInfoActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+
+
+    <LinearLayout
         android:id="@+id/my_hochschuleInfo_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
 
+        <!--header-->
         <TextView
+            android:id="@+id/homepage_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="THU"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/hochschuleMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/my_hochschuleInfo_toolbar"/>
+        android:layout_below="@+id/my_hochschuleInfo_toolbar"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp">
+
+    </ListView>
 
 </RelativeLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bone_white"
+        android:orientation="vertical">
+
+
+        <!-- title and search bar-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <!--header-->
+            <TextView
+                android:id="@+id/homepage_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/myfont2bold"
+                android:text="@string/app_name"
+                android:textColor="@color/off_black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/homepage_title"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/card_1"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="search..." />-->
+
+        </RelativeLayout>
+
+
+        <!--4 buttons-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <!--school-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_school"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/school" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:text="My \n Hochschule"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--city-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_city"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/city" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:gravity="center"
+                    android:text="My City"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--forum-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_forum"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/forum" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:gravity="center"
+                    android:text="Feed"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--news-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:elevation="10dp">
+
+                    <ImageView
+                        android:id="@+id/HP_news"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/news" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/myfont2"
+                    android:text="News and Events"
+                    android:textAlignment="center"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--scrollable events-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/myfont2"
+                    android:text="Latest Updates"
+                    android:textColor="@color/off_black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/latest_updates"
+                android:layout_width="match_parent"
+                android:layout_height="280dp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        android:elevation="50dp"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+</RelativeLayout>

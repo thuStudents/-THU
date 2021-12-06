@@ -1,41 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ApplyingActivity">
-    <androidx.appcompat.widget.Toolbar
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+    <LinearLayout
         android:id="@+id/my_applyInfo_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
 
+        <!--header-->
         <TextView
+            android:id="@+id/homepage_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Applying for a Bachelor's degree program with a foreign higher education entrance qualification"
-            android:textSize="15dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="How to Apply"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/my_applyInfo_toolbar"
+        android:layout_above="@id/bottom_navigation">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <TextView
         android:textSize="14dp"
         android:id="@+id/we_are"
         android:layout_width="400dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/my_applyInfo_toolbar"
         android:layout_alignParentStart="true"
         android:layout_marginStart="7dp"
         android:layout_marginTop="11dp"
@@ -150,5 +170,219 @@ Applications for the degree programme Computer Science (CTS) at Ulm University o
         \n🔵 If you have a foreign entrance qualification: recognition of your certificate by the Studienkolleg Konstanz \n🔵 Certificate of language proficiency in English (TOEFL, Cambridge Certificate, …), level B2 or higher \n🔵 Completed form regarding your level of German language skills \n🔵 Statement of Purpose (your motivation to study Computer Science at Ulm University of Applied Sciences) \n🔵 Curriculum Vitae \n🔵 Photocopy of passport (if applicable) "
         android:textSize="14dp"></TextView>
 
+            <TableLayout
+                android:id="@+id/feesTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/certificate"
+                android:layout_marginTop="20dp">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" International students course fees"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 1500"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" International students who are \n studying for a second degree"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 650"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/firstCell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" Ulm Students' Union fee, covers:\n
+Social contribution and Semester\n ticket basic payment"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="EUR 82"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" Administration costs for the\n State of
+Baden-Württemberg"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 70"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" Semester fee for Ulm Students' \nCouncil"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 15"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" One-off service payment"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 10"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" Total fees upon enrollment"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 177"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text=" Total fees upon re-registration"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cell_shape"
+                        android:padding="5dp"
+                        android:text="Eur 167"
+                        android:textAppearance="?android:attr/textAppearanceMedium">
+
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
-</ScrollView>

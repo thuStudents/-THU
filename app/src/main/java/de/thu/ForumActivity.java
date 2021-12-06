@@ -3,22 +3,16 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 
 public class ForumActivity extends AppCompatActivity {
-    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,27 +20,32 @@ public class ForumActivity extends AppCompatActivity {
         setContentView(R.layout.activity_forum);
 //            Toolbar toolbar=findViewById(R.id.toolbar);
 //    setSupportActionBar(toolbar);
-        bottomNav = findViewById(R.id.bottom_navigation);
-        bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.home:
-//                    Intent intent=new Intent(getApplicationContext(),DashboardActivity.class);
-//                    startActivity(intent);
-//                    finish();
-                        break;
-                    case R.id.add:
-                        Intent intent=new Intent(getApplicationContext(),PostActivity.class);
-                        startActivity(intent);
-                        finish();
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new AddButtonQue()).commit();
-                        break;
+                switch(item.getItemId()){
                     case R.id.find:
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1,new FindFriend()).commit();
-                        break;
+                        startActivity(new Intent(getApplicationContext()
+                                , Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
                 }
-                return true;
+
+                return false;
             }
         });
 

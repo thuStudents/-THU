@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimetableActivity">
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/timetableToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/header_bg">
+
+        <!--header-->
+        <TextView
+            android:id="@+id/homepage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/myfont2"
+            android:text="My Timetable"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/timetableToolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--        MONDAY-->
+        <LinearLayout
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/monday_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/monday" />
+
+                <TextView
+                    android:id="@+id/mondayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/monday_image"
+                    android:fontFamily="@font/myfont2"
+                    android:text="Monday"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/times1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mondayText"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/monday_image"
+                    android:fontFamily="@font/myfont2"
+                    android:text="8:00 - 9:30\n\n9:50 - 11:20\n\n11:30 - 13:00\n\n14:00 - 15:30\n\n15:45 - 17:15"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/mondayClass1"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/mondayText"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times1"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/mondayClass2"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/mondayClass1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times1"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/mondayClass3"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/mondayClass2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times1"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/mondayClass4"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/mondayClass3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times1"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/mondayClass5"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/mondayClass4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times1"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--        Tuesday-->
+        <LinearLayout
+            android:id="@+id/tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monday"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/tuesday_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tuesday" />
+
+                <TextView
+                    android:id="@+id/tuesdayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/tuesday_image"
+                    android:fontFamily="@font/myfont2"
+                    android:text="Tuesday"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/times2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tuesdayText"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/tuesday_image"
+                    android:fontFamily="@font/myfont2"
+                    android:text="8:00 - 9:30\n\n9:50 - 11:20\n\n11:30 - 13:00\n\n14:00 - 15:30\n\n15:45 - 17:15"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tuesdayClass1"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/tuesdayText"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times2"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/tuesdayClass2"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/tuesdayClass1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times2"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/tuesdayClass3"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/tuesdayClass2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times2"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/tuesdayClass4"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/tuesdayClass3"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times2"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/tuesdayClass5"
+                    android:layout_width="100dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/tuesdayClass4"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/times2"
+                    android:background="@drawable/edit_text_box"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+            <!--        Wednesday-->
+            <LinearLayout
+                android:id="@+id/wednesday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tuesday"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/wednesday_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/wednesday" />
+
+                    <TextView
+                        android:id="@+id/wednesdayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/wednesday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Wednesday"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/times3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/wednesdayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/wednesday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="8:00 - 9:30\n\n9:50 - 11:20\n\n11:30 - 13:00\n\n14:00 - 15:30\n\n15:45 - 17:15"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/wednesdayClass1"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/wednesdayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times3"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/wednesdayClass2"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/wednesdayClass1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times3"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/wednesdayClass3"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/wednesdayClass2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times3"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/wednesdayClass4"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/wednesdayClass3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times3"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/wednesdayClass5"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/wednesdayClass4"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times3"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--        Thursday-->
+            <LinearLayout
+                android:id="@+id/thursday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wednesday"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/thursday_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/thursday" />
+
+                    <TextView
+                        android:id="@+id/thursdayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/thursday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Thursday"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/times4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thursdayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/thursday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="8:00 - 9:30\n\n9:50 - 11:20\n\n11:30 - 13:00\n\n14:00 - 15:30\n\n15:45 - 17:15"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/thursdayClass1"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/thursdayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times4"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/thursdayClass2"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/thursdayClass1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times4"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/thursdayClass3"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/thursdayClass2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times4"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/thursdayClass4"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/thursdayClass3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times4"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/thursdayClass5"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/thursdayClass4"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times4"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--        Friday-->
+            <LinearLayout
+                android:id="@+id/friday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thursday"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/friday_image"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/friday" />
+
+                    <TextView
+                        android:id="@+id/fridayText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/friday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Friday"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/times5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fridayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/friday_image"
+                        android:fontFamily="@font/myfont2"
+                        android:text="8:00 - 9:30\n\n9:50 - 11:20\n\n11:30 - 13:00\n\n14:00 - 15:30\n\n15:45 - 17:15"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fridayClass1"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/fridayText"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times5"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/fridayClass2"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/fridayClass1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times5"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/fridayClass3"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/fridayClass2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times5"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/fridayClass4"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/fridayClass3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times5"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/fridayClass5"
+                        android:layout_width="100dp"
+                        android:layout_height="17dp"
+                        android:layout_below="@id/fridayClass4"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/times5"
+                        android:background="@drawable/edit_text_box"
+                        android:fontFamily="@font/myfont2"
+                        android:textSize="10sp"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

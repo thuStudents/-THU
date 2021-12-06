@@ -4,25 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NightLifeActivity">
+    tools:context=".ulm.transport.TransportActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/night_life_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/parent"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Night Life in Ulm"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nightlife_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="7dp"
+                android:text="Contact Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nightlife_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nightlife_name"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:text="Contact Email"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/nightlife_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/nightlife_des"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

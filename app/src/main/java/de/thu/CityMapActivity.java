@@ -1,8 +1,10 @@
 package de.thu;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import de.thu.R;
 
 public class CityMapActivity extends AppCompatActivity {
 

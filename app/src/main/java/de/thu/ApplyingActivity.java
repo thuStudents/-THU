@@ -1,8 +1,14 @@
 package de.thu;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class ApplyingActivity extends AppCompatActivity {
 
@@ -12,6 +18,34 @@ public class ApplyingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_applying);
 //        TextView txt = findViewById(R.id.certificate);
 //        txt.setMovementMethod(new ScrollingMovementMethod());
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.find:
+                        startActivity(new Intent(getApplicationContext()
+                                , Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
     }
 
 }

@@ -3,10 +3,10 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
-import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -29,9 +28,6 @@ public class HomeActivity extends AppCompatActivity {
     RecyclerView event_rec_view;
     AutoScrollAdapter autoScrollAdapter;
     LinearLayoutManager layoutManager;
-    BottomNavigationMenuView bottomNavigationView;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 startActivity(new Intent(getApplicationContext()
-                        , HochschuleGeneralActivity.class));
+                        , HochschuleInfoActivity.class));
                 overridePendingTransition(0,0);
 
             }});
@@ -100,11 +96,9 @@ public class HomeActivity extends AppCompatActivity {
 
         newsEventsImageView.setOnClickListener(new OnClickListener(){
             public void onClick(View view) {
-
-                Toast.makeText(HomeActivity.this, "In development",Toast.LENGTH_LONG).show();
-/*                startActivity(new Intent(getApplicationContext()
-                        , HochschuleGeneralActivity.class));
-                overridePendingTransition(0,0);*/
+                startActivity(new Intent(getApplicationContext()
+                        , NewsEventActivity.class));
+                overridePendingTransition(0,0);
 
             }});
 /*        cityInfoImageView.setOnClickListener(this);

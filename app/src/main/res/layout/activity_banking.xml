@@ -4,25 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BankingActivity">
+    android:background="@color/bone_white"
+    tools:context=".ulm.banking.BankingActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/banking_toolbar"
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
 
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/bank"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:background="@drawable/header_bg">
+
+        <!--header-->
         <TextView
+            android:id="@+id/homepage_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Banking"
-            android:textSize="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Find the best bank \nfor you!"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
 
-</RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bank"
+        android:layout_above="@+id/bottom_navigation"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+

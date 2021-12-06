@@ -1,13 +1,18 @@
 package de.thu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
@@ -18,16 +23,44 @@ public class HochschuleInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hochschule_info);
+
         hochschuleMenu = findViewById(R.id.hochschuleMenu);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.find:
+                        startActivity(new Intent(getApplicationContext()
+                                , Profile.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.add:
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
 
         ArrayList<String> hsumenuList = new ArrayList<>();
 
-        hsumenuList.add("THU");
         hsumenuList.add("My University");
+        hsumenuList.add("My Studies");
 
         ArrayAdapter<String> hsumenuAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_list_item_1,
+                R.layout.list_element_layout,
                 hsumenuList
         );
 
@@ -43,13 +76,15 @@ public class HochschuleInfoActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 1: // my uni
-//                        intent = new Intent(HochschuleInformationActivity.this, ApplyingActivity.class);
-//                        startActivity(intent);
+                        intent = new Intent(HochschuleInfoActivity.this, MyStudiesActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         break;
                 }
             }
         });
+
+
     }
 }
