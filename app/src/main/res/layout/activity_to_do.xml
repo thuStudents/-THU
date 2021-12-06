@@ -48,6 +48,11 @@
         android:background="@drawable/add_task_button"
         android:clickable="true"
         tools:ignore="SpeakableTextPresentCheck" />
+    <FrameLayout
+        android:id="@+id/frameLayoutToDo"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_above="@id/bottom_navigation"/>
 
 
 

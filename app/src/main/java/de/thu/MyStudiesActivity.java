@@ -77,9 +77,9 @@ public class MyStudiesActivity extends AppCompatActivity {
 //                        intent = new Intent(MyStudiesActivity.this, HochschuleGeneralActivity.class);
 //                        startActivity(intent);
                         break;
-                    case 1: // my uni
-//                        intent = new Intent(MyStudiesActivity.this, MyStudiesActivity.class);
-//                        startActivity(intent);
+                    case 1: // my to do
+                        intent = new Intent(MyStudiesActivity.this, ToDoActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         break;

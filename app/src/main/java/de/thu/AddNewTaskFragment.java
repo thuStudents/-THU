@@ -17,6 +17,8 @@ public class AddNewTaskFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_cafeteria, container, false);
 
+
+
         return view;
     }
 }
