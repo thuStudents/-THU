@@ -46,7 +46,6 @@ public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.privb_name.setText(resBuild.get(position).getPrivateBName());
-        holder.privb_des.setText(resBuild.get(position).getPrivateBDes());
         holder.privb_image.setImageResource(resBuild.get(position).getPrivateBImage());
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +82,6 @@ public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             privb_name=itemView.findViewById(R.id.privb_name);
-            privb_des = itemView.findViewById(R.id.privb_des);
             privb_image = itemView.findViewById(R.id.privb_image);
             parent = itemView.findViewById(R.id.parent);
 

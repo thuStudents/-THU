@@ -72,11 +72,11 @@ public class CafeActivity extends AppCompatActivity {
 
         cafe.setHasFixedSize(true);
 
-        cafeLocations.add(new CafeItems("Coffee Fellows", "56", R.drawable.residences));
-        cafeLocations.add(new CafeItems("Starbucks", "6535", R.drawable.restaurants));
-        cafeLocations.add(new CafeItems("Cafe Largo", "423756239562938", R.drawable.cinemas));
-        cafeLocations.add(new CafeItems("Cafe Stella", "423756239562938", R.drawable.cinemas));
-        cafeLocations.add(new CafeItems("Confiserie Cafe Tröglen", "423756239562938", R.drawable.cinemas));
+        cafeLocations.add(new CafeItems("Coffee Fellows", "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", R.drawable.coffee_fellows, "Neue Str. 85, 89073 Ulm", "7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n9:00am-9:00pm"));
+        cafeLocations.add(new CafeItems("Starbucks", "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", R.drawable.starbucks, "Münsterplatz 16, 89073 Ulm", "9:00am-9:00pm \n9:00am-9:00pm \n9:00am-9:00pm \n9:00am-9:00pm \n9:00am-9:00pm \n9:00am-9:00pm \n9:00am-9:00pm"));
+        cafeLocations.add(new CafeItems("Cafe Largo", "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", R.drawable.cafe_largo, "Breite G. 5, 89073 Ulm", "8:00am-1:00am \n8:00am-1:00am \n8:00am-1:00am \n8:00am-1:00am \n8:00am-1:00am \n8:00am-1:00am \nClosed"));
+        cafeLocations.add(new CafeItems("Cafe Stella", "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", R.drawable.cafe_stella, "Dreiköniggasse 11, 89073 Ulm", "9:00am-1:00am \n9:00am-1:00am \n9:00am-1:00am \n9:00am-1:00am \n9:00am-1:00am \n9:00am-1:00am \nClosed"));
+        cafeLocations.add(new CafeItems("Confiserie Cafe Tröglen", "Monday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday", R.drawable.cofiserie, " Münsterplatz 5, 89073 Ulm", "7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \n7:30am-9:00pm \nClosed"));
 
     }
 

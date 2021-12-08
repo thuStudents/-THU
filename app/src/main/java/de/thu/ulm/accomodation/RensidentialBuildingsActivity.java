@@ -32,11 +32,11 @@ public class RensidentialBuildingsActivity extends AppCompatActivity {
         resBRecView =findViewById(R.id.RecView);
 
         ArrayList<ResidentialBuildingsItems> res_elements = new ArrayList<>();
-        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", "th@email.com", R.drawable.gutenbergstr ));
-        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", "as@email.com", R.drawable.frauensteige));
-        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße 1", "rm@email.com",R.drawable.heidenheimer1));
-        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße 2", "rm@email.com",R.drawable.heidenheimer2));
-        res_elements.add(new ResidentialBuildingsItems("Upper West Side", "rm@email.com",R.drawable.uppperwestside));
+        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", R.drawable.gutenbergstr ));
+        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", R.drawable.frauensteige));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n1", R.drawable.heidenheimer1));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n2", R.drawable.heidenheimer2));
+        res_elements.add(new ResidentialBuildingsItems("Upper West Side", R.drawable.uppperwestside));
 
         ResidentialBAdapter adapter=new ResidentialBAdapter(this);
         adapter.setContacts(res_elements);

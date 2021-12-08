@@ -38,6 +38,8 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
         holder.cafe_name.setText(cafeLocations.get(position).getCafe_name());
         holder.cafe_time.setText(cafeLocations.get(position).getCafe_time());
         holder.cafe_image.setImageResource(cafeLocations.get(position).getCafe_image());
+        holder.cafe_address.setText(cafeLocations.get(position).getCafe_address());
+        holder.cafe_t.setText(cafeLocations.get(position).getCafe_t());
 
         boolean isExpanded = cafeLocations.get(position).isExpanded_c();
         holder.expandableLayout_c.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
@@ -52,7 +54,7 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
 
     public class CafeViewHolder extends RecyclerView.ViewHolder {
 
-        TextView cafe_name, cafe_time;
+        TextView cafe_name, cafe_time, cafe_address, cafe_t;
         ImageView cafe_image;
         LinearLayout linearLayout_c;
         RelativeLayout expandableLayout_c;
@@ -64,6 +66,8 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
             cafe_name = itemView.findViewById(R.id.cafe_name);
             cafe_time = itemView.findViewById(R.id.cafe_time);
             cafe_image = itemView.findViewById(R.id.cafe_image);
+            cafe_address = itemView.findViewById(R.id.cafe_address);
+            cafe_t = itemView.findViewById(R.id.cafe_t);
 
 
             linearLayout_c = itemView.findViewById(R.id.linear_layout2);

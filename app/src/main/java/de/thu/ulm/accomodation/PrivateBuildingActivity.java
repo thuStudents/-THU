@@ -40,9 +40,9 @@ public class PrivateBuildingActivity extends AppCompatActivity {
         privateBRecView =findViewById(R.id.RecView);
 
         ArrayList<PrivateBItems> contacts = new ArrayList<>();
-        contacts.add(new PrivateBItems("ILive Campus Village", "lit lit", R.drawable.ilive));
-        contacts.add(new PrivateBItems("UniApart", "expencive lit", R.drawable.uniapart));
-        contacts.add(new PrivateBItems("Links from Studierendenwerk", "lit",R.drawable.studierendenwerk));
+        contacts.add(new PrivateBItems("ILive Campus Village", R.drawable.ilive));
+        contacts.add(new PrivateBItems("UniApart", R.drawable.uniapart));
+        contacts.add(new PrivateBItems("Links from Studierendenwerk", R.drawable.studierendenwerk));
 
         PrivateBAdapter adapter=new PrivateBAdapter(this);
         adapter.setContacts(contacts);

@@ -2,12 +2,10 @@ package de.thu.ulm.accomodation;
 
 public class PrivateBItems {
     private String privateBName;
-    private String privateBDes;
     private int privateBImage;
 
-    public PrivateBItems(String nameP, String desP, int imageP) {
+    public PrivateBItems(String nameP, int imageP) {
         this.privateBName = nameP;
-        this.privateBDes = desP;
         this.privateBImage = imageP;
     }
 
@@ -17,14 +15,6 @@ public class PrivateBItems {
 
     public void setPrivateBName(String privateBName) {
         this.privateBName = privateBName;
-    }
-
-    public String getPrivateBDes() {
-        return privateBDes;
-    }
-
-    public void setPrivateBDes(String privateBDes) {
-        this.privateBDes = privateBDes;
     }
 
     public int getPrivateBImage() {

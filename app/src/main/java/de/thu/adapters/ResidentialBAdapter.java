@@ -46,7 +46,6 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.resb_name.setText(resBuild.get(position).getResidentialbName());
-        holder.resb_des.setText(resBuild.get(position).getResidentialbDesc());
         holder.resb_image.setImageResource(resBuild.get(position).getResidentialBImage());
 
 
@@ -54,8 +53,10 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, resBuild.get(position).getResidentialbName() + " Selected", Toast.LENGTH_SHORT).show();
+
             }
         });
+
 
 
 
@@ -85,7 +86,6 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             resb_name=itemView.findViewById(R.id.resb_name);
-            resb_des = itemView.findViewById(R.id.resb_des);
             resb_image = itemView.findViewById(R.id.resb_image);
             parent = itemView.findViewById(R.id.parent);
 
