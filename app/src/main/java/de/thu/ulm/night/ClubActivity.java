@@ -3,10 +3,11 @@ package de.thu.ulm.night;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,19 +36,23 @@ public class ClubActivity extends AppCompatActivity {
         //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
         //textView.setText("Clubs");
 
+        TextView title = findViewById(R.id.title);
+        title.setText("Clubs");
+
         ArrayList<ClubItems> funitem = new ArrayList<>();
-        funitem.add(new ClubItems("Rules", "this place is cool", R.drawable.rulesclub));
-        funitem.add(new ClubItems("Theatro", "this place is cool", R.drawable.theatroclub));
-        funitem.add(new ClubItems("Gleis44", "this place is cool", R.drawable.gleis44club));
-        funitem.add(new ClubItems("Cabaret Club Eden", "this place is cool", R.drawable.edenclub));
-        funitem.add(new ClubItems("M-Club", "this place is cool", R.drawable.mclub));
+        funitem.add(new ClubItems("Rules" ,R.drawable.rulesclub, "this is an address", "time"));
+        funitem.add(new ClubItems("Theatro", R.drawable.theatroclub, "this is an address", "time"));
+        funitem.add(new ClubItems("Gleis44", R.drawable.gleis44club, "this is an address", "time"));
+        funitem.add(new ClubItems("Cabaret Club Eden", R.drawable.edenclub, "this is an address", "time"));
+        funitem.add(new ClubItems("M-Club", R.drawable.mclub, "this is an address", "time"));
+
 
         ClubAdapter adapter=new ClubAdapter(this);
         adapter.setContacts(funitem);
 
         funRecView.setAdapter(adapter);
-        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        funRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        funRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 

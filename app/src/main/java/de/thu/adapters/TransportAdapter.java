@@ -6,8 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -20,7 +21,7 @@ import de.thu.ulm.transport.TransportItems;
 
 public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.ViewHolder> {
 
-    private ArrayList<TransportItems> fun = new ArrayList<>();
+    private ArrayList<TransportItems> transportLocations = new ArrayList<>();
 
     private Context context;
 
@@ -45,15 +46,12 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.transport_name.setText(fun.get(position).getTransportName());
-        holder.transport_des.setText(fun.get(position).getTransportDes());
-        holder.transport_image.setImageResource(fun.get(position).getTransportImage());
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, fun.get(position).getTransportName() + " Selected", Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.transport_name.setText(transportLocations.get(position).getTransportName());
+        holder.transport_des.setText(transportLocations.get(position).getTransportDes());
+        holder.transport_image.setImageResource(transportLocations.get(position).getTransportImage());
+
+        boolean isExpanded = transportLocations.get(position).isExtended_t();
+        holder.expandableLayout_transport.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
 
 
@@ -63,11 +61,11 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
     //return the count of different items in our adapter
     @Override
     public int getItemCount() {
-        return  fun.size();
+        return  transportLocations.size();
     }
 
     public void setContacts(ArrayList<TransportItems> contacts) {
-        this.fun = contacts;
+        this.transportLocations = contacts;
         notifyDataSetChanged();
     }
 
@@ -76,6 +74,8 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
 
         private TextView transport_name, transport_des;
         private ImageView transport_image;
+        private LinearLayout linearLayout_transport;
+        private RelativeLayout expandableLayout_transport;
 
 
         private CardView parent;
@@ -87,6 +87,18 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
             transport_image = itemView.findViewById(R.id.transport_image);
 
             parent = itemView.findViewById(R.id.parent);
+
+            linearLayout_transport = itemView.findViewById(R.id.linear_layout3);
+            expandableLayout_transport = itemView.findViewById(R.id.expandale_transport);
+
+            linearLayout_transport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TransportItems transportItems = transportLocations.get(getAdapterPosition());
+                    transportItems.setExtended_t(!transportItems.isExtended_t());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
 
         }
     }

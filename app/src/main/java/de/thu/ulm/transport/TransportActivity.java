@@ -6,7 +6,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -61,16 +61,17 @@ public class TransportActivity extends AppCompatActivity {
         transportBRecView =findViewById(R.id.transport_recview);
 
         ArrayList<TransportItems> means = new ArrayList<>();
-        means.add(new TransportItems("Buses and Trams", "Discover Ulm thanks to it's developed public transport system", R.drawable.bus));
+        means.add(new TransportItems("Semester Tickets", "dufdsl fauhflafel fehoifeh eifhq \n dwqihf fqfuh fwquh wqifhq \n wdudwqui ", R.drawable.tram));
+        means.add(new TransportItems("Buses", "Discover Ulm thanks to it's developed public transport system", R.drawable.bus));
+        means.add(new TransportItems("Trams", "Discover Ulm thanks to it's developed public transport system", R.drawable.bus));
         means.add(new TransportItems("Trains", "Take advantage of the connections to many destinations in and outside Germany", R.drawable.train));
-        //means.add(new TransportItems("Trams", "Get to your destinations fast thanks to Ulms' tram system", R.drawable.tram));
 
 
         TransportAdapter adapter=new TransportAdapter(this);
         adapter.setContacts(means);
 
         transportBRecView.setAdapter(adapter);
-        //transportBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        transportBRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        transportBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //transportBRecView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }

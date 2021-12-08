@@ -66,7 +66,7 @@
             android:background="@drawable/card_3"
             android:elevation="8dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -84,6 +84,7 @@
                 android:id="@+id/private_rooms_image"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
+                android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/shared_room" />
 
@@ -101,7 +102,7 @@
             android:background="@drawable/card_3"
             android:elevation="8dp"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <TextView
                 android:layout_width="wrap_content"

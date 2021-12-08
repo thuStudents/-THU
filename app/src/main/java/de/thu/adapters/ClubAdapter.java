@@ -6,8 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -15,12 +16,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.ulm.night.ClubItems;
 import de.thu.R;
+import de.thu.ulm.night.ClubItems;
 
 public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 
-    private ArrayList<ClubItems> fun = new ArrayList<>();
+    private ArrayList<ClubItems> clubLocations = new ArrayList<>();
 
     private Context context;
 
@@ -45,17 +46,14 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.fun_name.setText(fun.get(position).getFunName());
-        holder.fun_des.setText(fun.get(position).getFunDes());
-        holder.fun_image.setImageResource(fun.get(position).getFunImage());
-        holder.parent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, fun.get(position).getFunName() + " Selected", Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.fun_name.setText(clubLocations.get(position).getFunName());
+        holder.fun_image.setImageResource(clubLocations.get(position).getFunImage());
+        holder.fun_address.setText(clubLocations.get(position).getFunAddress());
+        holder.fun_time.setText(clubLocations.get(position).getFunTime());
 
 
+        boolean isExpanded = clubLocations.get(position).isExtendable_club();
+        holder.extendableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
@@ -63,19 +61,21 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
     //return the count of different items in our adapter
     @Override
     public int getItemCount() {
-        return  fun.size();
+        return  clubLocations.size();
     }
 
     public void setContacts(ArrayList<ClubItems> contacts) {
-        this.fun = contacts;
+        this.clubLocations = contacts;
         notifyDataSetChanged();
     }
 
     //inner class needed for generating View objects
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView fun_name, fun_des;
+        private TextView fun_name, fun_address, fun_time;
         private ImageView fun_image;
+        private LinearLayout linearLayout;
+        private RelativeLayout extendableLayout;
 
 
         private CardView parent;
@@ -83,9 +83,24 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fun_name =itemView.findViewById(R.id.fun_name);
-            fun_des = itemView.findViewById(R.id.fun_des);
             fun_image = itemView.findViewById(R.id.fun_image);
+            fun_address = itemView.findViewById(R.id.club_address);
+            fun_time = itemView.findViewById(R.id.club_time);
+
             parent = itemView.findViewById(R.id.parent);
+
+            linearLayout = itemView.findViewById(R.id.linear_layout4);
+            extendableLayout = itemView.findViewById(R.id.extendable_club);
+
+
+            linearLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ClubItems clubItems = clubLocations.get(getAdapterPosition());
+                    clubItems.setExtendable_club(!clubItems.isExtendable_club());
+                    notifyItemChanged(getAdapterPosition());
+                }
+            });
 
         }
     }
