@@ -62,9 +62,6 @@
             android:name=".OfficesActivity"
             android:exported="false" />
         <activity
-            android:name=".ImportantDatesActivity"
-            android:exported="false" />
-        <activity
             android:name=".FeesActivity"
             android:exported="false" />
         <activity

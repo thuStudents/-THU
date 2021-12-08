@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
@@ -17,7 +18,7 @@ public class EventsFragment extends Fragment {
 
      View view;
      Calendar c;
-    CalendarView cv;
+     CalendarView cv;
      TextView event;
 
 
@@ -31,37 +32,16 @@ public class EventsFragment extends Fragment {
         c = Calendar.getInstance();
         cv = (CalendarView) view.findViewById(R.id.calendarView);
         cv.setMinDate(c.getTimeInMillis());
-//        com.applandeo.materialcalendarview.CalendarView calendarView = view.findViewById(R.id.calendarView);
-//       CalendarView calendarViewC = view.findViewById(R.id.calendarView);
-//
-//        List<EventDay> events = new ArrayList<>();
-//        c = Calendar.getInstance();
-//        events.add(new EventDay(c, R.drawable.sample_icon));
-//        Calendar c1 = Calendar.getInstance();
-//        c1.add(Calendar.DATE,18);
-//        events.add(new EventDay(c1, R.drawable.sample_icon));
-//        calendarView.setEvents(events);
-////        List<Calendar> calendars = new ArrayList<>();
-////        calendarView.setHighlightedDays(calendars);
-//        Calendar c = Calendar.getInstance();
-//        int year = c.get(Calendar.YEAR);
-//        int month = c.get(Calendar.MONTH);
-//        int day = c.get(Calendar.DAY_OF_MONTH);
-//        setEventText(year, month, day);
+        setEventText(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE));
 
-//        ((CalendarView) calendarView).setOnDateChangeListener(new OnDateChangeListener() {
-//
-//            @Override
-//            public void onSelectedDayChange(CalendarView view, int year, int month,
-//                                            int dayOfMonth) {
-//                Intent k = new Intent(GlavnaAktivnost.this, DatumDetalji.class);
-//                k.putExtra("godina", year);
-//                k.putExtra("mesec", month);
-//                k.putExtra("dan", dayOfMonth);
-//                startActivity(k);
-//
-//            }
-//        });
+        cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
+                setEventText(year, month, day);
+            }
+        });
+
+
         return view;
     }
 
@@ -112,3 +92,35 @@ public class EventsFragment extends Fragment {
 
 }
 
+
+//        com.applandeo.materialcalendarview.CalendarView calendarView = view.findViewById(R.id.calendarView);
+//       CalendarView calendarViewC = view.findViewById(R.id.calendarView);
+//
+//        List<EventDay> events = new ArrayList<>();
+//        c = Calendar.getInstance();
+//        events.add(new EventDay(c, R.drawable.sample_icon));
+//        Calendar c1 = Calendar.getInstance();
+//        c1.add(Calendar.DATE,18);
+//        events.add(new EventDay(c1, R.drawable.sample_icon));
+//        calendarView.setEvents(events);
+////        List<Calendar> calendars = new ArrayList<>();
+////        calendarView.setHighlightedDays(calendars);
+//        Calendar c = Calendar.getInstance();
+//        int year = c.get(Calendar.YEAR);
+//        int month = c.get(Calendar.MONTH);
+//        int day = c.get(Calendar.DAY_OF_MONTH);
+//        setEventText(year, month, day);
+
+//        ((CalendarView) calendarView).setOnDateChangeListener(new OnDateChangeListener() {
+//
+//            @Override
+//            public void onSelectedDayChange(CalendarView view, int year, int month,
+//                                            int dayOfMonth) {
+//                Intent k = new Intent(GlavnaAktivnost.this, DatumDetalji.class);
+//                k.putExtra("godina", year);
+//                k.putExtra("mesec", month);
+//                k.putExtra("dan", dayOfMonth);
+//                startActivity(k);
+//
+//            }
+//        });
