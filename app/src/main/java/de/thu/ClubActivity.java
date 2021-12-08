@@ -39,7 +39,7 @@ public class ClubActivity extends AppCompatActivity {
         funitem.add(new ClubItems("M-Club", "this place is cool", R.drawable.mclub));
 
         ClubAdapter adapter=new ClubAdapter(this);
-//        adapter.setContacts(funitem);
+        adapter.setContacts(funitem);
 
         funRecView.setAdapter(adapter);
         //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

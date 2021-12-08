@@ -16,8 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.ulm.night.ClubActivity;
-import de.thu.ulm.night.NightLifeItems;
+import de.thu.ClubActivity;
+import de.thu.NightLifeItems;
 import de.thu.R;
 
 public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.ViewHolder> {
@@ -31,6 +31,9 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
     }
 
     public NightLifeAdapter() {
+
+
+
     }
 
     //create view holder

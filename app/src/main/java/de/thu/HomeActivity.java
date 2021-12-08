@@ -17,8 +17,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-import de.thu.ulm.UlmInformationActivity;
-
 public class HomeActivity extends AppCompatActivity {
 
     ImageView home, add, find;
@@ -75,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
-                        , HochschuleGeneralActivity.class));
+                        , HochschuleInfoActivity.class));
                 overridePendingTransition(0,0);
 
             }
@@ -104,8 +102,9 @@ public class HomeActivity extends AppCompatActivity {
         newsEventsImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, "News and Events", Toast.LENGTH_SHORT).show();
-
+                startActivity(new Intent(getApplicationContext()
+                        , NewsEventActivity.class));
+                overridePendingTransition(0,0);
             }
         });
 

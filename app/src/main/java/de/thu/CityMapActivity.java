@@ -1,12 +1,8 @@
-package de.thu.ulm.map;
-
-import android.os.Bundle;
+package de.thu;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import de.thu.R;
 
 public class CityMapActivity extends AppCompatActivity {
 

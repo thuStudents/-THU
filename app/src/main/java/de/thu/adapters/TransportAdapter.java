@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.thu.R;
-import de.thu.ulm.transport.TransportItems;
+import de.thu.TransportItems;
 
 public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.ViewHolder> {
 

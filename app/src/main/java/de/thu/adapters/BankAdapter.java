@@ -1,4 +1,4 @@
-package de.thu.ulm.banking;
+package de.thu.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.thu.BankItems;
 import de.thu.R;
 
 public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder> {

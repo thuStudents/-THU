@@ -1,4 +1,4 @@
-package de.thu.ulm.cafe;
+package de.thu;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-
-import de.thu.R;
 
 public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder> {
 

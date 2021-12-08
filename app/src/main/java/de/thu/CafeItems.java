@@ -1,4 +1,4 @@
-package de.thu.ulm.cafe;
+package de.thu;
 
 public class CafeItems {
 
