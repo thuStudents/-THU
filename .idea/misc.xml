@@ -27,9 +27,12 @@
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_ulm_information.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_list.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_row.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bar_items.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bottommeow.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/cafe_row.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/changepassword.xml" value="0.1796875" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/cinema_items.xml" value="0.1" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/city_items.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/club_items.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/contacts_list_item.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/dashboard.xml" value="0.1" />
@@ -48,6 +51,7 @@
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview_residentialb.xml" value="0.22" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residential_item.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residentialb_items.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/restaurant_items.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/test.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/testing.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/toolbar_top.xml" value="0.1796875" />

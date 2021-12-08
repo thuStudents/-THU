@@ -1,4 +1,4 @@
-package de.thu.ulm.night;
+package de.thu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,42 +15,38 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-import de.thu.HomeActivity;
-import de.thu.PostActivity;
-import de.thu.Profile;
-import de.thu.R;
-import de.thu.adapters.ClubAdapter;
+public class RestaurantActivity extends AppCompatActivity {
 
-public class ClubActivity extends AppCompatActivity {
-
-    private RecyclerView funRecView;
+    private RecyclerView restaurantRecView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview);
 
-        funRecView =findViewById(R.id.RecView);
+        restaurantRecView =findViewById(R.id.RecView);
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
         //textView.setText("Clubs");
 
         TextView title = findViewById(R.id.title);
-        title.setText("Clubs");
+        title.setText("Restaurants");
 
-        ArrayList<ClubItems> funitem = new ArrayList<>();
-        funitem.add(new ClubItems("Rules" ,R.drawable.rulesclub, " Frauenstraße 29, 89073 Ulm"));
-        funitem.add(new ClubItems("Theatro", R.drawable.theatroclub, "Hirschstraße 12/1, 89073 Ulm"));
-        funitem.add(new ClubItems("Gleis44", R.drawable.gleis44club, "Schillerstraße 44, 89077 Ulm"));
-        funitem.add(new ClubItems("Cabaret Club Eden", R.drawable.edenclub, "Karlstraße 71, 89073 Ulm"));
-        funitem.add(new ClubItems("M-Club", R.drawable.mclub, "Lautenberg 1, 89073 Ulm"));
+        ArrayList<RestaurantItems> restaurantItems = new ArrayList<>();
+        restaurantItems.add(new RestaurantItems("Big City Lounge", "Marktpl. 18, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("X-Lounge", "Am Lederhof 1, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("Billbar", "Hans-und-Sophie-Scholl-Platz 1, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("Kelly's Irish Pub", "Lautenberg 1, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("Sahara", "Glöcklerstraße 4, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("Shibar", "Frauenstraße 23, 89073 Ulm",R.drawable.rulesclub));
+        restaurantItems.add(new RestaurantItems("Sassy Shisha & Cocktail Bar", "Neue Str. 43, 89073 Ulm",R.drawable.rulesclub));
 
-        ClubAdapter adapter=new ClubAdapter(this);
-        adapter.setContacts(funitem);
+        RestaurantAdapter adapter=new RestaurantAdapter(this);
+        adapter.setContacts(restaurantItems);
 
-        funRecView.setAdapter(adapter);
-        funRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        restaurantRecView.setAdapter(adapter);
+        restaurantRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

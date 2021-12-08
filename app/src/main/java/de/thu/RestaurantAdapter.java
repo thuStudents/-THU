@@ -1,4 +1,4 @@
-package de.thu.adapters;
+package de.thu;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -16,21 +16,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.R;
-import de.thu.ulm.night.ClubItems;
+public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.ViewHolder> {
 
-public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
-
-    private ArrayList<ClubItems> clubLocations = new ArrayList<>();
+    private ArrayList<RestaurantItems> restaurantLocations = new ArrayList<>();
 
     private Context context;
 
-    public ClubAdapter(Context context) {
+    public RestaurantAdapter(Context context) {
         this.context = context;
     }
 
-    public ClubAdapter() {
-    }
+
 
     //create view holder
     @NonNull
@@ -39,18 +35,18 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
         //create view obj
         //view group parent of all the layout files, parent of rel layout, const layout... -> tells where we want to attach the view obj
         //false cause redundancy i guess
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.club_items, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.restaurant_items, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-        holder.fun_name.setText(clubLocations.get(position).getFunName());
-        holder.fun_image.setImageResource(clubLocations.get(position).getFunImage());
-        holder.fun_address.setText(clubLocations.get(position).getFunAddress());
+        holder.restaurant_name.setText(restaurantLocations.get(position).getRestaurant_name());
+        holder.restaurant_image.setImageResource(restaurantLocations.get(position).getRestaurant_image());
+        holder.restaurant_address.setText(restaurantLocations.get(position).getRestaurant_address());
 
-        boolean isExpanded = clubLocations.get(position).isExtendable_club();
+        boolean isExpanded = restaurantLocations.get(position).isExtendable_restaurant();
         holder.extendableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
@@ -59,42 +55,42 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
     //return the count of different items in our adapter
     @Override
     public int getItemCount() {
-        return  clubLocations.size();
+        return  restaurantLocations.size();
     }
 
-    public void setContacts(ArrayList<ClubItems> contacts) {
-        this.clubLocations = contacts;
+    public void setContacts(ArrayList<RestaurantItems> contacts) {
+        this.restaurantLocations = contacts;
         notifyDataSetChanged();
     }
 
     //inner class needed for generating View objects
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView fun_name, fun_address;
-        private ImageView fun_image;
+        private TextView restaurant_name, restaurant_address;
+        private ImageView restaurant_image;
         private LinearLayout linearLayout;
         private RelativeLayout extendableLayout;
 
 
         private CardView parent;
-        
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            fun_name =itemView.findViewById(R.id.fun_name);
-            fun_image = itemView.findViewById(R.id.fun_image);
-            fun_address = itemView.findViewById(R.id.club_address);
+            restaurant_name =itemView.findViewById(R.id.restaurants_name);
+            restaurant_image = itemView.findViewById(R.id.restaurants_image);
+            restaurant_address = itemView.findViewById(R.id.restaurants_address);
 
             parent = itemView.findViewById(R.id.parent);
 
-            linearLayout = itemView.findViewById(R.id.linear_layout4);
-            extendableLayout = itemView.findViewById(R.id.extendable_club);
+            linearLayout = itemView.findViewById(R.id.linear_layout7);
+            extendableLayout = itemView.findViewById(R.id.extendable_restaurants);
 
 
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ClubItems clubItems = clubLocations.get(getAdapterPosition());
-                    clubItems.setExtendable_club(!clubItems.isExtendable_club());
+                    RestaurantItems restaurantItems = restaurantLocations.get(getAdapterPosition());
+                    restaurantItems.setExtendable_restaurant(!restaurantItems.isExtendable_restaurant());
                     notifyItemChanged(getAdapterPosition());
                 }
             });

@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -16,9 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import de.thu.BarActivity;
+import de.thu.CinemaActivity;
+import de.thu.R;
+import de.thu.RestaurantActivity;
 import de.thu.ulm.night.ClubActivity;
 import de.thu.ulm.night.NightLifeItems;
-import de.thu.R;
 
 public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.ViewHolder> {
 
@@ -48,7 +50,6 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.nightlife_name.setText(nightstuff.get(position).getNightName());
-        holder.nightlife_des.setText(nightstuff.get(position).getNightDes());
         holder.nightlife_imageView.setImageResource(nightstuff.get(position).getNightImage());
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,15 +58,19 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
                 switch(position){
                     case 0:
                         v.getContext().startActivity(new Intent(v.getContext(), ClubActivity.class));
+                        break;
 
                     case 1:
-                        Toast.makeText(context, nightstuff.get(position).getNightName() + " Selected", Toast.LENGTH_SHORT).show();
+                        v.getContext().startActivity(new Intent(v.getContext(), BarActivity.class));
+                        break;
 
                     case 2:
-                        Toast.makeText(context, nightstuff.get(position).getNightName() + " Selected", Toast.LENGTH_SHORT).show();
+                        v.getContext().startActivity(new Intent(v.getContext(), CinemaActivity.class));
+                        break;
 
                     case 3:
-                        Toast.makeText(context, nightstuff.get(position).getNightName() + " Selected", Toast.LENGTH_SHORT).show();
+                        v.getContext().startActivity(new Intent(v.getContext(), RestaurantActivity.class));
+                        break;
 
                 }
 
@@ -90,7 +95,7 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
     //inner class needed for generating View objects
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView nightlife_name, nightlife_des;
+        private TextView nightlife_name;
         private ImageView nightlife_imageView;
 
 
@@ -99,7 +104,6 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nightlife_name =itemView.findViewById(R.id.nightlife_name);
-            nightlife_des = itemView.findViewById(R.id.nightlife_des);
             nightlife_imageView = itemView.findViewById(R.id.nightlife_imageview);
             parent = itemView.findViewById(R.id.parent);
 

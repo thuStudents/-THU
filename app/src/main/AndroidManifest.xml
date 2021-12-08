@@ -110,7 +110,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
         </activity>
+
+        <activity android:name=".RestaurantActivity"
+            android:exported="true"
+            >
+
+
+
+
+        </activity>
+
+        <activity android:name=".CinemaActivity"
+            android:exported="true">
+
+
+        </activity>
+
+        <activity android:name=".BarActivity"
+            android:exported="true">
+
+
+        </activity>
+
         <activity
             android:name=".EditprofileActivity"
             android:exported="true"></activity>

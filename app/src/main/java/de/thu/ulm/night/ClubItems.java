@@ -1,15 +1,14 @@
 package de.thu.ulm.night;
 
 public class ClubItems {
-    private String funName, funAddress, funTime;
+    private String funName, funAddress;
     private int funImage;
     private boolean extendable_club;
 
-    public ClubItems(String nameP, int imageP, String addressP, String timeP) {
+    public ClubItems(String nameP, int imageP, String addressP) {
         this.funName = nameP;
         this.funImage = imageP;
         this.funAddress = addressP;
-        this.funTime = timeP;
         this.extendable_club = false;
     }
 
@@ -45,11 +44,4 @@ public class ClubItems {
         this.funAddress = funAddress;
     }
 
-    public String getFunTime() {
-        return funTime;
-    }
-
-    public void setFunTime(String funTime) {
-        this.funTime = funTime;
-    }
 }
