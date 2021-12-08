@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.PrivateBItems;
+import de.thu.ulm.accomodation.PrivateBItems;
 import de.thu.R;
 
 public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHolder> {

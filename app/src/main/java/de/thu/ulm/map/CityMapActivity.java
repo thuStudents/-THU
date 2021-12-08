@@ -1,4 +1,6 @@
-package de.thu;
+package de.thu.ulm.map;
+
+import android.os.Bundle;
 
 import android.os.Bundle;
 

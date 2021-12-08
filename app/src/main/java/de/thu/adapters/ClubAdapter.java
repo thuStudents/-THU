@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.ClubItems;
+import de.thu.ulm.night.ClubItems;
 import de.thu.R;
 
 public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
@@ -79,7 +79,7 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 
 
         private CardView parent;
-
+        
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fun_name =itemView.findViewById(R.id.fun_name);

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.thu.R;
-import de.thu.ResidentialBuildingsItems;
+import de.thu.ulm.accomodation.ResidentialBuildingsItems;
 
 public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapter.ViewHolder> {
 
