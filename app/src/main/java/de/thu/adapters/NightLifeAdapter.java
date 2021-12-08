@@ -19,8 +19,8 @@ import de.thu.BarActivity;
 import de.thu.CinemaActivity;
 import de.thu.R;
 import de.thu.RestaurantActivity;
-import de.thu.ulm.night.ClubActivity;
-import de.thu.ulm.night.NightLifeItems;
+import de.thu.ClubActivity;
+import de.thu.NightLifeItems;
 
 public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.ViewHolder> {
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/bone_white"
     android:layout_height="match_parent"
-    tools:context=".ulm.accomodation.AccommodationActivity">
+    tools:context=".AccommodationActivity">
 
     <!--bottom navigation bar-->
     <com.google.android.material.bottomnavigation.BottomNavigationView

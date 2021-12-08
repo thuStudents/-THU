@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import de.thu.R;
-import de.thu.ulm.night.ClubItems;
+import de.thu.ClubItems;
 
 public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 

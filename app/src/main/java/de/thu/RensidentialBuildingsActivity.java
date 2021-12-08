@@ -3,11 +3,10 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,39 +14,34 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class BarActivity extends AppCompatActivity {
+import de.thu.adapters.ResidentialBAdapter;
 
-    private RecyclerView barRecView;
+public class RensidentialBuildingsActivity extends AppCompatActivity {
+
+    private RecyclerView resBRecView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview);
 
-        barRecView =findViewById(R.id.RecView);
+        resBRecView =findViewById(R.id.RecView);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
+        ArrayList<ResidentialBuildingsItems> res_elements = new ArrayList<>();
+        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", R.drawable.gutenbergstr ));
+        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", R.drawable.frauensteige));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n1", R.drawable.heidenheimer1));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n2", R.drawable.heidenheimer2));
+        res_elements.add(new ResidentialBuildingsItems("Upper West Side", R.drawable.uppperwestside));
 
-        TextView title = findViewById(R.id.title);
-        title.setText("Bars");
+        ResidentialBAdapter adapter=new ResidentialBAdapter(this);
+        adapter.setContacts(res_elements);
 
-        ArrayList<BarItems> barItems = new ArrayList<>();
-        barItems.add(new BarItems("Big City Lounge", "Marktpl. 18, 89073 Ulm",R.drawable.bigcitylounge));
-        barItems.add(new BarItems("X-Lounge", "Am Lederhof 1, 89073 Ulm",R.drawable.xlounge));
-        barItems.add(new BarItems("Billbar", "Hans-und-Sophie-Scholl-Platz 1, 89073 Ulm",R.drawable.billbar));
-        barItems.add(new BarItems("Kelly's Irish Pub", "Lautenberg 1, 89073 Ulm",R.drawable.kells));
-        barItems.add(new BarItems("Sahara", "Glöcklerstraße 4, 89073 Ulm",R.drawable.sahara));
-        barItems.add(new BarItems("Shibar", "Frauenstraße 23, 89073 Ulm",R.drawable.shibar));
-        barItems.add(new BarItems("Sassy Shisha & Cocktail Bar", "Neue Str. 43, 89073 Ulm",R.drawable.sassy));
+        resBRecView.setAdapter(adapter);
+        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        resBRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
-        BarAdapter adapter=new BarAdapter(this);
-        adapter.setContacts(barItems);
 
-        barRecView.setAdapter(adapter);
-        barRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -68,7 +62,7 @@ public class BarActivity extends AppCompatActivity {
                                 , PostActivity.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.home:
+                        case R.id.home:
                         startActivity(new Intent(getApplicationContext()
                                 , HomeActivity.class));
                         overridePendingTransition(0,0);

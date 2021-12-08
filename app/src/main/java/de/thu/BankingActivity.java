@@ -3,11 +3,9 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,44 +13,24 @@ import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
-public class BarActivity extends AppCompatActivity {
+public class BankingActivity extends AppCompatActivity {
 
-    private RecyclerView barRecView;
+    RecyclerView recyclerView;
+    RecyclerView.Adapter adapter;
+    RecyclerView bank;
+    ArrayList<BankItems> bankLocations = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recyclerview);
+        setContentView(R.layout.activity_banking);
 
-        barRecView =findViewById(R.id.RecView);
-
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
-
-        TextView title = findViewById(R.id.title);
-        title.setText("Bars");
-
-        ArrayList<BarItems> barItems = new ArrayList<>();
-        barItems.add(new BarItems("Big City Lounge", "Marktpl. 18, 89073 Ulm",R.drawable.bigcitylounge));
-        barItems.add(new BarItems("X-Lounge", "Am Lederhof 1, 89073 Ulm",R.drawable.xlounge));
-        barItems.add(new BarItems("Billbar", "Hans-und-Sophie-Scholl-Platz 1, 89073 Ulm",R.drawable.billbar));
-        barItems.add(new BarItems("Kelly's Irish Pub", "Lautenberg 1, 89073 Ulm",R.drawable.kells));
-        barItems.add(new BarItems("Sahara", "Glöcklerstraße 4, 89073 Ulm",R.drawable.sahara));
-        barItems.add(new BarItems("Shibar", "Frauenstraße 23, 89073 Ulm",R.drawable.shibar));
-        barItems.add(new BarItems("Sassy Shisha & Cocktail Bar", "Neue Str. 43, 89073 Ulm",R.drawable.sassy));
-
-        BarAdapter adapter=new BarAdapter(this);
-        adapter.setContacts(barItems);
-
-        barRecView.setAdapter(adapter);
-        barRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        bank = findViewById(R.id.recycler_bank);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.find);
-
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -78,6 +56,33 @@ public class BarActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        initData();
+        initRecyclerView();
+
+
+    }
+
+
+
+    private void initData() {
+
+        bank.setHasFixedSize(true);
+
+        bankLocations.add(new BankItems("Volksbank Ulm", "0731 1830", "volksbank_ulm@email.de", "Frauenstraße 60, 89073 Ulm", R.drawable.vr_bank));
+        bankLocations.add(new BankItems("Volksbank Neu-Ulm", "0731 970030", "volksbank_neu_ulm@email.de", "Ludwigstraße 1, 89231 Neu-Ulm", R.drawable.vr_bank));
+        bankLocations.add(new BankItems("Sparkasse Ulm", "0128 746353", "sparkasse_ulm@email.de", "Hauptstraße 2, 89071 Ulm",R.drawable.sparkasse));
+        bankLocations.add(new BankItems("Sparkasse Neu-Ulm", "0364 743733", "sparkasse_neu_ulm@thu.de", "Schulstraße 7, 89231 Neu-Ulm", R.drawable.sparkasse));
+        bankLocations.add(new BankItems("Postbank", "0645 749658", "postbank@email.de", "Dorfstraße 43, 89073 Ulm", R.drawable.postbank));
+        bankLocations.add(new BankItems("Commerzbank", "0745 836386", "commerzbank@email.de", "Gartenstraße 6, 89072 Ulm", R.drawable.commerzbank));
+        bankLocations.add(new BankItems("Deutsche Bank", "0364 374538", "deutsche_bank@email.de", "Bahnhofstraße 8, 89073 Ulm", R.drawable.deutschebank));
+
+    }
+
+    private void initRecyclerView() {
+        adapter = new BankAdapter(bankLocations);
+        bank.setAdapter(adapter);
 
     }
 }

@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="News title"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="@color/off_black"
             android:fontFamily="@font/myfont2"/>
 
@@ -34,6 +34,7 @@
             android:id="@+id/latest_updates_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="11sp"
             android:text="The THU has issued hygiene and occupational safety measures for the time of the corona pandemic. The measures apply to all persons who are in the buildings and on the premises of the THU."
             />
 

@@ -3,52 +3,25 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.ArrayList;
-
-public class CinemaActivity extends AppCompatActivity {
-
-    private RecyclerView cinemaRecView;
+public class AccommodationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recyclerview);
-
-        cinemaRecView =findViewById(R.id.RecView);
-
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
-
-        TextView title = findViewById(R.id.title);
-        title.setText("Movies");
-
-        ArrayList<CinemaItems> cinemaItems = new ArrayList<>();
-        cinemaItems.add(new CinemaItems("Xinedome", "Am Lederhof 1, 89073 Ulm",R.drawable.xinedome));
-        cinemaItems.add(new CinemaItems("Cineplex Dietrich", "Marlene-Dietrich-Straße 11, 89231 Neu-Ulm",R.drawable.cineplex));
-
-        CinemaAdapter adapter=new CinemaAdapter(this);
-        adapter.setContacts(cinemaItems);
-
-        cinemaRecView.setAdapter(adapter);
-        cinemaRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        setContentView(R.layout.activity_accommodation);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.find);
-
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -59,9 +32,7 @@ public class CinemaActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        Toast.makeText(AccommodationActivity.this, "Add button pressed", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
@@ -73,6 +44,28 @@ public class CinemaActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        ImageView resbul_imageView = findViewById(R.id.private_rooms_image);
+        ImageView privroom_imageView = findViewById(R.id.shared_room_image);
+
+        resbul_imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , RensidentialBuildingsActivity.class));
+                overridePendingTransition(0,0);
+            }});
+
+        privroom_imageView.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , PrivateBuildingActivity.class));
+                overridePendingTransition(0,0);
+            }});
+
+
 
     }
 }

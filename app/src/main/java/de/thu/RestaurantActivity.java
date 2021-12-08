@@ -34,13 +34,12 @@ public class RestaurantActivity extends AppCompatActivity {
         title.setText("Restaurants");
 
         ArrayList<RestaurantItems> restaurantItems = new ArrayList<>();
-        restaurantItems.add(new RestaurantItems("Big City Lounge", "Marktpl. 18, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("X-Lounge", "Am Lederhof 1, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("Billbar", "Hans-und-Sophie-Scholl-Platz 1, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("Kelly's Irish Pub", "Lautenberg 1, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("Sahara", "Glöcklerstraße 4, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("Shibar", "Frauenstraße 23, 89073 Ulm",R.drawable.rulesclub));
-        restaurantItems.add(new RestaurantItems("Sassy Shisha & Cocktail Bar", "Neue Str. 43, 89073 Ulm",R.drawable.rulesclub));
+
+        restaurantItems.add(new RestaurantItems("Barfüßer die Hausbrauerei Ulm", "Marktpl. 18, 89073 Ulm", R.drawable.barfusser_ulm));
+        restaurantItems.add(new RestaurantItems("Choclet", "Am Lederhof 1, 89073 Ulm", R.drawable.choclet));
+        restaurantItems.add(new RestaurantItems("QMUH Ulm", "Hans-und-Sophie-Scholl-Platz 1, 89073 Ulm",R.drawable.citykebab));
+        restaurantItems.add(new RestaurantItems("Buddha Kitchen", "Lautenberg 1, 89073 Ulm",R.drawable.buddhakitchen));
+        restaurantItems.add(new RestaurantItems("City Kebab", "Glöcklerstraße 4, 89073 Ulm",R.drawable.qmuh));
 
         RestaurantAdapter adapter=new RestaurantAdapter(this);
         adapter.setContacts(restaurantItems);
