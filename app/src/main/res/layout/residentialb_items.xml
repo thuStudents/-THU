@@ -3,10 +3,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
+    android:padding="15dp"
     app:cardBackgroundColor="@color/light_white"
     android:id="@+id/parent"
     app:cardElevation="10dp"
+
     app:cardCornerRadius="10dp"
     android:layout_margin="10dp">
 
@@ -20,26 +21,17 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="7dp"
+
             android:fontFamily="@font/myfont2bold"
             android:text="Contact Name"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/resb_des"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/resb_name"
-            android:fontFamily="@font/myfont2"
-            android:layout_marginStart="7dp"
-            android:layout_marginTop="7dp"
-            android:text="Contact Email"
-            android:textStyle="italic" />
 
         <ImageView
             android:id="@+id/resb_image"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_below="@+id/resb_des"
+            android:layout_below="@+id/resb_name"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:scaleType="centerCrop"

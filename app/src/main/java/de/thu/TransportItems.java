@@ -3,11 +3,13 @@ package de.thu;
 public class TransportItems {
     private String transportName, transportDes;
     private int transportImage;
+    boolean extended_t;
 
     public TransportItems(String transportName, String transportDes, int transportImage) {
         this.transportName = transportName;
         this.transportDes = transportDes;
         this.transportImage = transportImage;
+        this.extended_t = false;
     }
 
     public String getTransportName() {
@@ -32,5 +34,13 @@ public class TransportItems {
 
     public void setTransportImage(int transportImage) {
         this.transportImage = transportImage;
+    }
+
+    public boolean isExtended_t() {
+        return extended_t;
+    }
+
+    public void setExtended_t(boolean extended_t) {
+        this.extended_t = extended_t;
     }
 }

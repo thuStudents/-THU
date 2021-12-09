@@ -1,5 +1,7 @@
 package de.thu;
 
+import static android.R.layout.simple_list_item_1;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,6 +21,7 @@ import java.util.ArrayList;
 public class UlmInformationActivity extends AppCompatActivity {
     ListView ulmMenu;
     BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +71,7 @@ public class UlmInformationActivity extends AppCompatActivity {
 
         ArrayAdapter<String> ulmMenuAdapter = new ArrayAdapter<>(
                 this,
-                R.layout.list_element_layout,
+                simple_list_item_1,
                 ulmMenuList
         );
 

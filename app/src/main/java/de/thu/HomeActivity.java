@@ -120,10 +120,10 @@ public class HomeActivity extends AppCompatActivity {
 
             ArrayList<LatestUpdatesItems> latestUpdatesLocations = new ArrayList<>();
 
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.evenmorenews, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.restaurants, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.evenmorenews, "Tash laptop broke", "Tash fell on her ass because of the snow and her laptop broke."));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "Top 3 Restaurants", "Tash kitchen, Noodles with eggs"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "Alpitish", "It's a thing"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.restaurants, "Covid and Restrictions ", "Covid"));
 
             adapter = new LatestUpdatesAdapter(latestUpdatesLocations);
             latest_updates.setAdapter(adapter);

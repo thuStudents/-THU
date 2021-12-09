@@ -4,8 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
-    app:cardBackgroundColor="@color/off_white"
-    android:elevation="8dp"
+    app:cardBackgroundColor="@color/light_white"
+    android:elevation="10dp"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -21,20 +21,17 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/myfont2"
             android:padding="16dp"
-            android:layout_gravity="center"
             android:text="Cafe Name"
             android:textColor="@color/off_black"
             android:textSize="20sp" />
 
         <ImageView
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:id="@+id/cafe_image"
             android:src="@drawable/bars"
             android:scaleType="centerCrop"
-            android:padding="16dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="5dp"
             android:adjustViewBounds="true"/>
 
         <RelativeLayout
@@ -44,31 +41,41 @@
             android:id="@+id/expandable_cafe"
             >
 
-
-            <RatingBar
-                android:id="@+id/cafe_rating"
+            <TextView
+                android:id="@+id/cafe_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:rating="4" />
-
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Cafe Address"
+                android:textColor="@color/off_black"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/cafe_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cafe_rating"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/myfont2"
-                android:padding="16dp"
                 android:text="Cafe Time"
+                android:layout_below="@+id/cafe_address"
                 android:textColor="@color/dark_gray"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/cafe_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe_address"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="ddadas"
                 android:textSize="18sp" />
 
         </RelativeLayout>

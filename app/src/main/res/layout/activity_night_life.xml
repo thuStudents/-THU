@@ -3,8 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ulm.transport.TransportActivity">
+    android:layout_height="wrap_content"
+    tools:context=".TransportActivity">
+
+
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -26,23 +29,14 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="7dp"
                 android:text="Contact Name"
+                android:fontFamily="@font/myfont2"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/nightlife_des"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nightlife_name"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="7dp"
-                android:text="Contact Email"
-                android:textStyle="italic" />
 
             <ImageView
                 android:id="@+id/nightlife_imageview"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@+id/nightlife_des"
+                android:layout_height="120dp"
+                android:layout_below="@+id/nightlife_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:scaleType="centerCrop"

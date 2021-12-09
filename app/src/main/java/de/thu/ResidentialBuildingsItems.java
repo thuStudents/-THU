@@ -2,12 +2,10 @@ package de.thu;
 
 public class ResidentialBuildingsItems {
     private String residentialbName;
-    private String residentialbDesc;
     private int residentialBImage;
 
-    public ResidentialBuildingsItems(String nameR, String desR, int imageR) {
+    public ResidentialBuildingsItems(String nameR, int imageR) {
         this.residentialbName = nameR;
-        this.residentialbDesc = desR;
         this.residentialBImage = imageR;
     }
 
@@ -17,14 +15,6 @@ public class ResidentialBuildingsItems {
 
     public void setResidentialbName(String residentialbName) {
         this.residentialbName = residentialbName;
-    }
-
-    public String getResidentialbDesc() {
-        return residentialbDesc;
-    }
-
-    public void setResidentialbDesc(String residentialbDesc) {
-        this.residentialbDesc = residentialbDesc;
     }
 
     public int getResidentialBImage() {

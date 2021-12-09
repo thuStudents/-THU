@@ -2,12 +2,10 @@ package de.thu;
 
 public class NightLifeItems {
     private String nightName;
-    private String nightDes;
     private int nightImage;
 
-    public NightLifeItems(String nameP, String desP, int imageP) {
+    public NightLifeItems(String nameP, int imageP) {
         this.nightName = nameP;
-        this.nightDes = desP;
         this.nightImage = imageP;
     }
 
@@ -17,14 +15,6 @@ public class NightLifeItems {
 
     public void setNightName(String nightName) {
         this.nightName = nightName;
-    }
-
-    public String getNightDes() {
-        return nightDes;
-    }
-
-    public void setNightDes(String nightDes) {
-        this.nightDes = nightDes;
     }
 
     public int getNightImage() {

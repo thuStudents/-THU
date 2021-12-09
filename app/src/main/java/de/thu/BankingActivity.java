@@ -72,12 +72,11 @@ public class BankingActivity extends AppCompatActivity {
 
         bankLocations.add(new BankItems("Volksbank Ulm", "0731 1830", "volksbank_ulm@email.de", "Frauenstraße 60, 89073 Ulm", R.drawable.vr_bank));
         bankLocations.add(new BankItems("Volksbank Neu-Ulm", "0731 970030", "volksbank_neu_ulm@email.de", "Ludwigstraße 1, 89231 Neu-Ulm", R.drawable.vr_bank));
-        bankLocations.add(new BankItems("Sparkasse Ulm", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text",R.drawable.gutenbergstr));
-        bankLocations.add(new BankItems("Sparkasse Neu-Ulm", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text", R.drawable.common_google_signin_btn_icon_dark_focused));
-        bankLocations.add(new BankItems("Postbank", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text", R.drawable.common_google_signin_btn_icon_dark_focused));
-        bankLocations.add(new BankItems("Commerzbank", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text", R.drawable.common_google_signin_btn_icon_dark_focused));
-        bankLocations.add(new BankItems("Deutsche Bank", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text", R.drawable.common_google_signin_btn_icon_dark_focused));
-        bankLocations.add(new BankItems("HypoVereinsbank", "This is my bank", "This duhwd dwuig wqudihw dwqudqh wduqh d", "some more text", R.drawable.common_google_signin_btn_icon_dark_focused));
+        bankLocations.add(new BankItems("Sparkasse Ulm", "0128 746353", "sparkasse_ulm@email.de", "Hauptstraße 2, 89071 Ulm",R.drawable.sparkasse));
+        bankLocations.add(new BankItems("Sparkasse Neu-Ulm", "0364 743733", "sparkasse_neu_ulm@thu.de", "Schulstraße 7, 89231 Neu-Ulm", R.drawable.sparkasse));
+        bankLocations.add(new BankItems("Postbank", "0645 749658", "postbank@email.de", "Dorfstraße 43, 89073 Ulm", R.drawable.postbank));
+        bankLocations.add(new BankItems("Commerzbank", "0745 836386", "commerzbank@email.de", "Gartenstraße 6, 89072 Ulm", R.drawable.commerzbank));
+        bankLocations.add(new BankItems("Deutsche Bank", "0364 374538", "deutsche_bank@email.de", "Bahnhofstraße 8, 89073 Ulm", R.drawable.deutschebank));
 
     }
 

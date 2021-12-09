@@ -2,27 +2,108 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bone_white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MarketsActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/markets_toolbar"
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:elevation="50dp"
         android:layout_height="wrap_content"
-        android:text="Markets in Ulm"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/markets"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        android:background="@drawable/header_bg">
+
+        <!--header-->
+        <TextView
+            android:id="@+id/homepage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Ulm weekly market \nFresh, Regional Tradition!"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/markets"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/market_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/market" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/market_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Ulm eats healthy! \nPeople of Ulm can buy fresh, regional and high-quality food at least once a week."
+            android:textColor="@color/off_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/market_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Wednesday and Saturday 6 a.m. to 1 p.m."
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/market_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/myfont2"
+            android:text="MÜNSTERPLATZ"
+            android:textColor="@color/dark_gray"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+
+
+
 
 </RelativeLayout>

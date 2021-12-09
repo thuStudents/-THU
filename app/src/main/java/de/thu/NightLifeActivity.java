@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import de.thu.R;
 import de.thu.adapters.NightLifeAdapter;
 
 public class NightLifeActivity extends AppCompatActivity {
@@ -24,10 +23,10 @@ public class NightLifeActivity extends AppCompatActivity {
 
 
         ArrayList<NightLifeItems> nightitem = new ArrayList<>();
-        nightitem.add(new NightLifeItems("Clubs", "Go clubbing its cool", R.drawable.clubs));
-        nightitem.add(new NightLifeItems("Bars", "Also Bars are cool", R.drawable.bars));
-        nightitem.add(new NightLifeItems("Cinemas", "Also Cinemas are cool", R.drawable.cinemas));
-        nightitem.add(new NightLifeItems("Restaurants", "Also Restaurants are cool", R.drawable.restaurants));
+        nightitem.add(new NightLifeItems("Clubs", R.drawable.clubs));
+        nightitem.add(new NightLifeItems("Bars", R.drawable.bars));
+        nightitem.add(new NightLifeItems("Cinemas", R.drawable.cinemas));
+        nightitem.add(new NightLifeItems("Restaurants", R.drawable.restaurants));
 
 
         NightLifeAdapter adapter=new NightLifeAdapter(this);

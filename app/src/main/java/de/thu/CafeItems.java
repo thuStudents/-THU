@@ -2,15 +2,16 @@ package de.thu;
 
 public class CafeItems {
 
-    String cafe_name, cafe_time;
+    String cafe_name, cafe_time, cafe_address, cafe_t;
     int cafe_image;
     boolean expanded_c;
 
-    public CafeItems(String cafe_name, String cafe_time, int cafe_image) {
+    public CafeItems(String cafe_name, String cafe_time, int cafe_image, String cafe_address, String cafe_t) {
         this.cafe_name = cafe_name;
         this.cafe_time = cafe_time;
         this.cafe_image = cafe_image;
-
+        this.cafe_address = cafe_address;
+        this.cafe_t = cafe_t;
         this.expanded_c = false;
     }
 
@@ -26,6 +27,14 @@ public class CafeItems {
         return cafe_time;
     }
 
+    public String getCafe_t() {
+        return cafe_t;
+    }
+
+    public void setCafe_t(String cafe_t) {
+        this.cafe_t = cafe_t;
+    }
+
     public void setCafe_time(String cafe_time) {
         this.cafe_time = cafe_time;
     }
@@ -38,7 +47,13 @@ public class CafeItems {
         this.cafe_image = cafe_image;
     }
 
+    public String getCafe_address() {
+        return cafe_address;
+    }
 
+    public void setCafe_address(String cafe_address) {
+        this.cafe_address = cafe_address;
+    }
 
     public boolean isExpanded_c() {
         return expanded_c;
