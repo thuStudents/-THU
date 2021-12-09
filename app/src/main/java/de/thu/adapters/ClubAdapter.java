@@ -77,7 +77,7 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 
 
         private CardView parent;
-        
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fun_name =itemView.findViewById(R.id.fun_name);
