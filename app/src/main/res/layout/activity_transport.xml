@@ -3,26 +3,154 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TransportActivity">
+    android:layout_height="wrap_content"
+    tools:context=".ulm.transport.TransportActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/transport_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/parent"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Transport"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/transport_name"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/off_black"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:text="Contact Name"
+                    android:fontFamily="@font/myfont2"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/transport_des"
+                    android:fontFamily="@font/myfont2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/transport_name"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:text="Contact Email"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:id="@+id/transport_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/transport_des"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/expandale_transport">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bus_info"
+                    android:layout_margin="5dp"
+                    android:textSize="13sp"
+                    android:text="Information"
+                    android:fontFamily="@font/myfont2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route2"
+                    android:layout_below="@+id/bus_info"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route3"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/route2"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route4"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/route3"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route5"
+                    android:layout_below="@+id/route4"
+                    android:text="Route 1"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route6"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/route5"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route7"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/route6"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/route8"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/route7"
+                    android:text="Route 1"
+                    android:fontFamily="@font/myfont2"
+                    android:textSize="10sp"/>
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

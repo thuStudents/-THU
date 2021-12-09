@@ -3,39 +3,42 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.view.View;
-import android.view.View.OnClickListener;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.ArrayList;
+
+import de.thu.ulm.UlmInformationActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     ImageView home, add, find;
+    BottomNavigationView bottomNavigationView;
+    RecyclerView.Adapter adapter;
+    RecyclerView latest_updates;
+    //LinearLayoutManager layoutManager;
 
-
-    RecyclerView event_rec_view;
-    AutoScrollAdapter autoScrollAdapter;
-    LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_homepage);
+        setContentView(R.layout.new_homepage_activity);
 
-        event_rec_view = findViewById(R.id.event_rec_view);
+
+        //hooks
+        latest_updates=findViewById(R.id.latest_updates);
+
+        latest_updates();
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -46,7 +49,7 @@ public class HomeActivity extends AppCompatActivity {
                 switch(item.getItemId()){
                     case R.id.find:
                         startActivity(new Intent(getApplicationContext()
-                                    , Profile.class));
+                                , Profile.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.add:
@@ -63,74 +66,68 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView schoolInfoImageView=(ImageView)findViewById(R.id.schoolInfoImageView);
-        ImageView cityInfoImageView=(ImageView)findViewById(R.id.cityInfoImageView);
-        ImageView forumImageView=(ImageView)findViewById(R.id.forumImageView);
-        ImageView newsEventsImageView=(ImageView)findViewById(R.id.newsEventsImageView);
+        ImageView schoolInfoImageView=(ImageView)findViewById(R.id.HP_school);
+        ImageView cityInfoImageView=(ImageView)findViewById(R.id.HP_city);
+        ImageView forumImageView=(ImageView)findViewById(R.id.HP_forum);
+        ImageView newsEventsImageView=(ImageView)findViewById(R.id.HP_news);
 
-        schoolInfoImageView.setOnClickListener(new OnClickListener(){
-            public void onClick(View view) {
-
+        schoolInfoImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
-                        , HochschuleInfoActivity.class));
+                        , HochschuleGeneralActivity.class));
                 overridePendingTransition(0,0);
 
-            }});
+            }
+        });
 
-        cityInfoImageView.setOnClickListener(new OnClickListener(){
-            public void onClick(View view) {
-
+        cityInfoImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
                         , UlmInformationActivity.class));
                 overridePendingTransition(0,0);
 
-            }});
+            }
+        });
 
-        forumImageView.setOnClickListener(new OnClickListener(){
-            public void onClick(View view) {
-
+        forumImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
                         , ForumActivity.class));
                 overridePendingTransition(0,0);
 
-            }});
-
-        newsEventsImageView.setOnClickListener(new OnClickListener(){
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext()
-                        , NewsEventActivity.class));
-                overridePendingTransition(0,0);
-
-            }});
-/*        cityInfoImageView.setOnClickListener(this);
-        forumImageView.setOnClickListener(this);
-        newsEventsImageView.setOnClickListener(this);*/
-
-        setRV();
-
-    }
-
-    private void setRV() {
-        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        event_rec_view.setLayoutManager(layoutManager);
-        autoScrollAdapter = new AutoScrollAdapter(this);
-        event_rec_view.setAdapter(autoScrollAdapter);
-
-        LinearSnapHelper snapHelper = new LinearSnapHelper();
-        snapHelper.attachToRecyclerView(event_rec_view);
-
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                if(layoutManager.findLastCompletelyVisibleItemPosition() < (autoScrollAdapter.getItemCount() - 1)){
-                    layoutManager.smoothScrollToPosition(event_rec_view, new RecyclerView.State(), layoutManager.findLastCompletelyVisibleItemPosition() + 1);
-                }else{
-                    layoutManager.smoothScrollToPosition(event_rec_view, new RecyclerView.State(), 0);
-                }
             }
+        });
 
-        },0, 3000);
+        newsEventsImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(HomeActivity.this, "News and Events", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
 
     }
+        private void latest_updates(){
+
+
+        //recyclerview only loads the cards visible to user
+        latest_updates.setHasFixedSize(true);
+        latest_updates.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+
+            ArrayList<LatestUpdatesItems> latestUpdatesLocations = new ArrayList<>();
+
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.evenmorenews, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.restaurants, "This is news", " fejhf fewjkfzhew fewkufzh ewew"));
+
+            adapter = new LatestUpdatesAdapter(latestUpdatesLocations);
+            latest_updates.setAdapter(adapter);
+
+        }
 }

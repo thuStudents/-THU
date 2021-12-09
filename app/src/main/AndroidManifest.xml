@@ -10,46 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".ToDoActivity"
+            android:name=".ulm.night.NightLifeActivity"
             android:exported="false" />
         <activity
-            android:name=".MyStudiesActivity"
+            android:name=".ulm.cafe.CafeActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".NewsEventActivity"
+            android:name=".BafogActivity"
             android:exported="false" />
         <activity
-            android:name=".NightLifeActivity"
+            android:name=".ulm.market.MarketsActivity"
             android:exported="false" />
         <activity
-            android:name=".CafeActivity"
+            android:name=".ulm.transport.TransportActivity"
             android:exported="false" />
         <activity
-            android:name=".MarketsActivity"
+            android:name=".ulm.legal.LegalAdviceActivity"
             android:exported="false" />
         <activity
-            android:name=".TransportActivity"
+            android:name=".ulm.map.CityMapActivity"
             android:exported="false" />
         <activity
-            android:name=".LegalAdviceActivity"
+            android:name=".ulm.banking.BankingActivity"
             android:exported="false" />
         <activity
-            android:name=".CityMapActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BankingActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AccommodationActivity"
+            android:name=".ulm.accomodation.AccommodationActivity"
             android:exported="false" />
         <activity
             android:name=".LibraryActivity"
@@ -70,6 +55,9 @@
             android:name=".OfficesActivity"
             android:exported="false" />
         <activity
+            android:name=".ImportantDatesActivity"
+            android:exported="false" />
+        <activity
             android:name=".FeesActivity"
             android:exported="false" />
         <activity
@@ -79,36 +67,61 @@
             android:name=".OfferedCoursesActivity"
             android:exported="false" />
         <activity
-            android:name=".UlmInformationActivity"
-            android:exported="false" />
+            android:name=".ulm.UlmInformationActivity"
+            android:exported="true" >
+
+
+
+        </activity>
         <activity
             android:name=".HochschuleGeneralActivity"
             android:exported="false" />
         <activity
             android:name=".PostActivity"
             android:exported="false" />
-        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ulm.accomodation.PrivateBuildingActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ulm.accomodation.RensidentialBuildingsActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".ForumActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".Profile"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".EditprofileActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".ChangepasswordActivity"
-            android:exported="true" />
+            android:exported="true"></activity>
+        <activity
+            android:name=".ulm.night.ClubActivity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>

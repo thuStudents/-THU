@@ -30,6 +30,15 @@
     <string name="user_name">User name</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+
+    <string name="type_of_user">multiuser</string>
+    <string-array name="usertype">
+        <item>student</item>
+        <item>guest</item>
+        <item>admin</item>
+    </string-array>
     <string name="coronaNewsExpanded">Participation in the on-site study program is only possible in the winter semester recovered / vaccinated / tested (with proof, max. 72 hours old). In order to follow up chains of infection, the participants must register for each face-to-face event./n
 With immediate effect, it is again mandatory to wear a medical mask in all rooms and (learning) areas of the university - also in teaching and if the minimum distance is observed (exception: lecturers)./n
 Since November 13th there have been free citizen tests again across Germany. The university cannot operate an additional test center and cannot cover the costs for corona tests./n
