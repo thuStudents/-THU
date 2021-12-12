@@ -54,16 +54,16 @@
         android:src="@android:drawable/sym_def_app_icon" />
 
     <!--edit full name-->
-    <EditText
+    <!--<EditText
+        android:id="@+id/edit_fullname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_fullname"
         android:layout_below="@+id/edit_profile_picture"
         android:layout_marginTop="35dp"
-        android:textSize="15sp"
-        android:hint="Full name"/>
+        android:hint="Full name"
+        android:textSize="15sp" />
 
-    <!--edit user name-->
+    &lt;!&ndash;edit user name&ndash;&gt;
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,17 +71,17 @@
         android:layout_below="@+id/edit_fullname"
         android:layout_marginTop="35dp"
         android:textSize="15sp"
-        android:hint="Username"/>
+        android:hint="Username"/>-->
 
     <!--edit email-->
     <EditText
+        android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_email"
-        android:layout_below="@+id/edit_username"
+        android:layout_below="@+id/edit_profile_picture"
         android:layout_marginTop="35dp"
-        android:textSize="15sp"
-        android:hint="Email"/>
+        android:hint="Email"
+        android:textSize="15sp" />
 
     <!--save changes button-->
     <Button

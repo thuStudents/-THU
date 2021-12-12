@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
 
@@ -22,6 +25,7 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.profile);
         editProfile();
         changePassword();
+        logout();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -45,6 +49,25 @@ public class Profile extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        TextView profileEmail = (TextView)findViewById(R.id.user_email);
+        profileEmail.setText(currentFirebaseUser.getEmail());
+
+    }
+
+    private void logout() {
+
+        Button buttonLogout;
+        buttonLogout = findViewById(R.id.buttonLogout);
+        buttonLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext()
+                        , WelcomeActivity.class));
+                overridePendingTransition(0,0);
             }
         });
 

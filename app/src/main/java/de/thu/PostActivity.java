@@ -13,7 +13,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
+import java.util.Calendar;
 
 public class PostActivity extends AppCompatActivity  implements View.OnClickListener{
      Button btnAdd;
@@ -44,8 +48,17 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
                 reference = rootnode.getReference("posts");
                 int random = (int)(Math.random() * 50 + 1);
 
-                reference.child(currentFirebaseUser.getUid() + random).setValue(value);
+                String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(new Date());
+                int mSec = calendar.get(Calendar.MILLISECOND);
 
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                String str = sdf.format(new Date());
+
+                reference.child(currentFirebaseUser.getUid() + mSec).child("post").setValue(value);
+                reference.child(currentFirebaseUser.getUid() + mSec).child("date").setValue(currentDate + " " + str);
+                reference.child(currentFirebaseUser.getUid() + mSec).child("email").setValue(currentFirebaseUser.getEmail());
 
 
                 /*Intent createAccount = new Intent(this, ForumActivity.class);

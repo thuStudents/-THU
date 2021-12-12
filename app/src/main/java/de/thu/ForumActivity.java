@@ -1,18 +1,30 @@
 package de.thu;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseListOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 
 public class ForumActivity extends AppCompatActivity {
+
+    ListView lv;
+    FirebaseListAdapter adapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,9 +61,42 @@ public class ForumActivity extends AppCompatActivity {
             }
         });
 
-//
-//        if(savedInstanceState==null) {
-//        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container1, new ForumFragment()).commit();
+        lv = (ListView) findViewById(R.id.postListView);
+
+        Query query = FirebaseDatabase.getInstance("https://thu-3f8f6-default-rtdb.europe-west1.firebasedatabase.app/").getReference().child("posts");
+
+        FirebaseListOptions<Post> options = new FirebaseListOptions.Builder<Post>()
+                .setLayout(R.layout.post_layout)
+                .setQuery(query, Post.class)
+                .build();
+
+        adapter = new FirebaseListAdapter(options) {
+            @Override
+            protected void populateView(@NonNull View v, @NonNull Object model, int position) {
+
+                TextView postPost = v.findViewById(R.id.user_que);
+                TextView postEmail = v.findViewById(R.id.post_que_user_name);
+                TextView postDate = v.findViewById(R.id.text_que_time_dis);
+
+                Post pst = (Post) model;
+                postPost.setText(pst.getPost().toString());
+                postEmail.setText((pst.getEmail().toString()));
+                postDate.setText(pst.getDate().toString());
+            }
+        };
+
+        lv.setAdapter(adapter);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
 }

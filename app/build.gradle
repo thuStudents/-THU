@@ -58,5 +58,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.0"
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'com.firebaseui:firebase-ui-database:8.0.0'
 
 }

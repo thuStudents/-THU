@@ -10,11 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/thu_blue"
-        app:itemIconTint="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
+        android:background="@color/white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
         app:labelVisibilityMode="selected"
-        app:menu="@menu/bottom_navigation_bar" />
+        app:menu="@menu/bottom_navigation_bar"/>
 
     <!--toolbar-->
     <Toolbar
@@ -42,6 +42,7 @@
     </Toolbar>
 
     <!--profile pic -->
+
     <ImageView
         android:id="@+id/profile_picture"
         android:layout_width="100dp"
@@ -51,18 +52,18 @@
         android:src="@android:drawable/sym_def_app_icon" />
 
     <!-- full name(title)-->
-    <TextView
+    <!--<TextView
         android:id="@+id/full_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/profile_picture"
         android:layout_marginStart="15dp"
         android:layout_marginTop="30dp"
-        android:text="Full name"
+
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <!-- display full name -->
+    &lt;!&ndash; display full name &ndash;&gt;
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,22 +71,22 @@
         android:layout_below="@id/full_name"
         android:textSize="15sp"
         android:layout_marginTop="3dp"
-        android:text="Display user full name"
+
         android:layout_marginStart="15dp"/>
 
-    <!-- user name (title) -->
+    &lt;!&ndash; user name (title) &ndash;&gt;
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/user_name"
         android:layout_below="@+id/full_name"
         android:layout_marginTop="40dp"
-        android:text="@string/user_name"
+
         android:textSize="15sp"
         android:layout_marginStart="15dp"
         android:textStyle="bold"/>
 
-    <!-- display user name -->
+    &lt;!&ndash; display user name &ndash;&gt;
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,15 +94,14 @@
         android:layout_below="@id/user_name"
         android:textSize="15sp"
         android:layout_marginTop="3dp"
-        android:text="Display user username"
-        android:layout_marginStart="15dp"/>
+        android:layout_marginStart="15dp"/>-->
 
     <!-- email (title) -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email"
-        android:layout_below="@+id/user_name"
+        android:layout_below="@+id/profile_picture"
         android:layout_marginTop="40dp"
         android:text="Email"
         android:textSize="15sp"
@@ -110,14 +110,14 @@
 
     <!-- display email -->
     <TextView
+        android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/user_email"
         android:layout_below="@id/email"
-        android:textSize="15sp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="5dp"
         android:text="Display user email"
-        android:layout_marginStart="15dp"/>
+        android:textSize="15sp" />
 
     <!-- edit profile button-->
     <Button
@@ -137,15 +137,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editprofile_bttn"
         android:layout_marginTop="2dp"
-        android:textColor="@color/white"
-        android:text="Chage password"
-        android:background="@color/thu_blue"/>
+        android:background="@color/thu_blue"
+        android:text="Change password"
+        android:textColor="@color/white" />
 
     <!-- log out button-->
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/logout_bttn"
+        android:id="@+id/buttonLogout"
         android:layout_below="@+id/changepassword_bttn"
         android:layout_marginTop="2dp"
         android:textColor="@color/white"
