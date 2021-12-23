@@ -72,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
         String email = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
 
-
         if (email.isEmpty()) {
             loginEmail.setError("Enter a valid email");
         } else if (password.isEmpty() || password.length()<6) {
@@ -114,18 +113,4 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
-    /*//intent for login
-    public void login(){
-        Button loginButton;
-        loginButton = findViewById(R.id.buttonLogin);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startHomeActivity;
-                startHomeActivity = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(startHomeActivity);
-            }
-        });
-    }*/
 }

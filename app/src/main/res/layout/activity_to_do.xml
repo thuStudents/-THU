@@ -10,22 +10,26 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:elevation="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/bone_white"
+        android:elevation="50dp"
         app:itemIconTint="@color/thu_blue"
         app:itemTextColor="@color/thu_blue"
         app:labelVisibilityMode="selected"
         app:menu="@menu/bottom_navigation_bar" />
 
-
     <!--toolbar-->
     <LinearLayout
         android:id="@+id/todoToolbar"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/header_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:padding="10dp">
 
         <!--header-->
         <TextView
@@ -39,23 +43,37 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/addTaskButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/add_task_button"
+            android:clickable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+        </RelativeLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/addTaskButton"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_above="@id/bottom_navigation"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/add_task_button"
-        android:clickable="true"
-        tools:ignore="SpeakableTextPresentCheck" />
     <FrameLayout
         android:id="@+id/frameLayoutToDo"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_above="@id/bottom_navigation"/>
+        android:layout_above="@id/bottom_navigation" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycerlview_todoList"
+        android:layout_below="@id/todoToolbar"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp" />
 
 
 

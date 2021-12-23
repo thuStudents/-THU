@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class WelcomeActivity extends AppCompatActivity {
     Button loginBtn, signupBtn;
     TextView guest;
+    public static boolean signedAsGuest = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,7 @@ public class WelcomeActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
-//                startActivity(intent);
+                signedAsGuest = false;
                 startActivity(new Intent(getApplicationContext()
                         , LoginActivity.class));
                 overridePendingTransition(0,0);
@@ -36,8 +36,7 @@ public class WelcomeActivity extends AppCompatActivity {
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
-//                startActivity(intent);
+                signedAsGuest = false;
                 startActivity(new Intent(getApplicationContext()
                         , RegisterActivity.class));
                 overridePendingTransition(0,0);
@@ -48,10 +47,9 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //SET GUEST RESTRICTIONS
-//                Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
-//                startActivity(intent);
+                signedAsGuest = true;
                 startActivity(new Intent(getApplicationContext()
-                        , HochschuleGeneralActivity.class));
+                        , HomeActivity.class));
                 overridePendingTransition(0,0);
 
             }

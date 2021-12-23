@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 public class UlmInformationActivity extends AppCompatActivity {
     ListView ulmMenu;
-    BottomNavigationView bottomNavigationView;
 
 
     @Override

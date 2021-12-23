@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrintingActivity">
+
+
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/printing_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
+
+        <!--header-->
+        <TextView
+            android:id="@+id/homepage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Printing"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--    Recharge Card-->
+    <LinearLayout
+        android:id="@+id/card4services"
+        android:background="@drawable/card_3"
+        android:layout_below="@id/printing_toolbar"
+        android:layout_above="@id/bottom_navigation"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/printingCardtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/myfont2"
+                android:text="How to Print"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="24.5sp"
+                android:textStyle="bold" />
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/ytPlayerPrintingCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/printingCardtext" />
+
+            <TextView
+                android:id="@+id/printingCardtext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/ytPlayerPrintingCard"
+                android:fontFamily="@font/myfont2"
+                android:text="You can use your Student ID to print, copy and scan. To print, you need to log on to one of the university desktop computers and print your documents."
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

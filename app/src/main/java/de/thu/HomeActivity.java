@@ -31,7 +31,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_homepage_activity);
 
-
         //hooks
         latest_updates=findViewById(R.id.latest_updates);
 
@@ -92,10 +91,13 @@ public class HomeActivity extends AppCompatActivity {
         forumImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext()
-                        , ForumActivity.class));
-                overridePendingTransition(0,0);
-
+                if(WelcomeActivity.signedAsGuest){
+                    Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                }else {
+                    startActivity(new Intent(getApplicationContext()
+                            , ForumActivity.class));
+                    overridePendingTransition(0,0);
+                }
             }
         });
 
@@ -120,9 +122,8 @@ public class HomeActivity extends AppCompatActivity {
 
             ArrayList<LatestUpdatesItems> latestUpdatesLocations = new ArrayList<>();
 
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.evenmorenews, "Tash laptop broke", "Tash fell on her ass because of the snow and her laptop broke."));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "Top 3 Restaurants", "Tash kitchen, Noodles with eggs"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "Alpitish", "It's a thing"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "Top 3 Restaurants", "??????"));
+            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "!!", "!!"));
             latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.restaurants, "Covid and Restrictions ", "Covid"));
 
             adapter = new LatestUpdatesAdapter(latestUpdatesLocations);

@@ -3,25 +3,48 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
-public class ApplyingActivity extends AppCompatActivity {
+public class ApplyingActivity extends YouTubeBaseActivity {
+
+    String api_key = "AIzaSyCSOYp9m9btLTfCBHi6sZUblS3HG1wWLOM";
+    YouTubePlayerView ytPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applying);
-//        TextView txt = findViewById(R.id.certificate);
-//        txt.setMovementMethod(new ScrollingMovementMethod());
+
+        // Get reference to the view of Video player
+        ytPlayer = findViewById(R.id.ytPlayerApplying);
+
+        ytPlayer.initialize(api_key, new YouTubePlayer.OnInitializedListener() {
+                  @Override  //handle play and pause here
+                  public void onInitializationSuccess( YouTubePlayer.Provider provider,
+                         YouTubePlayer youTubePlayer, boolean b) {
+                             youTubePlayer.cueVideo("otST6JiexIQ");
+                         }
+                  @Override
+                  public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                      YouTubeInitializationResult youTubeInitializationResult) {
+                      Toast.makeText(getApplicationContext(), "Video Player Failed", Toast.LENGTH_SHORT).show();
+                  }
+        });
+
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

@@ -4,323 +4,85 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
+
+import java.util.ArrayList;
 
 public class ServicesCardActivity extends AppCompatActivity {
-    TextView news1 ;
-    TextView news2;
-    TextView news3;
-    TextView news4;
-    TextView news5;
-    TextView news6;
-    TextView news7;
-    TextView news8;
-    TextView news9;
-    TextView news10;
-    TextView news1title ;
-    TextView news2title;
-    TextView news3title;
-    TextView news4title;
-    TextView news5title;
-    TextView news6title;
-    TextView news7title;
-    TextView news8title;
-    TextView news9title;
-    TextView news10title;
-    boolean news1exp = false;
-    boolean news2exp = false;
-    boolean news3exp = false;
-    boolean news4exp = false;
-    boolean news5exp = false;
-    boolean news6exp = false;
-    boolean news7exp = false;
-    boolean news8exp = false;
-    boolean news9exp = false;
-    boolean news10exp = false;
+    ListView servicesMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services_card);
-        news1 = findViewById(R.id.studentIdText);
-        news2 = findViewById(R.id.uniAccountText);
-        news3 = findViewById(R.id.emailText);
-        news4 = findViewById(R.id.wifiText);
-        news5 = findViewById(R.id.remoteAppText);
-        news6 = findViewById(R.id.vpnText);
-        news7 = findViewById(R.id.softwareForStudentsText);
-        news8 = findViewById(R.id.lsfText);
-        news9 = findViewById(R.id.selfServiceFunctionsText);
-        news10 = findViewById(R.id.eLearningText);
-        news1title = findViewById(R.id.StudentIdTitle);
-        news2title = findViewById(R.id.uniAccountTitle);
-        news3title = findViewById(R.id.emailTitle);
-        news4title = findViewById(R.id.wifiTitle);
-        news5title = findViewById(R.id.remoteAppTitle);
-        news6title = findViewById(R.id.vpnTitle);
-        news7title = findViewById(R.id.softwareForStudentsTitle);
-        news8title = findViewById(R.id.lsfTitle);
-        news9title = findViewById(R.id.selfServiceFunctionsTitle);
-        news10title = findViewById(R.id.eLearningTitle);
-        news1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news1exp){
-                    news1exp = false;
-                    news1.setText(getResources().getText(R.string.StudentIdCardNotExpanded));
-                }else{
-                    news1exp = true;
-                    news1.setText(getResources().getText(R.string.StudentIdExpanded));
-                }
-            }
-        });
-        news1title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news1exp){
-                    news1exp = false;
-                    news1.setText(getResources().getText(R.string.StudentIdCardNotExpanded));
-                }else{
-                    news1exp = true;
-                    news1.setText(getResources().getText(R.string.StudentIdExpanded));
-                }
-            }
-        });
 
-        news2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news2exp){
-                    news2exp = false;
-                    news2.setText(getResources().getText(R.string.uniAccountNotExpanded));
-                }else{
-                    news2exp = true;
-                    news2.setText(getResources().getText(R.string.uniAccountExpanded));
-                }
-            }
-        });
-        news2title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news2exp){
-                    news2exp = false;
-                    news2.setText(getResources().getText(R.string.uniAccountNotExpanded));
-                }else{
-                    news2exp = true;
-                    news2.setText(getResources().getText(R.string.uniAccountExpanded));
-                }
-            }
-        });
-        news3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news3exp){
-                    news3exp = false;
-                    news3.setText(getResources().getText(R.string.emailNotExpanded));
-                }else{
-                    news3exp = true;
-                    news3.setText(getResources().getText(R.string.emailExpanded));
-                }
-            }
-        });
-        news3title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news3exp){
-                    news3exp = false;
-                    news3.setText(getResources().getText(R.string.emailNotExpanded));
-                }else{
-                    news3exp = true;
-                    news3.setText(getResources().getText(R.string.emailExpanded));
-                }
-            }
-        });
-        news4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news4exp){
-                    news4exp = false;
-                    news4.setText(getResources().getText(R.string.wifiNotExpanded));
-                }else{
-                    news4exp = true;
-                    news4.setText(getResources().getText(R.string.wifiExpanded));
-                }
-            }
-        });
-        news4title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news4exp){
-                    news4exp = false;
-                    news4.setText(getResources().getText(R.string.wifiNotExpanded));
-                }else{
-                    news4exp = true;
-                    news4.setText(getResources().getText(R.string.wifiExpanded));
-                }
-            }
-        });
+        servicesMenu = findViewById(R.id.serivcesMenu);
 
-        news5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news5exp){
-                    news5exp = false;
-                    news5.setText(getResources().getText(R.string.remoteAppNotExpanded));
-                }else{
-                    news5exp = true;
-                    news5.setText(getResources().getText(R.string.remoteAppExpanded));
-                }
-            }
-        });
-        news5title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news5exp){
-                    news5exp = false;
-                    news5.setText(getResources().getText(R.string.remoteAppNotExpanded));
-                }else{
-                    news5exp = true;
-                    news5.setText(getResources().getText(R.string.remoteAppExpanded));
-                }
-            }
-        });
+        ArrayList<String> servicesList = new ArrayList<>();
 
-        news6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news6exp){
-                    news6exp = false;
-                    news6.setText(getResources().getText(R.string.vpnNotExpanded));
-                }else{
-                    news6exp = true;
-                    news6.setText(getResources().getText(R.string.vpnExpanded));
-                }
-            }
-        });
-        news6title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news6exp){
-                    news6exp = false;
-                    news6.setText(getResources().getText(R.string.vpnNotExpanded));
-                }else{
-                    news6exp = true;
-                    news6.setText(getResources().getText(R.string.vpnExpanded));
-                }
-            }
-        });
-        news7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news7exp){
-                    news7exp = false;
-                    news7.setText(getResources().getText(R.string.softwareForStudentNotExpanded));
-                }else{
-                    news7exp = true;
-                    news7.setText(getResources().getText(R.string.softwareForStudentExpanded));
-                }
-            }
-        });
-        news7title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news7exp){
-                    news7exp = false;
-                    news7.setText(getResources().getText(R.string.softwareForStudentNotExpanded));
-                }else{
-                    news7exp = true;
-                    news7.setText(getResources().getText(R.string.softwareForStudentExpanded));
-                }
-            }
-        });
+        servicesList.add("Connect to VPN✓");
+        servicesList.add("Validate Student ID");
+        servicesList.add("Recharge Student ID✓");
+        servicesList.add("Printing Credit✓");
+        servicesList.add("Printing");
 
-        news8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news8exp){
-                    news8exp = false;
-                    news8.setText(getResources().getText(R.string.lsfNotExpanded));
-                }else{
-                    news8exp = true;
-                    news8.setText(getResources().getText(R.string.lsfExpanded));
-                }
-            }
-        });
-        news8title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news8exp){
-                    news8exp = false;
-                    news8.setText(getResources().getText(R.string.lsfNotExpanded));
-                }else{
-                    news8exp = true;
-                    news8.setText(getResources().getText(R.string.lsfExpanded));
-                }
-            }
-        });
-        news9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news9exp){
-                    news9exp = false;
-                    news9.setText(getResources().getText(R.string.selfServiceFunctionsNotExpanded));
-                }else{
-                    news9exp = true;
-                    news9.setText(getResources().getText(R.string.selfServiceFunctionsExpanded));
-                }
-            }
-        });
-        news9title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news9exp){
-                    news9exp = false;
-                    news9.setText(getResources().getText(R.string.selfServiceFunctionsNotExpanded));
-                }else{
-                    news9exp = true;
-                    news9.setText(getResources().getText(R.string.selfServiceFunctionsExpanded));
-                }
-            }
-        });
+        ArrayAdapter<String> servicesAdapter = new ArrayAdapter<>(
+                this,
+                R.layout.list_element_layout,
+                servicesList
+        );
 
-        news10.setOnClickListener(new View.OnClickListener() {
+        servicesMenu.setAdapter(servicesAdapter);
+
+        servicesMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                if(news10exp){
-                    news10exp = false;
-                    news10.setText(getResources().getText(R.string.eLearningNotExpanded));
-                }else{
-                    news10exp = true;
-                    news10.setText(getResources().getText(R.string.eLearningExpanded));
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent;
+                switch(position){
+                    case 0:  //vpn
+                        intent = new Intent(ServicesCardActivity.this, ConnectToVPN_Activity.class);
+                        startActivity(intent);
+                        break;
+                    case 1: //validate
+                        intent = new Intent(ServicesCardActivity.this, ValidateCardActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2: //recharge
+                        intent = new Intent(ServicesCardActivity.this, RechargeCardActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3: //recharge print credit
+                        intent = new Intent(ServicesCardActivity.this, PrintingCreditActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4: //printing
+                        intent = new Intent(ServicesCardActivity.this, PrintingActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
                 }
             }
         });
-        news10title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(news10exp){
-                    news10exp = false;
-                    news10.setText(getResources().getText(R.string.eLearningNotExpanded));
-                }else{
-                    news10exp = true;
-                    news10.setText(getResources().getText(R.string.eLearningExpanded));
-                }
-            }
-        });
-
-
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -345,11 +107,9 @@ public class ServicesCardActivity extends AppCompatActivity {
                 return false;
             }
 
-
-
-
-
         });
 
     }
+
+
 }

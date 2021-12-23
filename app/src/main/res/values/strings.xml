@@ -187,6 +187,9 @@ e-Learning should provide you with all the opportunities of modern communication
     <string name="systemsEngineeringAndManagementCardText">Gather international experience at the RHIT in the USA. Acquire engineering expertise in hardware and software, and commercial expertise in the fields of finance and human resources.</string>
     <string name="intelligentSystemsPrequisitiesText">• Bachelor’s degree in a computer science related subject. \n• 60 ECTS credits acquired from the study of computer science-based subjects.  \n• A passing grade in a selection interview.  \n• Excellent written and spoken English.</string>
     <string name="systemsEngineeringAndManagementPrequisitiesText">"• Qualification in a technically-oriented degree from a German university. \n\n or \n\n• A comparable foreign university  \n\n• 180 ECTS credits acquired from the study of computer science-based subjects.  \n\n• Excellent written and spoken English. \n\n• Excellent written and spoken German. "</string>
+    <string name="title_activity_hochschule_map">HochschuleMap</string>
+    <string name="title_activity_hochschule_maps">HochschuleMapsActivity</string>
+    <string name="title_activity_city_map">CityMapActivity</string>
 
 
 </resources>

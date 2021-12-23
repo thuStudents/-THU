@@ -1,29 +1,47 @@
 package de.thu;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
-public class SubjectsTipsActivity extends AppCompatActivity {
+public class ConnectToVPN_Activity extends YouTubeBaseActivity {
+    String api_key_vpn = "AIzaSyCSOYp9m9btLTfCBHi6sZUblS3HG1wWLOM";
+    YouTubePlayerView ytPlayerVPN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_subjects_tips);
-
-        Toast.makeText(SubjectsTipsActivity.this, "In Development", Toast.LENGTH_SHORT).show();
+        setContentView(R.layout.activity_connect_to_vpn);
 
 
+        // Get reference to the view of Video player
+        ytPlayerVPN = findViewById(R.id.ytPlayerConnectToVPN);
+        ytPlayerVPN.initialize(api_key_vpn, new YouTubePlayer.OnInitializedListener() {
+            @Override  //handle play and pause here
+            public void onInitializationSuccess( YouTubePlayer.Provider provider,
+                                                 YouTubePlayer youTubePlayer, boolean b) {
+                youTubePlayer.cueVideo("7QSjGeyExtg");
+            }
+            @Override
+            public void onInitializationFailure(YouTubePlayer.Provider provider,
+                                                YouTubeInitializationResult youTubeInitializationResult) {
+                Toast.makeText(getApplicationContext(), "Video Player Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.find);
+        bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -47,7 +65,7 @@ public class SubjectsTipsActivity extends AppCompatActivity {
 
                 return false;
             }
-        });
 
+        });
     }
 }
