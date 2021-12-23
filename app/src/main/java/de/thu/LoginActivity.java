@@ -36,10 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginEmail=findViewById(R.id.inputEmail);
-        loginPassword=findViewById(R.id.inputPassword);
-        buttonLogin=findViewById(R.id.buttonLogin);
-        progressDialog = new ProgressDialog(this);
+        loginEmail = findViewById(R.id.inputEmail);
+        loginPassword = findViewById(R.id.inputPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
+//        progressDialog = new ProgressDialog(this);
         createNewAccount = findViewById(R.id.createNewAccount);
 
         mAuth = FirebaseAuth.getInstance();
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 startActivity(new Intent(getApplicationContext()
                         , RegisterActivity.class));
-                overridePendingTransition(0,0);
+                overridePendingTransition(0, 0);
 
             }
         });
@@ -75,13 +75,13 @@ public class LoginActivity extends AppCompatActivity {
 
         if (email.isEmpty()) {
             loginEmail.setError("Enter a valid email");
-        } else if (password.isEmpty() || password.length()<6) {
+        } else if (password.isEmpty() || password.length() < 6) {
             loginPassword.setError("Enter a valid password");
         } else {
-            progressDialog.setMessage("Login in progress");
-            progressDialog.setTitle("Login");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
+//            progressDialog.setMessage("Login in progress");
+//            progressDialog.setTitle("Login");
+//            progressDialog.setCanceledOnTouchOutside(false);
+//            progressDialog.show();
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -90,13 +90,13 @@ public class LoginActivity extends AppCompatActivity {
 
                             if (task.isSuccessful()) {
 
-                                progressDialog.dismiss();
+//                                progressDialog.dismiss();
                                 sendUserToNextActivity();
-                                Toast.makeText(LoginActivity.this, "Registration successful",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
 
                             } else {
-                                progressDialog.dismiss();
-                                Toast.makeText(LoginActivity.this, ""+task.getException(),Toast.LENGTH_SHORT).show();
+//                                progressDialog.dismiss();
+                                Toast.makeText(LoginActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
 
                             }
 
@@ -109,10 +109,16 @@ public class LoginActivity extends AppCompatActivity {
     private void sendUserToNextActivity() {
 
         Intent intent = new Intent(this, HomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 
     }
+
+    public boolean isCurUserLoggedIn() {
+        return (FirebaseAuth.getInstance().getCurrentUser() != null);
+    }
+}
+
 
 
     /*//intent for login
@@ -128,4 +134,3 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }*/
-}
