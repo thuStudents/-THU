@@ -25,13 +25,12 @@ public class ValidateCardActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_validate_card);
 
-        //add video
         ytPlayerValidate = findViewById(R.id.ytPlayerValidateCard);
         ytPlayerValidate.initialize(api_key_validate, new YouTubePlayer.OnInitializedListener() {
             @Override  //handle play and pause here
             public void onInitializationSuccess( YouTubePlayer.Provider provider,
                                                  YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.cueVideo("QjXK6lTJ3MU");
+                youTubePlayer.cueVideo("CTOopfhQz1Y");
             }
             @Override
             public void onInitializationFailure(YouTubePlayer.Provider provider,

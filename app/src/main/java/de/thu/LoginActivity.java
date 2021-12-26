@@ -3,6 +3,7 @@ package de.thu;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText loginEmail, loginPassword;
     Button buttonLogin;
     ProgressDialog progressDialog;
+    private boolean userLoggedIn = false;
 
     String emailPattern = "[a-zA-Z0-9._]-+@[a-z]+\\.+[a-z]";
 
@@ -30,6 +32,19 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseUser mUser;
 
     TextView createNewAccount;
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        if(mUser != null){
+            mUser.reload();
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +57,12 @@ public class LoginActivity extends AppCompatActivity {
 //        progressDialog = new ProgressDialog(this);
         createNewAccount = findViewById(R.id.createNewAccount);
 
-        mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 login();
-
             }
         });
 
@@ -72,7 +84,6 @@ public class LoginActivity extends AppCompatActivity {
         String email = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
 
-
         if (email.isEmpty()) {
             loginEmail.setError("Enter a valid email");
         } else if (password.isEmpty() || password.length() < 6) {
@@ -87,19 +98,15 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-
                             if (task.isSuccessful()) {
-
 //                                progressDialog.dismiss();
+//                                userLoggedIn = true;
                                 sendUserToNextActivity();
                                 Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-
                             } else {
 //                                progressDialog.dismiss();
                                 Toast.makeText(LoginActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
-
                             }
-
                         }
                     });
 
@@ -114,9 +121,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public boolean isCurUserLoggedIn() {
-        return (FirebaseAuth.getInstance().getCurrentUser() != null);
-    }
+//    public boolean isCurUserLoggedIn() {
+//        return userLoggedIn;
+//    }
 }
 
 

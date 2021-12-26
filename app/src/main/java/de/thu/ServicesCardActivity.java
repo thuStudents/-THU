@@ -36,7 +36,7 @@ public class ServicesCardActivity extends AppCompatActivity {
         ArrayList<String> servicesList = new ArrayList<>();
 
         servicesList.add("Connect to VPN✓");
-        servicesList.add("Validate Student ID");
+        servicesList.add("Validate Student ID✓");
         servicesList.add("Recharge Student ID✓");
         servicesList.add("Printing Credit✓");
         servicesList.add("Printing");

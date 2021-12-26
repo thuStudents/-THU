@@ -70,7 +70,7 @@ public class UlmInformationActivity extends AppCompatActivity {
 
         ArrayAdapter<String> ulmMenuAdapter = new ArrayAdapter<>(
                 this,
-                simple_list_item_1,
+                R.layout.list_element_layout,
                 ulmMenuList
         );
 

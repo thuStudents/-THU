@@ -106,5 +106,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+//    public boolean isCurUserRegisteredIn() {
+//        return (FirebaseAuth.getInstance().getReference() != null);
+//    }
+
 
 }
