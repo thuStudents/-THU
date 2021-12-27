@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reply">
+
+    <LinearLayout
+        android:id="@+id/my_reply_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
+
+        <!--header-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Reply"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/add_reply_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_reply_toolbar"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Type here...."
+        android:paddingLeft="10dp"
+        android:paddingTop="50dp"
+        android:paddingBottom="15dp" />
+
+
+    <Button
+        android:id="@+id/add_reply_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_reply_txt"
+        android:layout_marginTop="10dp"
+        android:background="@color/thuColor"
+        android:text="Answer"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+</RelativeLayout>

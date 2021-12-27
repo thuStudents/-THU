@@ -21,7 +21,7 @@ public class AccommodationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_accommodation);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.find);
+        bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -32,7 +32,9 @@ public class AccommodationActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.add:
-                        Toast.makeText(AccommodationActivity.this, "Add button pressed", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()

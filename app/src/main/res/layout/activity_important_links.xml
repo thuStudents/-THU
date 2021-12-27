@@ -28,38 +28,427 @@
 
         <!--header-->
         <TextView
-            android:id="@+id/homepage_title"
+            android:id="@+id/linksHeading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/myfont2"
-            android:text="Important Links"
+            android:text="Links"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/linksHeading"
-        android:layout_below="@id/linksToolbar"
+     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="11dp"
-        android:text="IMPORTANT LINKS"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+         android:layout_below="@id/linksToolbar"
+         android:layout_above="@id/bottom_navigation">
 
-    <TextView
-        android:id="@+id/text_view"
+      <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/linksHeading"
-        android:textSize="15sp"
-        android:gravity="center"/>
+        android:layout_height="wrap_content">
+
+              <LinearLayout
+                  android:id="@+id/websiteLinkCard"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/card_3"
+                  android:elevation="10dp"
+                  android:layout_margin="8dp">
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <ImageView
+                          android:id="@+id/thuWebsiteImage"
+                          android:layout_width="140dp"
+                          android:layout_height="140dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginBottom="8dp"
+                          android:contentDescription="content_description_media"
+                          android:scaleType="centerCrop"
+                          app:srcCompat="@drawable/thu_website" />
+
+                      <TextView
+                          android:id="@+id/thuWebsiteTitle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/thuWebsiteImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="THU WEBSITE"
+                          android:textAppearance="?attr/textAppearanceHeadline6"
+                          android:textSize="24sp" />
+
+                      <TextView
+                          android:id="@+id/thuWebsiteText"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/thuWebsiteTitle"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/thuWebsiteImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="Here you can access the THU Website"
+                          android:textAppearance="?attr/textAppearanceBody2"
+                          android:textColor="?android:attr/textColorSecondary"
+                          android:textSize="14sp"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:id="@+id/thuWebsiteLink"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/thuWebsiteText"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/thuWebsiteImage"
+                          android:background="@drawable/card_2"
+                          android:fontFamily="@font/myfont2"
+                          android:padding="10dp"
+                          android:text="THU WEBSITE"
+                          android:textAlignment="center"
+                          android:textColor="@color/white"
+                          android:textSize="18dp"
+                          android:textStyle="bold" />
+                  </RelativeLayout>
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/verwaltungLinkCard"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/websiteLinkCard"
+                  android:background="@drawable/card_3"
+                  android:elevation="10dp"
+                  android:layout_margin="10dp">
+
+                  <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                      <ImageView
+                          android:id="@+id/verwaltungImage"
+                          android:layout_width="140dp"
+                          android:layout_height="140dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginBottom="8dp"
+                          android:contentDescription="content_description_media"
+                          android:scaleType="centerCrop"
+                          app:srcCompat="@drawable/verwaltung" />
+
+                      <TextView
+                          android:id="@+id/verwaltungTitle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/verwaltungImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="VERWALTUNG"
+                          android:textAppearance="?attr/textAppearanceHeadline6"
+                          android:textSize="24sp" />
+
+                      <TextView
+                          android:id="@+id/verwaltungText"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/verwaltungTitle"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/verwaltungImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="Here you can access the grades overview or download registration status certificates"
+                          android:textAppearance="?attr/textAppearanceBody2"
+                          android:textColor="?android:attr/textColorSecondary"
+                          android:textSize="14sp"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:id="@+id/verwaltungLink"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/verwaltungText"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/verwaltungImage"
+                          android:background="@drawable/card_2"
+                          android:fontFamily="@font/myfont2"
+                          android:padding="10dp"
+                          android:text="VERWALTUNG"
+                          android:textAlignment="center"
+                          android:textColor="@color/white"
+                          android:textSize="18dp"
+                          android:textStyle="bold" />
+              </RelativeLayout>
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/lsfLinkCard"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/verwaltungLinkCard"
+                  android:background="@drawable/card_3"
+                  android:elevation="10dp"
+                  android:layout_margin="8dp">
+
+                  <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                      <ImageView
+                          android:id="@+id/lsfImage"
+                          android:layout_width="140dp"
+                          android:layout_height="140dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginBottom="8dp"
+                          android:contentDescription="content_description_media"
+                          android:scaleType="centerCrop"
+                          app:srcCompat="@drawable/lsf" />
+
+                      <TextView
+                          android:id="@+id/lsfTitle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/lsfImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="LSF"
+                          android:textAppearance="?attr/textAppearanceHeadline6"
+                          android:textSize="24sp" />
+
+                      <TextView
+                          android:id="@+id/lsfText"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/lsfTitle"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/lsfImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="Here you can access LSF to register/deregister for examinations or to sign up for elective modules"
+                          android:textAppearance="?attr/textAppearanceBody2"
+                          android:textColor="?android:attr/textColorSecondary"
+                          android:textSize="14sp"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:id="@+id/lsfLink"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/lsfText"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/lsfImage"
+                          android:background="@drawable/card_2"
+                          android:fontFamily="@font/myfont2"
+                          android:padding="10dp"
+                          android:text="LSF"
+                          android:textAlignment="center"
+                          android:textColor="@color/white"
+                          android:textSize="18dp"
+                          android:textStyle="bold" />
+
+
+              </RelativeLayout>
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/webmailLinkCard"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/lsfLinkCard"
+                  android:background="@drawable/card_3"
+                  android:elevation="10dp"
+                  android:layout_margin="8dp">
+
+                  <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+                      <ImageView
+                          android:id="@+id/webmailImage"
+                          android:layout_width="140dp"
+                          android:layout_height="140dp"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginTop="8dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginBottom="8dp"
+                          android:contentDescription="content_description_media"
+                          android:scaleType="centerCrop"
+                          app:srcCompat="@drawable/webmail" />
+
+                      <TextView
+                          android:id="@+id/webmailTitle"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/webmailImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="WEBMAIL"
+                          android:textAppearance="?attr/textAppearanceHeadline6"
+                          android:textSize="24sp" />
+
+
+                      <TextView
+                          android:id="@+id/webmailText"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/webmailTitle"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/webmailImage"
+                          android:fontFamily="@font/myfont2"
+                          android:text="Here you can access your own university mailbox"
+                          android:textAppearance="?attr/textAppearanceBody2"
+                          android:textColor="?android:attr/textColorSecondary"
+                          android:textSize="14sp"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:id="@+id/webmailLink"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_below="@id/webmailText"
+                          android:layout_centerHorizontal="true"
+                          android:layout_marginStart="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginEnd="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:layout_toRightOf="@id/webmailImage"
+                          android:background="@drawable/card_2"
+                          android:fontFamily="@font/myfont2"
+                          android:padding="10dp"
+                          android:text="WEBMAIL"
+                          android:textAlignment="center"
+                          android:textColor="@color/white"
+                          android:textSize="18dp"
+                          android:textStyle="bold" />
+
+
+              </RelativeLayout>
+              </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/publicFolderCard"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/webmailLinkCard"
+              android:background="@drawable/card_3"
+              android:elevation="10dp"
+              android:layout_margin="8dp">
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:id="@+id/publicFolderImage"
+                      android:layout_width="140dp"
+                      android:layout_height="140dp"
+                      android:layout_marginStart="8dp"
+                      android:layout_marginTop="8dp"
+                      android:layout_marginEnd="8dp"
+                      android:layout_marginBottom="8dp"
+                      android:contentDescription="content_description_media"
+                      android:scaleType="centerCrop"
+                      app:srcCompat="@drawable/public_folder" />
+
+                  <TextView
+                      android:id="@+id/publicFolderTitle"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="10dp"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginEnd="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:layout_toRightOf="@id/publicFolderImage"
+                      android:fontFamily="@font/myfont2"
+                      android:text="PUBLIC FOLDER"
+                      android:textAppearance="?attr/textAppearanceHeadline6"
+                      android:textSize="24sp" />
+
+                  <TextView
+                      android:id="@+id/publicFolderText"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/publicFolderTitle"
+                      android:layout_marginStart="10dp"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginEnd="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:layout_toRightOf="@id/publicFolderImage"
+                      android:fontFamily="@font/myfont2"
+                      android:text="Here you can access all necessary documents for all the offered courses "
+                      android:textAppearance="?attr/textAppearanceBody2"
+                      android:textColor="?android:attr/textColorSecondary"
+                      android:textSize="14sp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:id="@+id/publicFolderLink"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/publicFolderText"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginStart="10dp"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginEnd="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:layout_toRightOf="@id/publicFolderImage"
+                      android:background="@drawable/card_2"
+                      android:fontFamily="@font/myfont2"
+                      android:padding="10dp"
+                      android:text="PUBLIC FOLDER"
+                      android:textAlignment="center"
+                      android:textColor="@color/white"
+                      android:textSize="18dp"
+                      android:textStyle="bold" />
+              </RelativeLayout>
+          </LinearLayout>
+
+          </RelativeLayout>
+         </ScrollView>
+        </RelativeLayout>
 
 
 
-</RelativeLayout>
+

@@ -24,8 +24,6 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
-
-
     </LinearLayout>
 
     <FrameLayout
@@ -39,7 +37,6 @@
             android:id="@+id/postListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
-
     </FrameLayout>
 
 

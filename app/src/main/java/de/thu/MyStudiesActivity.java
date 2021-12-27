@@ -56,8 +56,9 @@ public class MyStudiesActivity extends AppCompatActivity {
 
         mystudiesmenuList.add("Timetable");
         mystudiesmenuList.add("To-Do List");
-        mystudiesmenuList.add("Subjects & Tips");
-        mystudiesmenuList.add("Links");
+        mystudiesmenuList.add("Links✓");
+        mystudiesmenuList.add("IT-Services & THU-Card");
+        mystudiesmenuList.add("THU map✓");
 
 
         ArrayAdapter<String> hsumenuAdapter = new ArrayAdapter<>(
@@ -81,12 +82,16 @@ public class MyStudiesActivity extends AppCompatActivity {
                         intent = new Intent(MyStudiesActivity.this, ToDoActivity.class);
                         startActivity(intent);
                         break;
-                    case 2: // subjects
-                        intent = new Intent(MyStudiesActivity.this, SubjectsTipsActivity.class);
+                    case 2: // links
+                        intent = new Intent(MyStudiesActivity.this, ImportantLinksActivity.class);
                         startActivity(intent);
                         break;
-                    case 3: // links
-                        intent = new Intent(MyStudiesActivity.this, ImportantLinksActivity.class);
+                    case 3: // IT-Services & THU-Card
+                        intent = new Intent(MyStudiesActivity.this, ServicesCardActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 4: // hochschule map
+                        intent = new Intent(MyStudiesActivity.this, HochschuleMapsActivity.class);
                         startActivity(intent);
                         break;
                     default:

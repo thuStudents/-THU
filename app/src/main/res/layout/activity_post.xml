@@ -6,36 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".PostActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_newpost_toolbar"
+    <LinearLayout
+        android:id="@+id/my_forum_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/thuColor"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
 
+        <!--header-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Post"
-            android:textSize="25dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Post"
+            android:textColor="@color/white"
+            android:textSize="30sp"
             android:textStyle="bold" />
-    </androidx.appcompat.widget.Toolbar>
+
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/add_post_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/my_newpost_toolbar"
+        android:layout_below="@+id/my_forum_toolbar"
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Type here...."
         android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
+        android:paddingTop="50dp"
+        android:paddingBottom="15dp" />
 
 
     <Button
@@ -50,5 +52,18 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
 
 </RelativeLayout>

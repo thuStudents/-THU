@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/websiteLinkCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_3"
+        android:elevation="10dp"
+        android:padding="10dp"
+        android:layout_margin="8dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            name-->
+            <TextView
+                android:id="@+id/taskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:text="TaskName"
+                android:layout_margin="5dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="28sp" />
+
+<!--            date-->
+            <TextView
+                android:id="@+id/taskAddedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/taskName"
+                android:fontFamily="@font/myfont2"
+                android:layout_margin = "5dp"
+                android:text="Date and Time"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+<!--            checkbox-->
+            <CheckBox
+                android:id="@+id/taskCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/checkbox_task_selector"
+                android:button="@null"
+                android:checked="false"
+                android:onClick="onCheckboxClicked" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

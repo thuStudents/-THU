@@ -5,14 +5,16 @@ public class Post {
     private String date;
     private String email;
     private String post;
+    private String id;
 
     public Post() {
     }
 
-    public Post(String date, String email, String post) {
+    public Post(String date, String email, String post, String id) {
         this.date = date;
         this.email = email;
         this.post = post;
+        this.id = id;
     }
 
 
@@ -38,5 +40,13 @@ public class Post {
 
     public void setPost(String post) {
         this.post = post;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

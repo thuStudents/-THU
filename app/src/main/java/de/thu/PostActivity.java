@@ -20,7 +20,7 @@ import java.util.Random;
 import java.util.Calendar;
 
 public class PostActivity extends AppCompatActivity  implements View.OnClickListener{
-     Button btnAdd;
+    Button btnAdd;
     FirebaseDatabase rootnode;
     DatabaseReference reference;
     FirebaseAuth mAuth;
@@ -59,10 +59,11 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
                 reference.child(currentFirebaseUser.getUid() + mSec).child("post").setValue(value);
                 reference.child(currentFirebaseUser.getUid() + mSec).child("date").setValue(currentDate + " " + str);
                 reference.child(currentFirebaseUser.getUid() + mSec).child("email").setValue(currentFirebaseUser.getEmail());
+                reference.child(currentFirebaseUser.getUid() + mSec).child("id").setValue(currentFirebaseUser.getUid() + mSec);
 
-
-                /*Intent createAccount = new Intent(this, ForumActivity.class);
-                startActivity(createAccount);*/
+                startActivity(new Intent(getApplicationContext()
+                        , ForumActivity.class));
+                overridePendingTransition(0,0);
 
                 break;
             default:

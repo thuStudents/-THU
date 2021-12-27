@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConnectToVPN_Activity">
+
+    <!--bottom navigation bar-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:elevation="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bone_white"
+        app:itemIconTint="@color/thu_blue"
+        app:itemTextColor="@color/thu_blue"
+        app:labelVisibilityMode="selected"
+        app:menu="@menu/bottom_navigation_bar" />
+
+
+    <!--toolbar-->
+    <LinearLayout
+        android:id="@+id/vpn_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/header_bg">
+
+        <!--header-->
+        <TextView
+            android:id="@+id/homepage_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Connect to VPN"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--    CONNECT TO VPN-->
+    <LinearLayout
+        android:id="@+id/card0services"
+        android:layout_below="@id/vpn_toolbar"
+        android:layout_above="@id/bottom_navigation"
+        android:background="@drawable/card_3"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vpn_toolbar">
+
+            <TextView
+                android:id="@+id/vpnCardtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/myfont2"
+                android:text="How to Connect to VPN"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="24.5sp"
+                android:textStyle="bold" />
+
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/ytPlayerConnectToVPN"
+                android:layout_width="match_parent"
+                android:layout_below="@id/vpnCardtext"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/vpnCardtext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ytPlayerConnectToVPN"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/myfont2"
+                android:text="If you want to connect to the Ulm University of Applied Sciences network from outside the campus, you will need a VPN connection. VPN connection enables participants in a private network to connect to a different private network.\n
+LSF platform and many remote apps required during lectures are only available with the VPN connection."
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
