@@ -27,12 +27,11 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
         
         ArrayList<String> hsumenuGeneralList = new ArrayList<>();
 
-        hsumenuGeneralList.add("Offered Courses");
-        hsumenuGeneralList.add("Applying");
-        hsumenuGeneralList.add("Offices");
-        hsumenuGeneralList.add("IT-Services & THU-Card");
-        hsumenuGeneralList.add("Cafeteria & Mensa");
-        hsumenuGeneralList.add("Library");
+        hsumenuGeneralList.add("Offered Courses✓");
+        hsumenuGeneralList.add("Applying✓");
+        hsumenuGeneralList.add("Offices✓");
+        hsumenuGeneralList.add("Library✓");
+        hsumenuGeneralList.add("Cafeteria & Mensa✓");
 
         ArrayAdapter<String> hsumenuGeneralAdapter = new ArrayAdapter<>(
                 this,
@@ -59,16 +58,12 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
                         intent = new Intent(HochschuleGeneralActivity.this, OfficesActivity.class);
                         startActivity(intent);
                         break;
-                    case 3: // IT-Services & THU-Card
-                        intent = new Intent(HochschuleGeneralActivity.this, ServicesCardActivity.class);
+                    case 3: // Library
+                        intent = new Intent(HochschuleGeneralActivity.this, LibraryActivity.class);
                         startActivity(intent);
                         break;
                     case 4: // Cafeteria & Mensa
                         intent = new Intent(HochschuleGeneralActivity.this, CafeteriaMensaActivity.class);
-                        startActivity(intent);
-                        break;
-                    case 5:// Library
-                        intent = new Intent(HochschuleGeneralActivity.this, LibraryActivity.class);
                         startActivity(intent);
                         break;
                     default:

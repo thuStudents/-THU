@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,120 +7,238 @@
         tools:context=".CafeteriaFragment"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/Cafeteria"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            app:srcCompat="@drawable/cafeteria" />
+            android:layout_height="match_parent"
+            android:padding="15dp">
 
-        <TextView
-            android:id="@+id/cafeteriaHeading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Cafeteria"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="11dp"
-            android:text="CAFETERIA"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            <!--                    FIXXXXXX-->
+            <LinearLayout
+                android:id="@+id/card0cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/cafeteriaHeading"
-            android:layout_centerHorizontal="true"
-            android:text="The Studierendenwerk Ulm operates the cafeteria of the Technical University of Ulm on the Prittwitzstrasse campus.
+                    <ImageView
+                        android:id="@+id/Cafeteria"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_alignParentTop="true"
+                        app:srcCompat="@drawable/cafeteria" />
 
-\nOur small but fine cafeteria is located in the B building of the university. Bright yellow and cool blue are its colors. The small, sunny terrace with a view of the green adds to the fresh atmosphere." />
+                </RelativeLayout>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/Payment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text"
+            <LinearLayout
+                android:id="@+id/card1cafeteria"
+                android:layout_below="@id/card0cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="8dp">
 
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="11dp"
-            android:text="Payment:"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/secondParagraph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Payment"
-            android:layout_centerHorizontal="true"
-            android:text="Payment is made with the student ID (THU card), the credit of which is topped up in the entrance area of ​​the cafeteria with cash or in the cafeteria with an EC card (Prittwitzstraße). On the Albert-Einstein-Allee campus, it is possible to upgrade the THU card with cash in the cafeteria." />
+                    <TextView
+                        android:id="@+id/cafeteriaHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="CAFETERIA"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cafeteriaHeading"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="The Studierendenwerk Ulm operates the cafeteria of the Technical University of Ulm on the Prittwitzstrasse campus.
 
-        <TextView
-            android:id="@+id/openingHours"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/secondParagraph"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="11dp"
-            android:text="Opening Hours:"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+\nOur small but fine cafeteria is located in the B building of the university. Bright yellow and cool blue are its colors. The small, sunny terrace with a view of the green adds to the fresh atmosphere."
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/thirdParagraph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/openingHours"
-            android:text="Monday to Friday 07.30 a.m - 10.30 a.m, 11.00 a.m - 02.00 p.m" />
+                </RelativeLayout>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/mealPlans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/thirdParagraph"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="11dp"
-            android:text="Meal Plans:"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/card2cafeteria"
+                android:layout_below="@id/card1cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="8dp">
 
-        <TextView
-            android:id="@+id/forthParagraph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/mealPlans"
-            android:layout_centerHorizontal="true"
-            android:text="Cafeteria and snack offer" />
-        <!--        add the link at the keyword here-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/ContactPerson"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/forthParagraph"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="11dp"
-            android:text="Contact Person:"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/Payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="PAYMENT"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/fifthParagraph"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ContactPerson"
-            android:layout_centerHorizontal="true"
-            android:text="Matthias Auciello\nTel. 0731 50-28218 \nmatthias.auciello@studierendenwerk-ulm.de" />
+                    <TextView
+                        android:id="@+id/secondParagraph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Payment"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Payment is made with the student ID (THU card), the credit of which is topped up in the entrance area of ​​the cafeteria with cash or in the cafeteria with an EC card (Prittwitzstraße). On the Albert-Einstein-Allee campus, it is possible to upgrade the THU card with cash in the cafeteria."
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
+                </RelativeLayout>
+            </LinearLayout>
 
-    </RelativeLayout>
-</ScrollView>
+            <LinearLayout
+                android:id="@+id/card3cafeteria"
+                android:layout_below="@id/card2cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/openingHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="OPENING HOURS"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/thirdParagraph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/openingHours"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Monday to Friday 07.30 a.m - 10.30 a.m, 11.00 a.m - 02.00 p.m"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card4cafeteria"
+                android:layout_below="@id/card3cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mealPlans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="MEAL PLANS"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/forthParagraph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mealPlans"
+                        android:layout_centerHorizontal="true"
+                        android:text="Cafeteria and snack offer"
+                        android:fontFamily="@font/myfont2"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card5cafeteria"
+                android:layout_below="@id/card4cafeteria"
+                android:background="@drawable/card_3"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/ContactPerson"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="11dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="CONTACT PERSON"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fifthParagraph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ContactPerson"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/myfont2"
+                        android:text="Matthias Auciello\nTel. 0731 50-28218 \nmatthias.auciello@studierendenwerk-ulm.de"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

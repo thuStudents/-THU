@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:fontFamily="@font/myfont2"
-            android:text="International degree programs"
+            android:text="Offered Courses"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -52,20 +52,107 @@
             android:layout_below="@id/my_offeredCourses_toolbar">
 
 <!--            Computer Science-->
-            <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:id="@+id/computerScienceCard">
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:id="@+id/computerScienceCard"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_3"
+                    android:elevation="8dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/computerScienceImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:contentDescription="content_description_media"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/computer_science_image" />
+
+                        <TextView
+                            android:id="@+id/computerScienceTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/computerScienceImage"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/myfont2"
+                            android:text="COMPUTER SCIENCE"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/computerScienceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/computerScienceTitle"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/myfont2"
+                            android:text="@string/computerScienceCardText"
+                            android:textAppearance="?attr/textAppearanceBody2"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/CourseScheduleComputerScienceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/computerScienceText"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/card_2"
+                            android:fontFamily="@font/myfont2"
+                            android:padding="12dp"
+                            android:text="Course Schedule"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/PrequisitiesComputerScienceButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/CourseScheduleComputerScienceButton"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/card_2"
+                            android:fontFamily="@font/myfont2"
+                            android:padding="12dp"
+                            android:text="Prequisites"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+<!--            energyInformationManagementCard-->
             <LinearLayout
+                android:layout_toRightOf="@id/computerScienceCard"
                 android:layout_width="300dp"
+                android:id="@+id/energyInformationManagementCard"
                 android:layout_height="match_parent"
-                android:layout_margin="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/card_3"
                 android:elevation="8dp"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="10dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -73,648 +160,748 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/computerScienceImage"
+                        android:id="@+id/energyInformationManagementImage"
                         android:layout_width="match_parent"
                         android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/energy_information_management" />
+
+                    <TextView
+                        android:id="@+id/energyInformationManagementTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/energyInformationManagementImage"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="ENERGY INFORMATION MANAGEMENT"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/energyInformationManagementText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/energyInformationManagementTitle"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
-                        android:contentDescription="content_description_media"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/computer_science_image" />
-
-                    <TextView
-                        android:id="@+id/computerScienceTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/computerScienceImage"
-                        android:layout_margin="10dp"
-                        android:text="COMPUTER SCIENCE"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/computerScienceText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/computerScienceTitle"
-                        android:layout_margin="10dp"
-                        android:text="@string/computerScienceCardText"
+                        android:fontFamily="@font/myfont2"
+                        android:text="@string/energyInformationManagementCardText"
                         android:textAppearance="?attr/textAppearanceBody2"
                         android:textColor="?android:attr/textColorSecondary"
-                        android:textSize="12sp"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:id="@+id/computerScienceMiniCard1"
-                        android:layout_width="match_parent"
+                    <Button
+                        android:id="@+id/CourseScheduleEnergyInformationManagementButton"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/computerScienceText"
-                        android:background="@drawable/card_3"
-                        android:layout_margin="8dp"
-                        android:elevation="8dp"
-                        android:orientation="vertical"
-                        android:padding="10dp">
+                        android:layout_below="@id/energyInformationManagementText"
+                        android:text="Course Schedule"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/myfont2"
+                        android:layout_margin="10dp"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/card_2" />
 
-                        <TextView
-                            android:id="@+id/computerScienceCourseSchedule"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:text="Course Schedule"
-                            android:textStyle="bold"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"
-                            android:id="@+id/schedule_image"
-                            app:srcCompat = "@drawable/course_schedule"
-                            android:layout_below="@id/computerScienceCourseSchedule"
-                            />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/computerScienceMiniCard2"
-                        android:layout_width="match_parent"
+                    <Button
+                        android:id="@+id/PrequisitiesEnergyInformationManagementButton"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/computerScienceMiniCard1"
-                        android:background="@drawable/card_3"
-                        android:layout_margin="8dp"
-                        android:elevation="8dp"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:id="@+id/computerSciencePrequisities"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:text="Prequisities"
-                            android:textStyle="bold"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-                        <TextView
-                            android:id="@+id/computerSciencetext3"
-                            android:layout_below="@id/computerSciencePrequisities"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:text="@string/computerSciencePrequisitiesText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-                    </LinearLayout>
+                        android:layout_below="@id/CourseScheduleEnergyInformationManagementButton"
+                        android:layout_alignParentEnd="true"
+                        android:text="Prequisites"
+                        android:textSize="14dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/myfont2"
+                        android:layout_margin="10dp"
+                        android:padding="12dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/card_2" />
 
                 </RelativeLayout>
             </LinearLayout>
-            </ScrollView>
-
-<!--            energyInformationManagementCard-->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:id="@+id/energyInformationManagementCard"
-                android:layout_toRightOf="@id/computerScienceCard">
-                <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/card_3"
-                    android:elevation="8dp"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/energyInformationManagementImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="content_description_media"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/energy_information_management" />
-
-                        <TextView
-                            android:id="@+id/energyInformationManagementTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/energyInformationManagementImage"
-                            android:layout_margin="10dp"
-                            android:text="ENERGY INFORMATION MANAGEMENT"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/energyInformationManagementText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/energyInformationManagementTitle"
-                            android:layout_margin="10dp"
-                            android:textStyle="bold"
-                            android:text="@string/energyInformationManagementCardText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                        <LinearLayout
-                            android:id="@+id/energyInformationManagementMiniCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/energyInformationManagementText"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/energyInformationManagementCourseSchedule"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Course Schedule"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="180dp"
-                                android:id="@+id/schedule2_image"
-                                app:srcCompat = "@drawable/energy_information_management_course_schedule"
-                                android:layout_below="@id/energyInformationManagementCourseSchedule"
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/energyInformationManagementMiniCard2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/energyInformationManagementMiniCard1"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/energyInformationManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Prequisities"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                            <TextView
-                                android:id="@+id/energyInformationManagementPrequisitiesText"
-                                android:layout_below="@id/energyInformationManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="@string/energyInformationManagementPrequisitiesText"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-
-                    </RelativeLayout>
-                </LinearLayout>
-            </ScrollView>
 
 <!--            intelligentSystemsCard-->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <LinearLayout
+                android:layout_toRightOf="@id/energyInformationManagementCard"
+                android:layout_width="300dp"
                 android:id="@+id/intelligentSystemsCard"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:layout_toRightOf="@id/energyInformationManagementCard" >
-            <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/card_3"
-                    android:elevation="8dp"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                    <RelativeLayout
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/intelligentSystemsImage"
                         android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/intelligent_systems" />
+
+                    <TextView
+                        android:id="@+id/intelligentSystemsTitle"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_below="@id/intelligentSystemsImage"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="INTELLIGENT SYSTEMS"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
 
-                        <ImageView
-                            android:id="@+id/intelligentSystemsImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="content_description_media"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/intelligent_systems" />
+                    <TextView
+                        android:id="@+id/intelligentSystemsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/intelligentSystemsTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="@string/intelligentSystemsCardText"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/intelligentSystemsTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/intelligentSystemsImage"
-                            android:layout_margin="10dp"
-                            android:text="INTELLIGENT SYSTEMS"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="20sp" />
+                    <Button
+                        android:id="@+id/CourseScheduleIntelligentSystemsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/intelligentSystemsText"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/card_2"
+                        android:fontFamily="@font/myfont2"
+                        android:padding="12dp"
+                        android:text="Course Schedule"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/intelligentSystemsText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/intelligentSystemsTitle"
-                            android:layout_margin="10dp"
-                            android:textStyle="bold"
-                            android:text="@string/intelligentSystemsCardText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
+                    <Button
+                        android:id="@+id/PrequisitesIntelligentSystemsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/CourseScheduleIntelligentSystemsButton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/card_2"
+                        android:fontFamily="@font/myfont2"
+                        android:padding="12dp"
+                        android:text="Prequisites"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:id="@+id/intelligentSystemsMiniCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/intelligentSystemsText"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
+                </RelativeLayout>
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/intelligentSystemsCourseSchedule"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Course Schedule"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="100dp"
-                                android:id="@+id/schedule3_image"
-                                app:srcCompat = "@drawable/intelligent_systems_course_schedule"
-                                android:layout_below="@id/intelligentSystemsCourseSchedule"
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/intelligentSystemsMiniCard2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/intelligentSystemsMiniCard1"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/intelligentSystemsPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Prequisities"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                            <TextView
-                                android:id="@+id/intelligentSystemsPrequisitiesText"
-                                android:layout_below="@id/intelligentSystemsPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="@string/intelligentSystemsPrequisitiesText"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </ScrollView>
 <!--            internationalEnergyEconomicsCard-->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:id="@+id/internationalEnergyEconomicsCard"
-                android:layout_toRightOf="@id/intelligentSystemsCard" >
             <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/card_3"
-                    android:elevation="8dp"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                android:layout_toRightOf="@id/intelligentSystemsCard"
+                android:layout_width="300dp"
+                android:id="@+id/internationalEnergyEconomicsCard"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                    <RelativeLayout
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/internationalEnergyEconomicsImage"
                         android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/international_energy_economics" />
+
+                    <TextView
+                        android:id="@+id/internationalEnergyEconomicsTitle"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_below="@id/internationalEnergyEconomicsImage"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="INTERNATIONAL ENERGY ECONOMICS"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
 
-                        <ImageView
-                            android:id="@+id/internationalEnergyEconomicsImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="content_description_media"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/international_energy_economics" />
+                    <TextView
+                        android:id="@+id/internationalEnergyEconomicsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/internationalEnergyEconomicsTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="@string/internationalEnergyEconomicsCardText"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/internationalEnergyEconomicsTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/internationalEnergyEconomicsImage"
-                            android:layout_margin="10dp"
-                            android:text="INTERNATIONAL ENERGY ECONOMICS"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="20sp" />
 
-                        <TextView
-                            android:id="@+id/internationalEnergyEconomicsText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/internationalEnergyEconomicsTitle"
-                            android:layout_margin="10dp"
-                            android:textStyle="bold"
-                            android:text="@string/internationalEnergyEconomicsCardText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
+                <Button
+                    android:id="@+id/PrequisitesInternationalEnergyEconomicsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/internationalEnergyEconomicsText"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/card_2"
+                    android:fontFamily="@font/myfont2"
+                    android:padding="12dp"
+                    android:text="Prequisites"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+                </RelativeLayout>
 
-                        <LinearLayout
-                            android:id="@+id/internationalEnergyEconomicsMiniCard1"
-                            android:layout_below="@id/internationalEnergyEconomicsText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/internationalEnergyEconomicsPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Prequisities"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                            <TextView
-                                android:id="@+id/internationalEnergyEconomicsPrequisitiesText"
-                                android:layout_below="@id/internationalEnergyEconomicsPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="@string/internationalEnergyEconomicsPrequisitiesText"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </ScrollView>
+            </LinearLayout>
 
 <!--          internationalEnergyManagementCard  -->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+            <LinearLayout
+                android:layout_toRightOf="@id/internationalEnergyEconomicsCard"
+                android:layout_width="300dp"
                 android:id="@+id/internationalEnergyManagementCard"
-                android:layout_toRightOf="@id/internationalEnergyEconomicsCard" >
-                <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/card_3"
-                    android:elevation="8dp"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:id="@+id/internationalEnergyManagementImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="content_description_media"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/international_energy_management" />
-
-                        <TextView
-                            android:id="@+id/internationalEnergyManagementTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/internationalEnergyManagementImage"
-                            android:layout_margin="10dp"
-                            android:text="INTERNATIONAL ENERGY MANAGEMENT"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:id="@+id/internationalEnergyManagementText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:layout_below="@id/internationalEnergyManagementTitle"
-                            android:layout_margin="10dp"
-                            android:text="@string/internationalEnergyManagementCardText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
-
-                        <LinearLayout
-                            android:id="@+id/internationalEnergyManagementMiniCard1"
-                            android:layout_below="@id/internationalEnergyManagementText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/internationalEnergyManagementCourseSchedule"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Course Schedule"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-
-                            <ImageView
-                                android:layout_width="match_parent"
-                                android:layout_height="180dp"
-                                android:id="@+id/schedule4_image"
-                                app:srcCompat = "@drawable/international_energy_management_course_schedule"
-                                android:layout_below="@id/intelligentSystemsCourseSchedule"
-                                />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/internationalEnergyManagementMiniCard2"
-                            android:layout_below="@id/internationalEnergyManagementMiniCard1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
-
-                            <TextView
-                                android:id="@+id/internationalEnergyManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Prequisities"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                            <TextView
-                                android:id="@+id/internationalEnergyManagementPrequisitiesText"
-                                android:layout_below="@id/internationalEnergyManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="@string/internationalEnergyManagementPrequisitiesText"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </ScrollView>
-
-<!--          systemsEngineeringAndManagement-->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_margin="10dp"
-                android:id="@+id/systemsEngineeringAndManagement"
-                android:layout_toRightOf="@id/internationalEnergyManagementCard" >
-                <LinearLayout
-                    android:layout_width="300dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="@drawable/card_3"
-                    android:elevation="8dp"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                    <RelativeLayout
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/internationalEnergyManagementImage"
                         android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/international_energy_management" />
+
+                    <TextView
+                        android:id="@+id/internationalEnergyManagementTitle"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_below="@id/internationalEnergyManagementImage"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="INTERNATIONAL ENERGY MANAGEMENT"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
 
-                        <ImageView
-                            android:id="@+id/systemsEngineeringAndManagementImage"
-                            android:layout_width="match_parent"
-                            android:layout_height="140dp"
-                            android:layout_margin="10dp"
-                            android:contentDescription="content_description_media"
-                            android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/systems_engineering_management" />
+                    <TextView
+                        android:id="@+id/internationalEnergyManagementText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/internationalEnergyManagementTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="@string/internationalEnergyManagementCardText"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/systemsEngineeringAndManagementTitle"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/systemsEngineeringAndManagementImage"
-                            android:layout_margin="10dp"
-                            android:text="SYSTEMS ENGINEERING AND MANAGEMENT"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            android:textSize="20sp" />
+                    <Button
+                        android:id="@+id/CourseScheduleInternationalEnergyManagementButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/internationalEnergyManagementText"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/card_2"
+                        android:fontFamily="@font/myfont2"
+                        android:padding="12dp"
+                        android:text="Course Schedule"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/systemsEngineeringAndManagementText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/systemsEngineeringAndManagementTitle"
-                            android:layout_margin="10dp"
-                            android:textStyle="bold"
-                            android:text="@string/systemsEngineeringAndManagementCardText"
-                            android:textAppearance="?attr/textAppearanceBody2"
-                            android:textColor="?android:attr/textColorSecondary"
-                            android:textSize="12sp" />
+                    <Button
+                        android:id="@+id/PrequisitesInternationalEnergyManagementButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/CourseScheduleInternationalEnergyManagementButton"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/card_2"
+                        android:fontFamily="@font/myfont2"
+                        android:padding="12dp"
+                        android:text="Prequisites"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
 
-                        <LinearLayout
-                            android:id="@+id/systemsEngineeringAndManagementMiniCard1"
-                            android:layout_below="@id/systemsEngineeringAndManagementText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/card_3"
-                            android:layout_margin="8dp"
-                            android:elevation="8dp"
-                            android:orientation="vertical"
-                            android:padding="10dp">
+                </RelativeLayout>
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/systemsEngineeringAndManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="Prequisities"
-                                android:textStyle="bold"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                            <TextView
-                                android:id="@+id/systemsEngineeringAndManagementPrequisitiesText"
-                                android:layout_below="@id/systemsEngineeringAndManagementPrequisities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:text="@string/systemsEngineeringAndManagementPrequisitiesText"
-                                android:textAppearance="?attr/textAppearanceBody2"
-                                android:textColor="?android:attr/textColorSecondary"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-                    </RelativeLayout>
-                </LinearLayout>
-            </ScrollView>
+            <!--systemsEngineeringAndManagement-->
+
+            <LinearLayout
+                android:layout_toRightOf="@id/internationalEnergyManagementCard"
+                android:layout_width="300dp"
+                android:id="@+id/systemsEngineeringAndManagement"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/systemsEngineeringAndManagementImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:contentDescription="content_description_media"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/systems_engineering_management" />
+
+                    <TextView
+                        android:id="@+id/systemsEngineeringAndManagementTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/systemsEngineeringAndManagementImage"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="SYSTEMS ENGINEERING AND MANAGEMENT"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/systemsEngineeringAndManagementText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/systemsEngineeringAndManagementTitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/myfont2"
+                        android:text="@string/systemsEngineeringAndManagementCardText"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
 
+                    <Button
+                        android:id="@+id/PrequisitesSystemsEngineeringAndManagementButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/systemsEngineeringAndManagementText"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/card_2"
+                        android:fontFamily="@font/myfont2"
+                        android:padding="12dp"
+                        android:text="Prequisites"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
     </HorizontalScrollView>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/computerScienceMiniCard1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/bottom_navigation"
+    android:layout_below="@id/my_offeredCourses_toolbar"
+    android:visibility="gone">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_3"
+        android:elevation="8dp"
+        android:layout_margin="8dp">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <ImageView
+                android:id="@+id/schedule_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/computer_science_course_schedule" />
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+     <androidx.cardview.widget.CardView
+         android:id="@+id/computerScienceMiniCard2"
+         android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_3"
+                android:elevation="8dp"
+                android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/computerSciencePrequisities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Prequisities"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/computerSciencePrequisities2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/myfont2"
+            android:layout_below="@id/computerSciencePrequisities"
+            android:layout_margin="10dp"
+            android:text="@string/computerSciencePrequisitiesText"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="16sp" />
+            </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/energyInformationManagementMiniCard1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/my_offeredCourses_toolbar"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/schedule2_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/energy_information_management_course_schedule"/>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/energyInformationManagementMiniCard2"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/energyInformationManagementPrequisities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Prequisities"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/energyInformationManagementPrequisitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:layout_below="@id/energyInformationManagementPrequisities"
+                android:layout_margin="10dp"
+                android:text="@string/energyInformationManagementPrequisitiesText"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/intelligentSystemsMiniCard1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/my_offeredCourses_toolbar"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/schedule3_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/intelligent_systems_course_schedule"/>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/intelligentSystemsMiniCard2"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/intelligentSystemsPrequisitiesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Prequisities"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/intelligentSystemsPrequisitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:layout_below="@id/intelligentSystemsPrequisitiesTitle"
+                android:layout_margin="10dp"
+                android:text="@string/intelligentSystemsPrequisitiesText"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/internationalEnergyEconomicsMiniCard1"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/internationalEnergyEconomicsPrequisitiesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Prequisities"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/internationalEnergyEconomicsPrequisitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:layout_below="@id/internationalEnergyEconomicsPrequisitiesTitle"
+                android:layout_margin="10dp"
+                android:text="@string/intelligentSystemsPrequisitiesText"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/internationalEnergyManagementMiniCard1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_below="@id/my_offeredCourses_toolbar"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <ImageView
+                    android:id="@+id/schedule4_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/international_energy_management_course_schedule"/>
+            </HorizontalScrollView>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/internationalEnergyManagementMiniCard2"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/internationalEnergyManagementPrequisities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Prequisities"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/internationalEnergyManagementPrequisitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:layout_below="@id/internationalEnergyManagementPrequisities"
+                android:layout_margin="10dp"
+                android:text="@string/internationalEnergyManagementPrequisitiesText"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/systemsEngineeringAndManagementMiniCard1"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_3"
+            android:elevation="8dp"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/systemsEngineeringAndManagementPrequisitiesTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/myfont2"
+                android:text="Prequisities"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/systemsEngineeringAndManagementPrequisitiesText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myfont2"
+                android:layout_below="@id/systemsEngineeringAndManagementPrequisitiesTitle"
+                android:layout_margin="10dp"
+                android:text="@string/intelligentSystemsPrequisitiesText"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
 
 </RelativeLayout>

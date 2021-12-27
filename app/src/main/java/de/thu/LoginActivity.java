@@ -3,6 +3,7 @@ package de.thu;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText loginEmail, loginPassword;
     Button buttonLogin;
     ProgressDialog progressDialog;
+    private boolean userLoggedIn = false;
 
     String emailPattern = "[a-zA-Z0-9._]-+@[a-z]+\\.+[a-z]";
 
@@ -32,25 +34,35 @@ public class LoginActivity extends AppCompatActivity {
     TextView createNewAccount;
 
     @Override
+    public void onStart() {
+        super.onStart();
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+
+        if(mUser != null){
+            mUser.reload();
+        }
+    }
+
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginEmail=findViewById(R.id.inputEmail);
-        loginPassword=findViewById(R.id.inputPassword);
-        buttonLogin=findViewById(R.id.buttonLogin);
-        progressDialog = new ProgressDialog(this);
+        loginEmail = findViewById(R.id.inputEmail);
+        loginPassword = findViewById(R.id.inputPassword);
+        buttonLogin = findViewById(R.id.buttonLogin);
+//        progressDialog = new ProgressDialog(this);
         createNewAccount = findViewById(R.id.createNewAccount);
 
-        mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 login();
-
             }
         });
 
@@ -61,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 startActivity(new Intent(getApplicationContext()
                         , RegisterActivity.class));
-                overridePendingTransition(0,0);
+                overridePendingTransition(0, 0);
 
             }
         });
@@ -72,34 +84,29 @@ public class LoginActivity extends AppCompatActivity {
         String email = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
 
-
         if (email.isEmpty()) {
             loginEmail.setError("Enter a valid email");
-        } else if (password.isEmpty() || password.length()<6) {
+        } else if (password.isEmpty() || password.length() < 6) {
             loginPassword.setError("Enter a valid password");
         } else {
-            progressDialog.setMessage("Login in progress");
-            progressDialog.setTitle("Login");
-            progressDialog.setCanceledOnTouchOutside(false);
-            progressDialog.show();
+//            progressDialog.setMessage("Login in progress");
+//            progressDialog.setTitle("Login");
+//            progressDialog.setCanceledOnTouchOutside(false);
+//            progressDialog.show();
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-
                             if (task.isSuccessful()) {
-
-                                progressDialog.dismiss();
+//                                progressDialog.dismiss();
+//                                userLoggedIn = true;
                                 sendUserToNextActivity();
-                                Toast.makeText(LoginActivity.this, "Registration successful",Toast.LENGTH_SHORT).show();
-
+                                Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                             } else {
-                                progressDialog.dismiss();
-                                Toast.makeText(LoginActivity.this, ""+task.getException(),Toast.LENGTH_SHORT).show();
-
+//                                progressDialog.dismiss();
+                                Toast.makeText(LoginActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
                             }
-
                         }
                     });
 
@@ -109,10 +116,16 @@ public class LoginActivity extends AppCompatActivity {
     private void sendUserToNextActivity() {
 
         Intent intent = new Intent(this, HomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
 
     }
+
+//    public boolean isCurUserLoggedIn() {
+//        return userLoggedIn;
+//    }
+}
+
 
 
     /*//intent for login
@@ -128,4 +141,3 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }*/
-}
