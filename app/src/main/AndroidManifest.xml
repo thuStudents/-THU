@@ -103,9 +103,6 @@
             android:name=".LegalAdviceActivity"
             android:exported="false" />
         <activity
-            android:name=".CityMapActivity"
-            android:exported="false" />
-        <activity
             android:name=".BankingActivity"
             android:exported="false" />
         <activity
@@ -119,9 +116,6 @@
             android:exported="false" />
         <activity
             android:name=".ServicesCardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SubjectsTipsActivity"
             android:exported="false" />
         <activity
             android:name=".CafeteriaMensaActivity"
