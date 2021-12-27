@@ -65,6 +65,10 @@ public class Profile extends AppCompatActivity {
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                FirebaseAuth.getInstance().signOut();
+
+
                 startActivity(new Intent(getApplicationContext()
                         , WelcomeActivity.class));
                 overridePendingTransition(0,0);
