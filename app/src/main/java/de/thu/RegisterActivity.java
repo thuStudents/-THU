@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     EditText registerEmail, registerUsername, registerPassword, registerConfirmPassword;
     Button buttonRegister;
+    TextView alreadyHaveAccount;
     ProgressDialog progressDialog;
 
     String emailPattern = "[a-zA-Z0-9._]-+@[a-z]+\\.+[a-z]";
@@ -38,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerPassword=findViewById(R.id.inputPassword);
         registerConfirmPassword=findViewById(R.id.confirmPassword);
         buttonRegister=findViewById(R.id.buttonRegister);
+        alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
         progressDialog = new ProgressDialog(this);
 
         mAuth = FirebaseAuth.getInstance();
@@ -49,6 +52,20 @@ public class RegisterActivity extends AppCompatActivity {
                 registerAuth();
             }
         });
+
+        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext()
+                        , LoginActivity.class));
+                overridePendingTransition(0, 0);
+
+            }
+        });
+
+
+
 
     }
 
@@ -79,7 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()) {
-
+                                WelcomeActivity.signedAsGuest = false;
                                 progressDialog.dismiss();
                                 sendUserToNextActivity();
                                 Toast.makeText(RegisterActivity.this, "Registration successful",Toast.LENGTH_SHORT).show();
@@ -87,11 +104,8 @@ public class RegisterActivity extends AppCompatActivity {
                             } else {
                                 progressDialog.dismiss();
                                 Toast.makeText(RegisterActivity.this, ""+task.getException(),Toast.LENGTH_SHORT).show();
-
                             }
-
                         }
-
                     });
         }
 
@@ -99,16 +113,14 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void sendUserToNextActivity() {
-
+        //Intent flags used to clear the back stack so the user can not go back to this activity with the back button
        Intent intent = new Intent(this, HomeActivity.class);
-       intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
        startActivity(intent);
-
     }
+
+}
 
 //    public boolean isCurUserRegisteredIn() {
 //        return (FirebaseAuth.getInstance().getReference() != null);
 //    }
-
-
-}

@@ -54,7 +54,6 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.inputEmail);
         loginPassword = findViewById(R.id.inputPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
-//        progressDialog = new ProgressDialog(this);
         createNewAccount = findViewById(R.id.createNewAccount);
 
 
@@ -83,61 +82,32 @@ public class LoginActivity extends AppCompatActivity {
     private void login() {
         String email = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
-
         if (email.isEmpty()) {
             loginEmail.setError("Enter a valid email");
         } else if (password.isEmpty() || password.length() < 6) {
             loginPassword.setError("Enter a valid password");
         } else {
-//            progressDialog.setMessage("Login in progress");
-//            progressDialog.setTitle("Login");
-//            progressDialog.setCanceledOnTouchOutside(false);
-//            progressDialog.show();
-
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-//                                progressDialog.dismiss();
-//                                userLoggedIn = true;
+                                WelcomeActivity.signedAsGuest = false;
                                 sendUserToNextActivity();
-                                Toast.makeText(LoginActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
                             } else {
-//                                progressDialog.dismiss();
                                 Toast.makeText(LoginActivity.this, "" + task.getException(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
-
         }
     }
 
     private void sendUserToNextActivity() {
 
+        //Intent flags used to clear the back stack so the user can not go back to this activity with the back button
         Intent intent = new Intent(this, HomeActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-
     }
 
-//    public boolean isCurUserLoggedIn() {
-//        return userLoggedIn;
-//    }
 }
-
-
-
-    /*//intent for login
-    public void login(){
-        Button loginButton;
-        loginButton = findViewById(R.id.buttonLogin);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startHomeActivity;
-                startHomeActivity = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(startHomeActivity);
-            }
-        });
-    }*/

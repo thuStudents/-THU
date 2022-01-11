@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     RecyclerView.Adapter adapter;
     RecyclerView latest_updates;
+    Button login;
     //LinearLayoutManager layoutManager;
 
 
@@ -33,6 +35,22 @@ public class HomeActivity extends AppCompatActivity {
 
         //hooks
         latest_updates=findViewById(R.id.latest_updates);
+        login = findViewById(R.id.buttonLoginHomepage);
+
+        if(WelcomeActivity.signedAsGuest){
+
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getApplicationContext()
+                            , LoginActivity.class));
+                    overridePendingTransition(0,0);
+                }
+            });
+        } else {
+            login.setVisibility(View.INVISIBLE);
+        }
+
 
         latest_updates();
 
@@ -45,17 +63,23 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.find:
+                        if(WelcomeActivity.signedAsGuest!=true){
                         startActivity(new Intent(getApplicationContext()
                                 , Profile.class));
-                        overridePendingTransition(0,0);
+                        } else {
+                        Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        if(WelcomeActivity.signedAsGuest!=true){
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0,0);
+                        } else {
+                            Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.home:
-                        Toast.makeText(HomeActivity.this, "Home", Toast.LENGTH_SHORT).show();
                         return true;
                 }
 
@@ -104,9 +128,13 @@ public class HomeActivity extends AppCompatActivity {
         newsEventsImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext()
-                        , NewsEventActivity.class));
-                overridePendingTransition(0,0);
+                if(WelcomeActivity.signedAsGuest){
+                    Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                }else {
+                    startActivity(new Intent(getApplicationContext()
+                            , NewsEventActivity.class));
+                    overridePendingTransition(0, 0);
+                }
             }
         });
 

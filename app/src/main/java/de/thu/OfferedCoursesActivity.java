@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -315,31 +316,37 @@ public class OfferedCoursesActivity extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelected(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.find:
-                        startActivity(new Intent(getApplicationContext()
-                                , Profile.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , Profile.class));
+                        } else {
+                            Toast.makeText(OfferedCoursesActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0, 0);
+                        } else {
+                            Toast.makeText(OfferedCoursesActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
                                 , HomeActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
                 return false;
             }
         });
-
     }
 }

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class WelcomeActivity extends AppCompatActivity {
     Button loginBtn, signupBtn;
     TextView guest;
-    public static boolean signedAsGuest = false;
+    static boolean signedAsGuest = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signedAsGuest = false;
-                startActivity(new Intent(getApplicationContext()
-                        , LoginActivity.class));
-                overridePendingTransition(0,0);
-
+                //Intent flags used to clear the back stack so the user can not go back to this activity with the back button
+                Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
 
@@ -37,9 +37,10 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signedAsGuest = false;
-                startActivity(new Intent(getApplicationContext()
-                        , RegisterActivity.class));
-                overridePendingTransition(0,0);
+                //Intent flags used to clear the back stack so the user can not go back to this activity with the back button
+                Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
             }
         });
 
@@ -48,9 +49,10 @@ public class WelcomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //SET GUEST RESTRICTIONS
                 signedAsGuest = true;
-                startActivity(new Intent(getApplicationContext()
-                        , HomeActivity.class));
-                overridePendingTransition(0,0);
+                //Intent flags used to clear the back stack so the user can not go back to this activity with the back button
+                Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
 
             }
         });

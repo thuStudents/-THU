@@ -1,13 +1,18 @@
 package de.thu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -69,6 +74,29 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
             default:
                 break;
         }
+
+//        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+//        bottomNavigationView.setSelected(false);
+//        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                switch (item.getItemId()) {
+//                    case R.id.find:
+//                            startActivity(new Intent(getApplicationContext()
+//                                    , Profile.class));
+//                        return true;
+//                    case R.id.add:
+//                        return true;
+//                    case R.id.home:
+//                        startActivity(new Intent(getApplicationContext()
+//                                , HomeActivity.class));
+//                        overridePendingTransition(0, 0);
+//                        return true;
+//                }
+//
+//                return false;
+//            }
+//        });
 
     }
 }

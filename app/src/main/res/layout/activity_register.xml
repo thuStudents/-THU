@@ -126,7 +126,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="#0055a3"
+                android:background="@drawable/card_2"
                 android:text="Sign Up"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="@+id/confirmPassword"
@@ -141,10 +141,12 @@
                 android:text="Already have an account?"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="@+id/buttonRegister"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="@+id/buttonRegister"
-                app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonRegister"
+                android:focusable="true" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -3,6 +3,7 @@ package de.thu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,34 +27,38 @@ public class TransportActivity extends AppCompatActivity {
         setContentView(R.layout.main_transport);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.setSelectedItemId(R.id.home);
-
+        bottomNavigationView.setSelected(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.find:
-                        startActivity(new Intent(getApplicationContext()
-                                , Profile.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , Profile.class));
+                        } else {
+                            Toast.makeText(TransportActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0, 0);
+                        } else {
+                            Toast.makeText(TransportActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
                                 , HomeActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
                 return false;
             }
         });
-
         transportBRecView =findViewById(R.id.transport_recview);
 
         ArrayList<TransportItems> means = new ArrayList<>();

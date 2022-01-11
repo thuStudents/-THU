@@ -12,8 +12,6 @@ import androidx.fragment.app.Fragment;
 
 import java.util.Calendar;
 
-//import com.applandeo.materialcalendarview.EventDay;
-
 public class EventsFragment extends Fragment {
 
      View view;

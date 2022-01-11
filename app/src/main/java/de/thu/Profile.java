@@ -39,7 +39,9 @@ public class Profile extends AppCompatActivity {
                         Toast.makeText(Profile.this, "Profile", Toast.LENGTH_SHORT).show();
                         return true;
                     case R.id.add:
-                        Toast.makeText(Profile.this, "Add button pressed", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(),
+                                PostActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
@@ -51,6 +53,8 @@ public class Profile extends AppCompatActivity {
                 return false;
             }
         });
+
+
 
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         TextView profileEmail = (TextView)findViewById(R.id.user_email);
@@ -68,9 +72,11 @@ public class Profile extends AppCompatActivity {
 
                 FirebaseAuth.getInstance().signOut();
 
+                //Intent flags used to clear the back stack so the user can not access the app after logout with the back button
+                Intent intent = new Intent(Profile.this, WelcomeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
 
-                startActivity(new Intent(getApplicationContext()
-                        , WelcomeActivity.class));
                 overridePendingTransition(0,0);
             }
         });
@@ -104,6 +110,7 @@ public class Profile extends AppCompatActivity {
                 startActivity(changepasswordActivity);
             }
         });
+
 
 
     }
