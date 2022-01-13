@@ -3,58 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable-v24/card_events.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_1.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_3.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_list_element.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/comment.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/edit_text_box.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/events_notselected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/events_selected_button.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/header_bg.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/like.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/news_notselected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/news_selected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/question_border.xml" value="0.3828125" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/shape.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/font/adamina.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_accommodation.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_applying.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_cafeteria_mensa.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_city_map.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_fees.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_forum.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_hochschule_general.xml" value="0.2761087267525036" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_hochschule_info.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_important_dates.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_important_links.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_library.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_main_homepage.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_my_studies.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_news_event.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_offered_courses.xml" value="0.1" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_offices.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_post.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_services_card.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_subjects_tips.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_timetable.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_to_do.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_ulm_information.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_welcome.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_add_new_task.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_blank.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_cafeteria.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_events.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_mensa.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_news.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_element_layout.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_group.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/post_layout.xml" value="0.42357512953367876" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/profile.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/reply.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/reply_layout.xml" value="0.5" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/toolbar_top.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Anna/AppData/Local/Android/Sdk/platforms/android-31/android.jar!/res/layout/simple_list_item_1.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_1.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_2.xml" value="0.1" />
@@ -63,122 +11,25 @@
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_5.xml" value="0.19282051282051282" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/cell_shape.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/header_bg.xml" value="0.19114583333333332" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_accommodation.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_banking.xml" value="0.1" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_accommodation.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_banking.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_cafe.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_library.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_main_homepage.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_maps.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_multi_user.xml" value="0.13425925925925927" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_night_life.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_offices.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_residential_building_info.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_transport.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_ulm_information.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_list.xml" value="0.10277777777777777" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_row.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bottommeow.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/cafe_row.xml" value="0.22" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/changepassword.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/club_items.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/contacts_list_item.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/fun_items.xml" value="0.22" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/latest_updates.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/list_design.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/list_item.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/main_night.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/main_transport.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/new_homepage_activity.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/privateb_items.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/profile.xml" value="0.22" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/rec_view_layout.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview_privateb.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview_residentialb.xml" value="0.22" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residential_item.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residentialb_items.xml" value="0.4466666666666667" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/test.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/testing.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/toolbar_top.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/unimap.xml" value="0.1796875" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable-v24/card_events.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_1.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_3.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/card_list_element.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/comment.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/edit_text_box.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/events_notselected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/events_selected_button.xml" value="0.3769230769230769" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/header_bg.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/like.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/news_notselected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/news_selected_button.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/question_border.xml" value="0.3828125" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/drawable/shape.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/font/adamina.xml" value="0.3453703703703704" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_accommodation.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_applying.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_cafeteria_mensa.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_city_map.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_fees.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_forum.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_hochschule_general.xml" value="0.2761087267525036" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_hochschule_info.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_important_dates.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_important_links.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_library.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_main_homepage.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_my_studies.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_news_event.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_offered_courses.xml" value="0.1" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_offices.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_post.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_services_card.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_subjects_tips.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_timetable.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_to_do.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_ulm_information.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/activity_welcome.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_add_new_task.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_blank.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_cafeteria.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_events.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_mensa.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/fragment_news.xml" value="0.33" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_element_layout.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_group.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/list_item.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/post_layout.xml" value="0.42357512953367876" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/profile.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/reply.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/reply_layout.xml" value="0.5" />
-        <entry key="..\:/Users/AZK/AndroidStudioProjects/-THU/app/src/main/res/layout/toolbar_top.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Anna/AppData/Local/Android/Sdk/platforms/android-31/android.jar!/res/layout/simple_list_item_1.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_1.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_2.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_3.xml" value="0.19282051282051282" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_4.xml" value="0.19282051282051282" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/card_5.xml" value="0.19282051282051282" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/cell_shape.xml" value="0.19114583333333332" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/drawable/header_bg.xml" value="0.19114583333333332" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_accommodation.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_banking.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_cafe.xml" value="0.1796875" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_city_map.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_legal_advice.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_library.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_main_homepage.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_maps.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_markets.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_markets.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_multi_user.xml" value="0.13425925925925927" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_night_life.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_offices.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_residential_building_info.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_transport.xml" value="0.22" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_ulm_information.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/activity_welcome.xml" value="0.3671875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_list.xml" value="0.10277777777777777" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bank_row.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bar_items.xml" value="0.1796875" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bar_items.xml" value="0.6" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/bottommeow.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/cafe_row.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/changepassword.xml" value="0.1796875" />
@@ -190,84 +41,30 @@
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/fun_items.xml" value="0.22" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/latest_updates.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/list_design.xml" value="0.1796875" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/list_element_layout.xml" value="0.3671875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/list_item.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/main_night.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/main_transport.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/new_homepage_activity.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/new_homepage_activity.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/privateb_items.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/profile.xml" value="0.22" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/rec_view_layout.xml" value="0.1796875" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview.xml" value="0.22" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview_privateb.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/recyclerview_residentialb.xml" value="0.22" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/reply_layout.xml" value="0.3671875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residential_item.xml" value="0.1" />
-        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residentialb_items.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/residentialb_items.xml" value="0.2944606413994169" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/restaurant_items.xml" value="0.1796875" />
+        <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/task_layout.xml" value="0.3671875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/test.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/testing.xml" value="0.1" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/toolbar_top.xml" value="0.1796875" />
         <entry key="..\:/Users/Anna/Documents/-THU/app/src/main/res/layout/unimap.xml" value="0.1796875" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/drawable/ic_add_black.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/drawable/input_bg.xml" value="0.37135416666666665" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_forum.xml" value="0.21822916666666667" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_hochschule_information.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_main_homepage.xml" value="0.22760416666666666" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_post.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/activity_reply.xml" value="0.16822916666666668" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/answers_layout.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/dashboard.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/post_layout.xml" value="0.375" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/profile.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/rec_view_layout.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/layout/toolbar_top.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/menu/bottom_navigation.xml" value="0.21822916666666667" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/menu/bottom_navigation_bar.xml" value="0.35520833333333335" />
-        <entry key="..\:/Users/hossa/AndroidStudioProjects/THU/app/src/main/res/menu/navigation_menu.xml" value="0.21822916666666667" />
-        <entry key="app/src/main/res/drawable/aula_text.xml" value="0.16111111111111112" />
-        <entry key="app/src/main/res/drawable/card_2.xml" value="0.25277777777777777" />
-        <entry key="app/src/main/res/drawable/card_3.xml" value="0.25277777777777777" />
-        <entry key="app/src/main/res/drawable/checkbox_task_selector.xml" value="0.2630208333333333" />
-        <entry key="app/src/main/res/drawable/checkedbox_task.xml" value="0.2630208333333333" />
-        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.16111111111111112" />
-        <entry key="app/src/main/res/drawable/ic_profileperson_manydp.xml" value="0.2640625" />
-        <entry key="app/src/main/res/drawable/uncheckedbox_task.xml" value="0.2630208333333333" />
-        <entry key="app/src/main/res/layout/activity_accommodation.xml" value="0.20833333333333334" />
-        <entry key="app/src/main/res/layout/activity_applying.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_cafeteria_mensa.xml" value="0.20833333333333334" />
-        <entry key="app/src/main/res/layout/activity_city_map.xml" value="0.24307692307692308" />
-        <entry key="app/src/main/res/layout/activity_connect_to_vpn.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/activity_hochschule_map.xml" value="0.30428769017980634" />
-        <entry key="app/src/main/res/layout/activity_hochschule_maps.xml" value="0.21574074074074073" />
-        <entry key="app/src/main/res/layout/activity_important_links.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_library.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_main_homepage.xml" value="0.2037037037037037" />
-        <entry key="app/src/main/res/layout/activity_my_studies.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_offered_courses.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_offices.xml" value="0.22378937470615892" />
-        <entry key="app/src/main/res/layout/activity_printing.xml" value="0.2328125" />
-        <entry key="app/src/main/res/layout/activity_printing_credit.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/activity_recharge_card.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/activity_services_card.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_timetable.xml" value="0.21574074074074073" />
-        <entry key="app/src/main/res/layout/activity_to_do.xml" value="0.14322916666666666" />
-        <entry key="app/src/main/res/layout/activity_validate_card.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/content_hochschule_map.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/fragment_add_new_task.xml" value="0.24307692307692308" />
-        <entry key="app/src/main/res/layout/fragment_cafeteria.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_connect_v_p_n.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/fragment_mensa.xml" value="0.21203703703703702" />
-        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.21203703703703702" />
-        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/list_item.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/new_homepage_activity.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/post_layout.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/privateb_items.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/recyclerview.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/task_layout.xml" value="0.246875" />
       </map>
     </option>
   </component>

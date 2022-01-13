@@ -5,25 +5,31 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearSnapHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import de.thu.adapters.AutoScrollAdapter;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ImageView home, add, find;
     BottomNavigationView bottomNavigationView;
-    RecyclerView.Adapter adapter;
+
+    AutoScrollAdapter autoScrollAdapter;
     RecyclerView latest_updates;
-    //LinearLayoutManager layoutManager;
+    LinearLayoutManager layoutManager;
+    LinearLayout forumBtn;
 
 
     @Override
@@ -31,15 +37,10 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_homepage_activity);
 
-        //hooks
         latest_updates=findViewById(R.id.latest_updates);
-
         latest_updates();
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -63,11 +64,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView schoolInfoImageView=(ImageView)findViewById(R.id.HP_school);
-        ImageView cityInfoImageView=(ImageView)findViewById(R.id.HP_city);
-        ImageView forumImageView=(ImageView)findViewById(R.id.HP_forum);
-        ImageView newsEventsImageView=(ImageView)findViewById(R.id.HP_news);
-
+        ImageView schoolInfoImageView= findViewById(R.id.HP_school);
+        ImageView cityInfoImageView= findViewById(R.id.HP_city);
+        ImageView forumImageView= findViewById(R.id.HP_Forum);
+        ImageView newsEventsImageView= findViewById(R.id.HP_news);
+        ImageView myStudiesImageView = findViewById(R.id.HP_my_studies);
+        forumBtn = findViewById(R.id.ll_forum);
         schoolInfoImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +90,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        forumImageView.setOnClickListener(new View.OnClickListener() {
+        forumBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(WelcomeActivity.signedAsGuest){
@@ -110,24 +112,35 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
+        myStudiesImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext()
+                        , MyStudiesActivity.class));
+                overridePendingTransition(0,0);
+            }
+        });
 
     }
         private void latest_updates(){
 
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        latest_updates.setLayoutManager(layoutManager);
+        autoScrollAdapter = new AutoScrollAdapter(this);
+        latest_updates.setAdapter(autoScrollAdapter);
+         LinearSnapHelper snapHelper = new LinearSnapHelper();
+         snapHelper.attachToRecyclerView(latest_updates);
 
-        //recyclerview only loads the cards visible to user
-        latest_updates.setHasFixedSize(true);
-        latest_updates.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
-            ArrayList<LatestUpdatesItems> latestUpdatesLocations = new ArrayList<>();
-
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.morenews, "Top 3 Restaurants", "??????"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.clubs, "!!", "!!"));
-            latestUpdatesLocations.add(new LatestUpdatesItems(R.drawable.restaurants, "Covid and Restrictions ", "Covid"));
-
-            adapter = new LatestUpdatesAdapter(latestUpdatesLocations);
-            latest_updates.setAdapter(adapter);
+            Timer timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    if (layoutManager.findLastCompletelyVisibleItemPosition() < (autoScrollAdapter.getItemCount() -1)){
+                        layoutManager.smoothScrollToPosition(latest_updates, new RecyclerView.State(), layoutManager.findLastCompletelyVisibleItemPosition()+1);
+                    } else
+                        layoutManager.smoothScrollToPosition(latest_updates, new RecyclerView.State(), 0);
+                    }
+            },0,3000);
 
         }
 }

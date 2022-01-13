@@ -1,12 +1,30 @@
 package de.thu;
 
 public class PrivateBItems {
-    private String privateBName;
+    private String privateBName, privateBDes, privateBAdd;
     private int privateBImage;
 
-    public PrivateBItems(String nameP, int imageP) {
+    public PrivateBItems(String nameP, int imageP, String des, String add) {
         this.privateBName = nameP;
         this.privateBImage = imageP;
+        this.privateBDes = des;
+        this.privateBAdd=add;
+    }
+
+    public String getPrivateBDes() {
+        return privateBDes;
+    }
+
+    public void setPrivateBDes(String privateBDes) {
+        this.privateBDes = privateBDes;
+    }
+
+    public String getPrivateBAdd() {
+        return privateBAdd;
+    }
+
+    public void setPrivateBAdd(String privateBAdd) {
+        this.privateBAdd = privateBAdd;
     }
 
     public String getPrivateBName() {

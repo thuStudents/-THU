@@ -36,17 +36,15 @@ public class AutoScrollAdapter extends RecyclerView.Adapter<AutoScrollAdapter.Vi
         //int id = getResources().getIdentifier("de.thu:drawable/news" + StringGenerated, null, null);
         switch (position) {
             case 0:
-                holder.image_slider.setImageDrawable(context.getResources().getDrawable(R.drawable.news));
+                holder.image_slider.setImageDrawable(context.getResources().getDrawable(R.drawable.people));
                 break;
             case 1:
                 holder.image_slider.setImageDrawable(context.getResources().getDrawable(R.drawable.morenews));
                 break;
             case 2:
-                holder.image_slider.setImageDrawable(context.getResources().getDrawable(R.drawable.evenmorenews));
+                holder.image_slider.setImageDrawable(context.getResources().getDrawable(R.drawable.thu2));
                 break;
         }
-
-
     }
 
     @Override
