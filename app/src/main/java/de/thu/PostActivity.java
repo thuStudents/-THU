@@ -30,6 +30,8 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
     DatabaseReference reference;
     FirebaseAuth mAuth;
     Random rand = new Random();
+    private NewPostNotifier newPostNotifier;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +39,12 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_post);
         btnAdd = findViewById(R.id.add_post_btn);
         btnAdd.setOnClickListener(this);
+        newPostNotifier = new NewPostNotifier(this);
     }
 
 
     public void onClick(View view) {
-        switch(view.getId()){
+        switch(view.getId()) {
             case R.id.add_post_btn:
                 //add the post and go back to activity
                 EditText editText = findViewById(R.id.add_post_txt);
@@ -51,7 +54,7 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
 
                 rootnode = FirebaseDatabase.getInstance("https://thu-3f8f6-default-rtdb.europe-west1.firebasedatabase.app/");
                 reference = rootnode.getReference("posts");
-                int random = (int)(Math.random() * 50 + 1);
+                int random = (int) (Math.random() * 50 + 1);
 
                 String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
                 Calendar calendar = Calendar.getInstance();
@@ -66,37 +69,16 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
                 reference.child(currentFirebaseUser.getUid() + mSec).child("email").setValue(currentFirebaseUser.getEmail());
                 reference.child(currentFirebaseUser.getUid() + mSec).child("id").setValue(currentFirebaseUser.getUid() + mSec);
 
+                newPostNotifier.showNotification();
+
                 startActivity(new Intent(getApplicationContext()
                         , ForumActivity.class));
-                overridePendingTransition(0,0);
+                overridePendingTransition(0, 0);
 
                 break;
             default:
                 break;
         }
-
-//        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-//        bottomNavigationView.setSelected(false);
-//        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                switch (item.getItemId()) {
-//                    case R.id.find:
-//                            startActivity(new Intent(getApplicationContext()
-//                                    , Profile.class));
-//                        return true;
-//                    case R.id.add:
-//                        return true;
-//                    case R.id.home:
-//                        startActivity(new Intent(getApplicationContext()
-//                                , HomeActivity.class));
-//                        overridePendingTransition(0, 0);
-//                        return true;
-//                }
-//
-//                return false;
-//            }
-//        });
 
     }
 }

@@ -25,7 +25,8 @@ public class AddNewTaskFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_add_new_task, container, false);
 
         savebtn = view.findViewById(R.id.newTaskButton);
-
+        newTaskText = view.findViewById(R.id.newTaskText);
+        newTaskText.setEnabled(true);
 
         savebtn.setOnClickListener(new View.OnClickListener() {
             @Override

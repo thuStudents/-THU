@@ -6,41 +6,204 @@
     android:layout_height="match_parent"
     tools:context=".LegalAdviceActivity">
 
-    <!--bottom navigation bar-->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:elevation="50dp"
+<!--bottom navigation bar-->
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottom_navigation"
+    android:layout_width="match_parent"
+    android:elevation="50dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/bone_white"
+    app:itemIconTint="@color/thu_blue"
+    app:itemTextColor="@color/thu_blue"
+    app:labelVisibilityMode="selected"
+    app:menu="@menu/bottom_navigation_bar" />
+
+<!--toolbar-->
+<LinearLayout
+    android:id="@+id/my_applyInfo_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@drawable/header_bg">
+    <!--header-->
+    <TextView
+        android:id="@+id/homepage_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/bone_white"
-        app:itemIconTint="@color/thu_blue"
-        app:itemTextColor="@color/thu_blue"
-        app:labelVisibilityMode="selected"
-        app:menu="@menu/bottom_navigation_bar" />
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/myfont2"
+        android:text="Legal Advice"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</LinearLayout>
 
-    <!--toolbar-->
-    <LinearLayout
-        android:id="@+id/legal_advice"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/my_applyInfo_toolbar"
+    android:layout_above="@id/bottom_navigation">
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content">
 
-        android:background="@drawable/header_bg">
-
-        <!--header-->
-        <TextView
-            android:id="@+id/homepage_title"
-            android:layout_width="wrap_content"
+        <!--            Visa Extension Required Documents-->
+        <LinearLayout
+            android:id="@+id/card1legaladvice"
+            android:background="@drawable/card_3"
+            android:elevation="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="25dp"
-            android:fontFamily="@font/myfont2"
-            android:text="Legal Advice"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:padding="15dp"
+            android:layout_margin="8dp">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/requiredDocumentsApplying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="📄 Visa Extension"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/myfont2"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/requiredDocuments"
+                    android:layout_below="@id/requiredDocumentsApplying"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myfont2"
+                    android:lineSpacingExtra="10dp"
+                    android:text="Required Documents:\n- Certificate of study\n- Residence permit and passport\n- €93\n- current biometric photo\n- Proof of secure livelihood - an account statement (€ 10,236)\n-Proof of Health Insurance "
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requiredDocuments"
+                    android:layout_marginTop="5dp"
+                    android:lineSpacingExtra="10dp"
+                    android:text="Address: Olgastraße 66, 89073 Ulm ( 2nd Floor ) \n Phone: 0731 1613366"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/myfont2"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--            Registering Address Required Documents-->
+        <LinearLayout
+            android:id="@+id/card2legaladvice"
+            android:background="@drawable/card_3"
+            android:elevation="10dp"
+            android:layout_below="@id/card1legaladvice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/requiredDocuments2legalAdvice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="📄 Address Registration"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/myfont2"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/requiredDocuments2"
+                    android:layout_below="@id/requiredDocuments2legalAdvice"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myfont2"
+                    android:lineSpacingExtra="10dp"
+                    android:text="Required Documents:\nPassport\nRental Agreement\nConfirmation from Landlord"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/requiredDocuments2"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myfont2"
+                    android:lineSpacingExtra="10dp"
+                    android:text="Address: Olgastraße 66, 89073 Ulm ( 1st Floor )\n Phone: 0731 1613366"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!--            Radio Required Documents-->
+        <LinearLayout
+            android:id="@+id/card3legaladvice"
+            android:background="@drawable/card_3"
+            android:elevation="10dp"
+            android:layout_below="@id/card2legaladvice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/requiredDocuments3legalAdvice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="📄 Deutschlandradio"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/myfont2"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/requiredDocuments3"
+                    android:layout_below="@id/requiredDocuments3legalAdvice"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myfont2"
+                    android:lineSpacingExtra="10dp"
+                    android:text="In Germany you need to pay Radio fees for every household.
+After registering your address you will receive a letter from Deutschlandradio.
+There you have the necessary instructions how to register and how to pay for it. "
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>
 </RelativeLayout>

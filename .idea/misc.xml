@@ -128,12 +128,16 @@
         <entry key="app/src/main/res/drawable/uncheckedbox_task.xml" value="0.2630208333333333" />
         <entry key="app/src/main/res/layout/activity_accommodation.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/activity_applying.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_bafog.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_banking.xml" value="0.246875" />
+        <entry key="app/src/main/res/layout/activity_cafe.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_cafeteria_mensa.xml" value="0.20833333333333334" />
         <entry key="app/src/main/res/layout/activity_city_map.xml" value="0.24307692307692308" />
         <entry key="app/src/main/res/layout/activity_connect_to_vpn.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_hochschule_map.xml" value="0.30428769017980634" />
         <entry key="app/src/main/res/layout/activity_hochschule_maps.xml" value="0.21574074074074073" />
         <entry key="app/src/main/res/layout/activity_important_links.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_legal_advice.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_library.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19444444444444445" />
