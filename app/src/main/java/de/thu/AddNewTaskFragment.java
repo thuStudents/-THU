@@ -31,7 +31,7 @@ public class AddNewTaskFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ToDoActivity activity = (ToDoActivity) getActivity();
-                activity.showButton();
+                //activity.showButton();
                 view.setVisibility(View.GONE);
             }
         });
