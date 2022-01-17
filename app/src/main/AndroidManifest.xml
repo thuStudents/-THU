@@ -91,9 +91,9 @@
         <activity
             android:name=".NightLifeActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".BafogActivity"
-            android:exported="false" />
+            android:exported="false" />-->
         <activity
             android:name=".MarketsActivity"
             android:exported="false" />
@@ -125,9 +125,9 @@
         <activity
             android:name=".OfficesActivity"
             android:exported="false" />
-        <activity
+        <!--<activity
             android:name=".FeesActivity"
-            android:exported="false" />
+            android:exported="false" />-->
         <activity
             android:name=".ApplyingActivity"
             android:exported="false" />
