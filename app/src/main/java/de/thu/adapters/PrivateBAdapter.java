@@ -2,12 +2,13 @@ package de.thu.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -47,13 +48,21 @@ public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.privb_name.setText(resBuild.get(position).getPrivateBName());
         holder.privb_image.setImageResource(resBuild.get(position).getPrivateBImage());
-        holder.parent.setOnClickListener(new View.OnClickListener() {
+        holder.privb_des.setText(resBuild.get(position).getPrivateBDes());
+        holder.privb_add.setText(resBuild.get(position).getPrivateBAdd());
+
+        holder.privb_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, resBuild.get(position).getPrivateBName() + " Selected", Toast.LENGTH_SHORT).show();
+                if (position == 2) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://studierendenwerk-ulm.de/wp-content/uploads/privatzimmer/PZV_ulm.pdf"));
+                    context.startActivity(browserIntent);
+                } else {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.it/maps/search/" + holder.privb_add.getText()));
+                    context.startActivity(browserIntent);
+                }
             }
         });
-
 
 
     }
@@ -73,7 +82,7 @@ public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHo
     //inner class needed for generating View objects
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView privb_name, privb_des;
+        private TextView privb_name, privb_des, privb_add;
         private ImageView privb_image;
 
 
@@ -82,6 +91,8 @@ public class PrivateBAdapter extends RecyclerView.Adapter<PrivateBAdapter.ViewHo
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             privb_name=itemView.findViewById(R.id.privb_name);
+            privb_des=itemView.findViewById(R.id.apartment_cost_p);
+            privb_add=itemView.findViewById(R.id.add_p);
             privb_image = itemView.findViewById(R.id.privb_image);
             parent = itemView.findViewById(R.id.parent);
 

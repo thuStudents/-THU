@@ -62,9 +62,11 @@ public class TransportActivity extends AppCompatActivity {
         transportBRecView =findViewById(R.id.transport_recview);
 
         ArrayList<TransportItems> means = new ArrayList<>();
+        means.add(new TransportItems("Time-Tables", "Discover the city thanks to the DING local public\ntransport", R.drawable.ding));
         means.add(new TransportItems("Semester Tickets", "All students from THU can buy a semester ticket.\n\nYou will have to present your student ID or certificate of enrollment when purchasing. \n\nThe ticket costs 133.00€ per semester. \n \nSemester tickets are issued for the following periods: \nSummer semester: March 1st to August 31st \nWinter semester: September 1st to September 28th / 29th February \n \nThe tickets are available at: \nTicket office at the Prittwitzstraße cafeteria \nSWU Offices \nHabtbahnhof Ulm", R.drawable.semestertickets));
         means.add(new TransportItems("Offers for students without a semester ticket", "From 6 p.m. and all day on weekends students can travel for free. \n\nFree travel between Uni Süd and THU stops. \n\nStudents living in Ulm can receive one free semester ticket by presenting their residence certificate at SWU. ", R.drawable.nosemesterticket));
         means.add(new TransportItems("Night Buses", "Night buses run in Ulm and Neu-Ulm on the nights before Saturday and Sunday and public holidays.\n\nThese buses are free for students on presentation of their student ID.", R.drawable.bus));
+
 
         TransportAdapter adapter=new TransportAdapter(this);
         adapter.setContacts(means);

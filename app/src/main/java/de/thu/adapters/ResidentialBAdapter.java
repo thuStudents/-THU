@@ -2,12 +2,13 @@ package de.thu.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -47,19 +48,16 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.resb_name.setText(resBuild.get(position).getResidentialbName());
         holder.resb_image.setImageResource(resBuild.get(position).getResidentialBImage());
+        holder.resb_contacts.setText(resBuild.get(position).getResidentialbContacts());
+        holder.resb_num.setText(resBuild.get(position).getResidentialNum());
 
-
-        holder.parent.setOnClickListener(new View.OnClickListener() {
+        holder.resb_num.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, resBuild.get(position).getResidentialbName() + " Selected", Toast.LENGTH_SHORT).show();
-
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.it/maps/search/"+ holder.resb_num.getText()));
+                context.startActivity(browserIntent);
             }
         });
-
-
-
-
     }
 
 
@@ -77,9 +75,8 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
     //inner class needed for generating View objects
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView resb_name, resb_des;
+        private TextView resb_name, resb_contacts, resb_num;
         private ImageView resb_image;
-
 
         private CardView parent;
         
@@ -87,6 +84,8 @@ public class ResidentialBAdapter extends RecyclerView.Adapter<ResidentialBAdapte
             super(itemView);
             resb_name=itemView.findViewById(R.id.resb_name);
             resb_image = itemView.findViewById(R.id.resb_image);
+            resb_num = itemView.findViewById(R.id.number_of_students);
+            resb_contacts = itemView.findViewById(R.id.apartment_contact);
             parent = itemView.findViewById(R.id.parent);
 
         }

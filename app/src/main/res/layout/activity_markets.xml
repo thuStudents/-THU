@@ -24,7 +24,7 @@
     <LinearLayout
         android:id="@+id/markets"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="90dp"
 
         android:background="@drawable/header_bg">
 
@@ -36,7 +36,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="25dp"
             android:fontFamily="@font/myfont2"
-            android:text="Ulm weekly market \nFresh, Regional Tradition!"
+            android:text="Ulm markets"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -94,16 +94,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
             android:fontFamily="@font/myfont2"
-            android:text="MÜNSTERPLATZ"
+            android:text="Münsterplatz, 89073 Ulm"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/market_time_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Wednesday and Saturday 7 a.m. to 1 p.m."
             android:textColor="@color/dark_gray"
             android:textSize="14sp" />
 
-
+        <TextView
+            android:id="@+id/market_location_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/myfont2"
+            android:text="Petruspl., 89231 Neu-Ulm"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
     </LinearLayout>
-
-
-
-
-
-
 </RelativeLayout>

@@ -45,6 +45,8 @@ public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder
         boolean isExpanded = bankLocations.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
+
+
     }
 
     @Override

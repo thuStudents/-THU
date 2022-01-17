@@ -2,6 +2,8 @@ package de.thu.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +55,15 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
         boolean isExpanded = transportLocations.get(position).isExtended_t();
         holder.expandableLayout_transport.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
-
+        holder.transport_des.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (position == 0) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ding.eu/"));
+                    context.startActivity(browserIntent);
+                }
+            }
+        });
 
     }
 

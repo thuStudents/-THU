@@ -24,7 +24,7 @@
     <LinearLayout
         android:id="@+id/cafe"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="90dp"
 
         android:background="@drawable/header_bg">
 
@@ -36,7 +36,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="25dp"
             android:fontFamily="@font/myfont2"
-            android:text="Enjoy your studies in \nUlms cozy cafees!"
+            android:text="Cafees"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
