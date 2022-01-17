@@ -24,7 +24,7 @@ public class LatestUpdatesAdapter extends RecyclerView.Adapter<LatestUpdatesAdap
     public LatestUpdatesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.latest_updates, parent, false);
         LatestUpdatesViewHolder latestUpdatesViewHolder = new LatestUpdatesViewHolder(view);
-        return latestUpdatesViewHolder;
+        return new LatestUpdatesViewHolder(view);
     }
 
     @Override
@@ -32,8 +32,7 @@ public class LatestUpdatesAdapter extends RecyclerView.Adapter<LatestUpdatesAdap
         LatestUpdatesItems latestUpdatesItems = latestUpdatesLocations.get(position);
 
         holder.imageLU.setImageResource(latestUpdatesLocations.get(position).getLatestUpdatesImage());
-        holder.titleLU.setText(latestUpdatesLocations.get(position).getLatestUpdatesTitle());
-        holder.descriptionLU.setText(latestUpdatesLocations.get(position).getLatestUpdatesDescription());
+
 
 
     }
@@ -53,8 +52,7 @@ public class LatestUpdatesAdapter extends RecyclerView.Adapter<LatestUpdatesAdap
             super(itemView);
 
             imageLU = itemView.findViewById(R.id.latest_updates_imageview);
-            titleLU = itemView.findViewById(R.id.latest_updates_title);
-            descriptionLU = itemView.findViewById(R.id.latest_updates_description);
+
 
         }
     }

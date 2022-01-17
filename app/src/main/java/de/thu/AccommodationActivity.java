@@ -27,14 +27,21 @@ public class AccommodationActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.find:
-                        startActivity(new Intent(getApplicationContext()
-                                , Profile.class));
-                        overridePendingTransition(0,0);
+                        if(WelcomeActivity.signedAsGuest!=true){
+                            startActivity(new Intent(getApplicationContext()
+                                    , Profile.class));
+                        } else {
+                            Toast.makeText(AccommodationActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        if(WelcomeActivity.signedAsGuest!=true){
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0,0);
+                        } else {
+                            Toast.makeText(AccommodationActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()

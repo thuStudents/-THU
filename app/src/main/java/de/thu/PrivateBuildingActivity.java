@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -36,46 +37,48 @@ public class PrivateBuildingActivity extends AppCompatActivity {
         privateBRecView =findViewById(R.id.RecView);
 
         ArrayList<PrivateBItems> contacts = new ArrayList<>();
-        contacts.add(new PrivateBItems("ILive Campus Village", R.drawable.ilive));
-        contacts.add(new PrivateBItems("UniApart", R.drawable.uniapart));
-        contacts.add(new PrivateBItems("Links from Studierendenwerk", R.drawable.studierendenwerk));
+        contacts.add(new PrivateBItems("ILive Campus Village", R.drawable.ilive, "21 - 24 m2: € 510\n\n26 - 33 m2: € 590", "Von-Hünefeld-Straße 28 89231 Neu-Ulm"));
+        contacts.add(new PrivateBItems("UniApart", R.drawable.uniapart, "22.5 m2: € 479\n\n33.5 m2: € 589", "Memminger Str. 33, 89231 Neu-Ulm"));
+        contacts.add(new PrivateBItems("Links from Studierendenwerk", R.drawable.studierendenwerk, "", "DAILY UPDATED PRIVATE ROOM INDEX"));
 
         PrivateBAdapter adapter=new PrivateBAdapter(this);
         adapter.setContacts(contacts);
 
         privateBRecView.setAdapter(adapter);
-        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        privateBRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        privateBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.setSelectedItemId(R.id.find);
-
-
+        bottomNavigationView.setSelected(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch(item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.find:
-                        startActivity(new Intent(getApplicationContext()
-                                , Profile.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , Profile.class));
+                        } else {
+                            Toast.makeText(PrivateBuildingActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.add:
-                        startActivity(new Intent(getApplicationContext()
-                                , PostActivity.class));
-                        overridePendingTransition(0,0);
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0, 0);
+                        } else {
+                            Toast.makeText(PrivateBuildingActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()
                                 , HomeActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
                         return true;
                 }
 
                 return false;
             }
         });
-
     }
 }

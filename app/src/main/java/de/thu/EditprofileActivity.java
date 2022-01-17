@@ -47,7 +47,9 @@ public class EditprofileActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.add:
-                        Toast.makeText(EditprofileActivity.this, "Add button pressed", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext()
+                                , PostActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext()

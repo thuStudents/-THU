@@ -1,13 +1,18 @@
 package de.thu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +30,8 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
     DatabaseReference reference;
     FirebaseAuth mAuth;
     Random rand = new Random();
+    private NewPostNotifier newPostNotifier;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +39,12 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_post);
         btnAdd = findViewById(R.id.add_post_btn);
         btnAdd.setOnClickListener(this);
+        newPostNotifier = new NewPostNotifier(this);
     }
 
 
     public void onClick(View view) {
-        switch(view.getId()){
+        switch(view.getId()) {
             case R.id.add_post_btn:
                 //add the post and go back to activity
                 EditText editText = findViewById(R.id.add_post_txt);
@@ -46,7 +54,7 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
 
                 rootnode = FirebaseDatabase.getInstance("https://thu-3f8f6-default-rtdb.europe-west1.firebasedatabase.app/");
                 reference = rootnode.getReference("posts");
-                int random = (int)(Math.random() * 50 + 1);
+                int random = (int) (Math.random() * 50 + 1);
 
                 String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
                 Calendar calendar = Calendar.getInstance();
@@ -61,9 +69,11 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
                 reference.child(currentFirebaseUser.getUid() + mSec).child("email").setValue(currentFirebaseUser.getEmail());
                 reference.child(currentFirebaseUser.getUid() + mSec).child("id").setValue(currentFirebaseUser.getUid() + mSec);
 
+                newPostNotifier.showNotification();
+
                 startActivity(new Intent(getApplicationContext()
                         , ForumActivity.class));
-                overridePendingTransition(0,0);
+                overridePendingTransition(0, 0);
 
                 break;
             default:

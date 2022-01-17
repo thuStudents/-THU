@@ -6,7 +6,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -28,18 +28,18 @@ public class RensidentialBuildingsActivity extends AppCompatActivity {
         resBRecView =findViewById(R.id.RecView);
 
         ArrayList<ResidentialBuildingsItems> res_elements = new ArrayList<>();
-        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", R.drawable.gutenbergstr ));
-        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", R.drawable.frauensteige));
-        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n1", R.drawable.heidenheimer1));
-        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße \n2", R.drawable.heidenheimer2));
-        res_elements.add(new ResidentialBuildingsItems("Upper West Side", R.drawable.uppperwestside));
+        res_elements.add(new ResidentialBuildingsItems("Gutenbergstraße", R.drawable.gutenbergstr, "4 and 6 person flat share: € 322\n\n9 person flat share (private bathroom): €362", "Gutenbergstraße 6, 89073 Ulm"));
+        res_elements.add(new ResidentialBuildingsItems("Frauensteigestraße", R.drawable.frauensteige, "2 person flat share: € 296", "Frauensteige 2, 89075 Ulm"));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße (Hause 1)", R.drawable.heidenheimer1, "18 person flat share: € 241", "Heidenheimer Str. 78, 89075 Ulm"));
+        res_elements.add(new ResidentialBuildingsItems("Heidenheimerstraße (Hause 2)", R.drawable.heidenheimer2, "10, 12 and 15 person flat share (private bathroom): € 318", "Heidenheimer Str. 78, 89075 Ulm"));
+        res_elements.add(new ResidentialBuildingsItems("Upper West Side", R.drawable.uppperwestside, "3 and 5 person flat share: € 343\n\n11 person flat share (private bathroom): €343", "Manfred-Straße, 89081 Ulm"));
 
         ResidentialBAdapter adapter=new ResidentialBAdapter(this);
         adapter.setContacts(res_elements);
 
         resBRecView.setAdapter(adapter);
-        //contactsRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        resBRecView.setLayoutManager(new GridLayoutManager(this, 2));
+        resBRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        //resBRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
 
 

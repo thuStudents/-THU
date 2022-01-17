@@ -85,6 +85,7 @@
                         android:layout_centerHorizontal="true"
                         android:textSize="18dp"
                         android:textStyle="bold" />
+
                     <TextView
                         android:id="@+id/textLibrary3Link"
                         android:layout_width="wrap_content"
@@ -92,7 +93,8 @@
                         android:layout_below="@id/textLibrary1"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="6dp"
-                        android:background="@color/thuColor"
+                        android:padding="5dp"
+                        android:background="@drawable/card_2"
                         android:fontFamily="@font/myfont2"
                         android:text="To library catalogue and account"
                         android:textAlignment="center"

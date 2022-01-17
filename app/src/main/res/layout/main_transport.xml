@@ -23,7 +23,7 @@
     <LinearLayout
         android:id="@+id/means"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="90dp"
 
         android:background="@drawable/header_bg">
 
@@ -35,7 +35,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="25dp"
             android:fontFamily="@font/myfont2"
-            android:text="Move easily around \nUlm!"
+            android:text="Transport"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />

@@ -1,14 +1,20 @@
 package de.thu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class LibraryActivity extends AppCompatActivity {
     View view;
@@ -34,6 +40,40 @@ public class LibraryActivity extends AppCompatActivity {
 
 
             }});
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelected(false);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.find:
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , Profile.class));
+                        } else {
+                            Toast.makeText(LibraryActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
+                        return true;
+                    case R.id.add:
+                        if (WelcomeActivity.signedAsGuest != true) {
+                            startActivity(new Intent(getApplicationContext()
+                                    , PostActivity.class));
+                            overridePendingTransition(0, 0);
+                        } else {
+                            Toast.makeText(LibraryActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                        }
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext()
+                                , HomeActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
 
     }
 }

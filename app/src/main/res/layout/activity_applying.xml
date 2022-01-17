@@ -73,6 +73,7 @@
                         android:text="Application Explanation Video"
                         android:textAppearance="?attr/textAppearanceHeadline6"
                         android:textSize="18sp"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/myfont2"
                         android:textAlignment="center"
                         android:textStyle="bold"/>
@@ -107,6 +108,7 @@
                         android:text="📄 Required Documents"
                         android:textAppearance="?attr/textAppearanceHeadline6"
                         android:textSize="25sp"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/myfont2"
                         android:textAlignment="center"
                         android:textStyle="bold"/>
@@ -116,6 +118,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/requiredDocumentsApplying"
                         android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
                         android:fontFamily="@font/myfont2"
                         android:lineSpacingExtra="10dp"
                         android:text="1. Studienkolleg Konstanz Certificate; required for recognition of your higher education entrance qualification.\n
@@ -125,7 +128,6 @@
 5. Send the Application for Admission to Ulm University of Applied Sciences (SSC), filled out and signed, together with required documentation. \n
 6. If you receive an offer from Ulm University of Applied Sciences, you must accept it in hochschulstart.de website. The Addmission Letter will inform you about enrollment."
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -172,7 +174,7 @@ MASTER PROGRAMS: \n
 Applying for Summer Semester the application deadline is 1 December. \n
 Applying for Winter Semester the application deadline is 1 June. "
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -216,7 +218,7 @@ International Students, who are studying for a second degree, Course Fee: €650
 Fee upon Enrollment: €177\n\n
 Fee upon Re-registration: €167"
                         android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="?android:attr/textColorSecondary"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         android:textStyle="bold" />
                 </RelativeLayout>

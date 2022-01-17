@@ -75,7 +75,6 @@ public class reply extends AppCompatActivity {
 
                 FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
-
                 int random = (int)(Math.random() * 50 + 1);
 
                 String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
