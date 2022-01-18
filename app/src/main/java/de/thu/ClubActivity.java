@@ -27,15 +27,22 @@ public class ClubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview);
 
+        /**
+         * instantiate the Club recycle view with the corresponding ID
+         */
         funRecView =findViewById(R.id.RecView);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
-
+        /**
+         * Activity name displayed in the toolbar is set
+         */
         TextView title = findViewById(R.id.title);
         title.setText("Clubs");
 
+        /**
+         * We need to create an array list to contain all the Clubs
+         * For each club the data is added manually
+         * Each club has a Name, address and icon
+         */
         ArrayList<ClubItems> funitem = new ArrayList<>();
         funitem.add(new ClubItems("Rules" ,R.drawable.rulesclub, " Frauenstraße 29, 89073 Ulm"));
         funitem.add(new ClubItems("Theatro", R.drawable.theatroclub, "Hirschstraße 12/1, 89073 Ulm"));
@@ -43,18 +50,30 @@ public class ClubActivity extends AppCompatActivity {
         funitem.add(new ClubItems("Cabaret Club Eden", R.drawable.edenclub, "Karlstraße 71, 89073 Ulm"));
         funitem.add(new ClubItems("M-Club", R.drawable.mclub, "Lautenberg 1, 89073 Ulm"));
 
+        /**
+         * create adapter istance and set the data
+         */
         ClubAdapter adapter=new ClubAdapter(this);
         adapter.setContacts(funitem);
 
+        /**
+         * set the adapter to the recycler view
+         */
         funRecView.setAdapter(adapter);
+        /**
+         * set a Layout Manager for the Recycler View
+         * pass a Linear Layout Manager which displayes the items in the recycler view in a Linear fashion
+         * make the layout VERTICAL
+         */
         funRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark find as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.find);
-
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
