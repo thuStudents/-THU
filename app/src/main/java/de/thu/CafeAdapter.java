@@ -13,14 +13,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder> {
 
     ArrayList<CafeItems> cafeLocations;
 
+    /**
+     *pass in the data
+     */
     public CafeAdapter(ArrayList<CafeItems> cafeLocations) {
         this.cafeLocations = cafeLocations;
     }
 
+    /**
+     * inflates the row layout from xml when needed
+     * onCreateViewHolder(ViewGroup, int) method is called right when the adapter is created and is used to initialize the ViewHolders.
+     */
     @NonNull
     @Override
     public CafeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -28,6 +38,9 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
         return new CafeViewHolder(view);
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull CafeViewHolder holder, int position) {
 
@@ -39,17 +52,26 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
         holder.cafe_address.setText(cafeLocations.get(position).getCafe_address());
         holder.cafe_t.setText(cafeLocations.get(position).getCafe_t());
 
+        /**
+         * If the View is expanded, set its visibility to VISIBLE
+         * If the View isn't expanded, set its visibility to GONE
+         */
         boolean isExpanded = cafeLocations.get(position).isExpanded_c();
         holder.expandableLayout_c.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return cafeLocations.size();
     }
 
-
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class CafeViewHolder extends RecyclerView.ViewHolder {
 
         TextView cafe_name, cafe_time, cafe_address, cafe_t;
@@ -71,6 +93,9 @@ public class CafeAdapter extends RecyclerView.Adapter<CafeAdapter.CafeViewHolder
             linearLayout_c = itemView.findViewById(R.id.linear_layout2);
             expandableLayout_c = itemView.findViewById(R.id.expandable_cafe);
 
+            /**
+             * the setExpanded sets whether the layout is expanded or not, animating if it has already been laid out.
+             */
             linearLayout_c.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

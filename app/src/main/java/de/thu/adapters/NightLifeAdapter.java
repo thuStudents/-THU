@@ -22,35 +22,47 @@ import de.thu.RestaurantActivity;
 import de.thu.ClubActivity;
 import de.thu.NightLifeItems;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.ViewHolder> {
 
     private ArrayList<NightLifeItems> nightstuff = new ArrayList<>();
 
     private Context context;
 
+    /**
+     *pass in the data
+     */
     public NightLifeAdapter(Context context) {
         this.context = context;
     }
 
-    public NightLifeAdapter() {
-    }
-
-    //create view holder
+    /**
+     * inflates the row layout from xml when needed
+     * onCreateViewHolder(ViewGroup, int) method is called right when the adapter is created and is used to initialize the ViewHolders.
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //create view obj
-        //view group parent of all the layout files, parent of rel layout, const layout... -> tells where we want to attach the view obj
-        //false cause redundancy i guess
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_night_life, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.nightlife_name.setText(nightstuff.get(position).getNightName());
         holder.nightlife_imageView.setImageResource(nightstuff.get(position).getNightImage());
+
+        /**
+         * respond to click events
+         * the clicked view is determined by taking it's position
+         * the corresponding intent is started based on the View we click
+         */
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +93,9 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
     }
 
 
-    //return the count of different items in our adapter
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return  nightstuff.size();
@@ -92,7 +106,9 @@ public class NightLifeAdapter extends RecyclerView.Adapter<NightLifeAdapter.View
         notifyDataSetChanged();
     }
 
-    //inner class needed for generating View objects
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView nightlife_name;
