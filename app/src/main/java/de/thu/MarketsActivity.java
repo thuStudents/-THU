@@ -25,8 +25,12 @@ public class MarketsActivity extends AppCompatActivity {
         address1 = findViewById(R.id.market_location);
         address2 = findViewById(R.id.market_location_n);
 
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark find as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -60,6 +64,9 @@ public class MarketsActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * On click listeners which will start the Google Maps activity with the corresponding address
+         */
         address1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

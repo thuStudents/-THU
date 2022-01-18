@@ -27,13 +27,15 @@ public class RestaurantActivity extends AppCompatActivity {
 
         restaurantRecView =findViewById(R.id.RecView);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
-
         TextView title = findViewById(R.id.title);
         title.setText("Restaurants");
 
+
+        /**
+         * We need to create an array list to contain all the Restaurants
+         * For each Restaurant the data is added manually
+         * Each Restaurant has a Name, address and icon
+         */
         ArrayList<RestaurantItems> restaurantItems = new ArrayList<>();
 
         restaurantItems.add(new RestaurantItems("Barfüßer die Hausbrauerei Ulm", "Marktpl. 18, 89073 Ulm", R.drawable.barfusser_ulm));
@@ -42,13 +44,28 @@ public class RestaurantActivity extends AppCompatActivity {
         restaurantItems.add(new RestaurantItems("Buddha Kitchen", "Lautenberg 1, 89073 Ulm",R.drawable.buddhakitchen));
         restaurantItems.add(new RestaurantItems("City Kebab", "Glöcklerstraße 4, 89073 Ulm",R.drawable.qmuh));
 
+        /**
+         * create adapter istance and set the data
+         */
         RestaurantAdapter adapter=new RestaurantAdapter(this);
         adapter.setContacts(restaurantItems);
 
+        /**
+         * set the adapter to the recycler view
+         */
         restaurantRecView.setAdapter(adapter);
-        restaurantRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
+        /**
+         * set a Layout Manager for the Recycler View
+         * pass a Linear Layout Manager which displayes the items in the recycler view in a Linear fashion
+         * make the layout VERTICAL
+         */
+        restaurantRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        /**
+         * BOTTOM NAVIGATION
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelected(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
