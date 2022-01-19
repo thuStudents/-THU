@@ -76,7 +76,7 @@
             android:fontFamily="@font/myfont2"
             android:text="Ulm eats healthy! \nPeople of Ulm can buy fresh, regional and high-quality food at least once a week."
             android:textColor="@color/off_black"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/market_time"
@@ -85,8 +85,8 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/myfont2"
             android:text="Wednesday and Saturday 6 a.m. to 1 p.m."
-            android:textColor="@color/dark_gray"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/market_location"
@@ -97,7 +97,7 @@
             android:text="Münsterplatz, 89073 Ulm"
             android:textStyle="bold|italic"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/market_time_n"
@@ -106,8 +106,8 @@
             android:layout_marginTop="28dp"
             android:fontFamily="@font/myfont2"
             android:text="Wednesday and Saturday 7 a.m. to 1 p.m."
-            android:textColor="@color/dark_gray"
-            android:textSize="14sp" />
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/market_location_n"
@@ -118,6 +118,6 @@
             android:text="Petruspl., 89231 Neu-Ulm"
             android:textStyle="bold|italic"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="17sp" />
     </LinearLayout>
 </RelativeLayout>

@@ -19,12 +19,18 @@ import java.util.ArrayList;
 import de.thu.R;
 import de.thu.ClubItems;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
 
     private ArrayList<ClubItems> clubLocations = new ArrayList<>();
 
     private Context context;
 
+    /**
+     *pass in the data
+     */
     public ClubAdapter(Context context) {
         this.context = context;
     }
@@ -32,31 +38,40 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
     public ClubAdapter() {
     }
 
-    //create view holder
+    /**
+     * inflates the row layout from xml when needed
+     * onCreateViewHolder(ViewGroup, int) method is called right when the adapter is created and is used to initialize the ViewHolders.
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //create view obj
-        //view group parent of all the layout files, parent of rel layout, const layout... -> tells where we want to attach the view obj
-        //false cause redundancy i guess
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.club_items, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.fun_name.setText(clubLocations.get(position).getFunName());
         holder.fun_image.setImageResource(clubLocations.get(position).getFunImage());
         holder.fun_address.setText(clubLocations.get(position).getFunAddress());
 
+        /**
+         * If the View is expanded, set its visibility to VISIBLE
+         * If the View isn't expanded, set its visibility to GONE
+         */
         boolean isExpanded = clubLocations.get(position).isExtendable_club();
         holder.extendableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
 
-    //return the count of different items in our adapter
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return  clubLocations.size();
@@ -67,7 +82,9 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
         notifyDataSetChanged();
     }
 
-    //inner class needed for generating View objects
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView fun_name, fun_address;
@@ -89,7 +106,9 @@ public class ClubAdapter extends RecyclerView.Adapter<ClubAdapter.ViewHolder> {
             linearLayout = itemView.findViewById(R.id.linear_layout4);
             extendableLayout = itemView.findViewById(R.id.extendable_club);
 
-
+            /**
+             * the setExpanded sets whether the layout is expanded or not, animating if it has already been laid out.
+             */
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

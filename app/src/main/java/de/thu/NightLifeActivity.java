@@ -28,24 +28,36 @@ public class NightLifeActivity extends AppCompatActivity {
 
         nightRecView =findViewById(R.id.night_recview);
 
-
+        /**
+         * We need to create an array list to contain all the Night Life activities
+         * For each activity the data is added manually
+         */
         ArrayList<NightLifeItems> nightitem = new ArrayList<>();
         nightitem.add(new NightLifeItems("Clubs", R.drawable.clubs));
         nightitem.add(new NightLifeItems("Bars", R.drawable.bars));
         nightitem.add(new NightLifeItems("Cinemas", R.drawable.cinemas));
         nightitem.add(new NightLifeItems("Restaurants", R.drawable.restaurants));
 
-
+        /**
+         * create adapter istance and set the data
+         */
         NightLifeAdapter adapter=new NightLifeAdapter(this);
         adapter.setContacts(nightitem);
 
+        /**
+         * set the adapter to the recycler view
+         */
         nightRecView.setAdapter(adapter);
-        //nightRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        //nightRecView.setLayoutManager(new LinearLayoutManager(this));
+        /**
+         * set a Layout Manager for the Recycler View
+         * pass a Grid Layout Manager which displayes the items in the recycler view in a Grid fashion
+         */
         nightRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
-
-
+        /**
+         * BOTTOM NAVIGATION
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelected(false);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

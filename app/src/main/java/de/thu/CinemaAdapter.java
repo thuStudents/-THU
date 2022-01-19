@@ -16,41 +16,56 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class CinemaAdapter extends RecyclerView.Adapter<CinemaAdapter.ViewHolder> {
 
     private ArrayList<CinemaItems> cinemaLocations = new ArrayList<>();
 
     private Context context;
 
+    /**
+     *pass in the data
+     */
     public CinemaAdapter(Context context) {
         this.context = context;
     }
 
-    //create view holder
+    /**
+     * inflates the row layout from xml when needed
+     * onCreateViewHolder(ViewGroup, int) method is called right when the adapter is created and is used to initialize the ViewHolders.
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //create view obj
-        //view group parent of all the layout files, parent of rel layout, const layout... -> tells where we want to attach the view obj
-        //false cause redundancy i guess
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cinema_items, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.cinema_name.setText(cinemaLocations.get(position).getCinema_name());
         holder.cinema_image.setImageResource(cinemaLocations.get(position).getCinema_image());
         holder.cinema_address.setText(cinemaLocations.get(position).getCinema_address());
 
+        /**
+         * If the View is expanded, set its visibility to VISIBLE
+         * If the View isn't expanded, set its visibility to GONE
+         */
         boolean isExpanded = cinemaLocations.get(position).isExtendable_cinema();
         holder.extendableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
 
 
-    //return the count of different items in our adapter
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return  cinemaLocations.size();
@@ -61,7 +76,9 @@ public class CinemaAdapter extends RecyclerView.Adapter<CinemaAdapter.ViewHolder
         notifyDataSetChanged();
     }
 
-    //inner class needed for generating View objects
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView cinema_name, cinema_address;
@@ -83,7 +100,9 @@ public class CinemaAdapter extends RecyclerView.Adapter<CinemaAdapter.ViewHolder
             linearLayout = itemView.findViewById(R.id.linear_layout6);
             extendableLayout = itemView.findViewById(R.id.extendable_cinema);
 
-
+            /**
+             * the setExpanded sets whether the layout is expanded or not, animating if it has already been laid out.
+             */
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

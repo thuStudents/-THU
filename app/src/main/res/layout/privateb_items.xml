@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/apartment_cost_p"
                 android:fontFamily="@font/myfont2"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:text="Contacts"/>
             <TextView

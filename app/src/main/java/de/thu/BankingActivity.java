@@ -19,20 +19,28 @@ public class BankingActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter;
     RecyclerView bank;
+    /**
+     * We need to create an array list to contain all the banks
+     */
     ArrayList<BankItems> bankLocations = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banking);
 
+        /**
+         * instantiate the Bank recycle view with the corresponding ID
+         */
         bank = findViewById(R.id.recycler_bank);
 
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark home as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -75,8 +83,16 @@ public class BankingActivity extends AppCompatActivity {
 
     private void initData() {
 
+        /**
+         * setHasFixedSize to true when changing the contents of the adapter
+         * does not change it's height or width
+         */
         bank.setHasFixedSize(true);
 
+        /**
+         * For each bank the data is added manually
+         * Each bank has a Name, phone number, e-mail, address and icon
+         */
         bankLocations.add(new BankItems("Volksbank Ulm", "0731 1830", "volksbank_ulm@email.de", "Frauenstraße 60, 89073 Ulm", R.drawable.vr_bank));
         bankLocations.add(new BankItems("Volksbank Neu-Ulm", "0731 970030", "volksbank_neu_ulm@email.de", "Ludwigstraße 1, 89231 Neu-Ulm", R.drawable.vr_bank));
         bankLocations.add(new BankItems("Sparkasse Ulm", "0128 746353", "sparkasse_ulm@email.de", "Hauptstraße 2, 89071 Ulm", R.drawable.sparkasse));
@@ -88,7 +104,14 @@ public class BankingActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
+
+        /**
+         * create the Recycler view adapter and set the data
+         */
         adapter = new BankAdapter(bankLocations);
+        /**
+         * set the adapter to the recycler view
+         */
         bank.setAdapter(adapter);
 
     }

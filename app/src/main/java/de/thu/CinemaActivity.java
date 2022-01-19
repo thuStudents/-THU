@@ -25,31 +25,50 @@ public class CinemaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recyclerview);
 
+        /**
+         * instantiate the Cinema recycle view with the corresponding ID
+         */
         cinemaRecView =findViewById(R.id.RecView);
 
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        //TextView textView = (TextView)toolbar.findViewById(R.id.txt_toolbar);
-        //textView.setText("Clubs");
-
+        /**
+         * Activity name displayed in the toolbar is set
+         */
         TextView title = findViewById(R.id.title);
         title.setText("Movies");
 
+        /**
+         * We need to create an array list to contain all the Cinemas
+         * For each cinema the data is added manually
+         * Each cinea has a Name, address and icon
+         */
         ArrayList<CinemaItems> cinemaItems = new ArrayList<>();
         cinemaItems.add(new CinemaItems("Xinedome", "Am Lederhof 1, 89073 Ulm",R.drawable.xinedome));
         cinemaItems.add(new CinemaItems("Cineplex Dietrich", "Marlene-Dietrich-Straße 11, 89231 Neu-Ulm",R.drawable.cineplex));
 
+        /**
+         * create adapter istance and set the data
+         */
         CinemaAdapter adapter=new CinemaAdapter(this);
         adapter.setContacts(cinemaItems);
 
+        /**
+         * set the adapter to the recycler view
+         */
         cinemaRecView.setAdapter(adapter);
+        /**
+         * set a Layout Manager for the Recycler View
+         * pass a Linear Layout Manager which displayes the items in the recycler view in a Linear fashion
+         * make the layout VERTICAL
+         */
         cinemaRecView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //funRecView.setLayoutManager(new GridLayoutManager(this, 2));
 
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark find as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV BAR that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.find);
-
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
