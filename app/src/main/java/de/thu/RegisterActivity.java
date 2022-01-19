@@ -25,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     TextView alreadyHaveAccount;
     ProgressDialog progressDialog;
 
-    String emailPattern = "[a-zA-Z0-9._]-+@[a-z]+\\.+[a-z]";
+    String emailPattern = "[a-zA-Z0-9._]+@thu.de";
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -78,7 +78,9 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         if (email.isEmpty()) {
-            registerEmail.setError("Enter a valid email");
+            registerEmail.setError("Email is empty");
+        } else if (!(email.matches(emailPattern))){
+            registerEmail.setError("Enter your student email");
         } else if (password.isEmpty() || password.length()<6) {
             registerPassword.setError("Enter a valid password");
         } else if (!password.equals(confirmPassword)) {
