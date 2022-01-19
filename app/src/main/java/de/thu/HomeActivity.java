@@ -43,8 +43,19 @@ public class HomeActivity extends AppCompatActivity {
 
         login = findViewById(R.id.buttonLoginHomepage);
 
+        /**
+         * instantiate view for image slideshow
+         */
+
         latest_updates=findViewById(R.id.latest_updates);
         latest_updates();
+
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark find as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -170,6 +181,17 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * set the AutoScroll Adapter
+     * set a Layout Manager for the Recycler View
+     * pass a Linear Layout Manager which displayes the items in the recycler view in a Linear fashion
+     * make the layout HORIZONTAL
+     * create adapter istance
+     * set the adapter to the recycler view
+     * snapping any child view of the RecyclerView.
+     * create a new Timer
+     */
         private void latest_updates(){
 
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
