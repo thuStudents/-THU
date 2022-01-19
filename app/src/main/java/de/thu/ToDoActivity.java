@@ -24,6 +24,13 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+/**
+ * Query the database for the to do tasks of the user
+ * Create the view for the listview on the layout
+ * Pass the data to the view
+ * Generate the view with the adapter
+ */
+
 public class ToDoActivity extends AppCompatActivity {
     Button addNewTask;
     FragmentTransaction fragmentTransaction;

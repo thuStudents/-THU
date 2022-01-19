@@ -1,5 +1,9 @@
 package de.thu;
 
+/**
+ * Constructor, getter and setter for the answers of forum posts
+ */
+
 public class AnswerItems {
 
     private String date;

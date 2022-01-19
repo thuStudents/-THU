@@ -15,6 +15,12 @@ import com.firebase.ui.database.FirebaseListOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+/**
+ * Query the database for the answers of a forum post
+ * Create the adapter for the list view of the answers
+ * Pass the data from the database to the views
+ */
+
 public class Answers extends AppCompatActivity {
 
     ListView answersLv;

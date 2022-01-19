@@ -25,13 +25,13 @@ import java.util.Random;
 import java.util.Calendar;
 
 public class PostActivity extends AppCompatActivity  implements View.OnClickListener{
+
     Button btnAdd;
     FirebaseDatabase rootnode;
     DatabaseReference reference;
     FirebaseAuth mAuth;
     Random rand = new Random();
     private NewPostNotifier newPostNotifier;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,11 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
         newPostNotifier = new NewPostNotifier(this);
     }
 
+    /**
+     * Function to create a table object in the database for the post
+     * Get the value in the editText
+     * Send them to the database
+     */
 
     public void onClick(View view) {
         switch(view.getId()) {

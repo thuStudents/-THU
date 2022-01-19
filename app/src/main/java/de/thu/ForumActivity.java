@@ -21,6 +21,12 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+/**
+ * Query the database for forum post
+ * Create the view for the listview on the layout
+ * Pass the data to the view
+ * Generate the view with the adapter
+ */
 
 public class ForumActivity extends AppCompatActivity {
 

@@ -23,6 +23,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * Function to create a table object in the database for the reply of the posts
+ * Check the number of entries and increment
+ * Get the values from the editText
+ * Pass the values to the database
+ */
+
 public class reply extends AppCompatActivity {
 
     Button replyButton;
