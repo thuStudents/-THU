@@ -23,12 +23,21 @@ public class EventsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        /**
+         * Inflate the layout for this fragment
+         */
         view = inflater.inflate(R.layout.fragment_events, container, false);
         event = view.findViewById(R.id.eventText);
 
+        /**
+         * Get a calendar Instance.
+         * Get the calendar view from our layout.
+         * Set the minimum date to today's date.
+         * Set the event text for today's date.
+         * If a date was selected, show the selected day event text.
+         */
         c = Calendar.getInstance();
-        cv = (CalendarView) view.findViewById(R.id.calendarView);
+        cv = view.findViewById(R.id.calendarView);
         cv.setMinDate(c.getTimeInMillis());
         setEventText(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE));
 
@@ -39,10 +48,20 @@ public class EventsFragment extends Fragment {
             }
         });
 
-
         return view;
     }
 
+    /**
+     * This method takes 3 parameters which specify the date.
+     * The events for this release were hardcoded.
+     * Each event is set in one of the cases of the switch statement
+     * This method is called if an event is selected.
+     * In each case it will show a message about the event.
+     * Otherwise it will simply show No Event.
+     * @param year
+     * @param month
+     * @param dayOfMonth
+     */
     private void setEventText(int year, int month, int dayOfMonth) {
         int date = year*10000 + month*100 + dayOfMonth;
         switch(date){
@@ -87,38 +106,4 @@ public class EventsFragment extends Fragment {
                 break;
         }
     }
-
 }
-
-
-//        com.applandeo.materialcalendarview.CalendarView calendarView = view.findViewById(R.id.calendarView);
-//       CalendarView calendarViewC = view.findViewById(R.id.calendarView);
-//
-//        List<EventDay> events = new ArrayList<>();
-//        c = Calendar.getInstance();
-//        events.add(new EventDay(c, R.drawable.sample_icon));
-//        Calendar c1 = Calendar.getInstance();
-//        c1.add(Calendar.DATE,18);
-//        events.add(new EventDay(c1, R.drawable.sample_icon));
-//        calendarView.setEvents(events);
-////        List<Calendar> calendars = new ArrayList<>();
-////        calendarView.setHighlightedDays(calendars);
-//        Calendar c = Calendar.getInstance();
-//        int year = c.get(Calendar.YEAR);
-//        int month = c.get(Calendar.MONTH);
-//        int day = c.get(Calendar.DAY_OF_MONTH);
-//        setEventText(year, month, day);
-
-//        ((CalendarView) calendarView).setOnDateChangeListener(new OnDateChangeListener() {
-//
-//            @Override
-//            public void onSelectedDayChange(CalendarView view, int year, int month,
-//                                            int dayOfMonth) {
-//                Intent k = new Intent(GlavnaAktivnost.this, DatumDetalji.class);
-//                k.putExtra("godina", year);
-//                k.putExtra("mesec", month);
-//                k.putExtra("dan", dayOfMonth);
-//                startActivity(k);
-//
-//            }
-//        });

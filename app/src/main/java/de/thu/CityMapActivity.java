@@ -26,7 +26,9 @@ public class CityMapActivity extends FragmentActivity implements OnMapReadyCallb
         binding = ActivityCityMapBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        /**
+         * Obtain the SupportMapFragment and get notified when the map is ready to be used.
+         */
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.mapUlm);
         mapFragment.getMapAsync(this);
@@ -35,16 +37,13 @@ public class CityMapActivity extends FragmentActivity implements OnMapReadyCallb
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera.
+     * This is where we can added markers, zoomed our view and moved the camera to the desired location.
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         float zoomLevel = 15.0f;
-//        mMap.setMapType(mMap.MAP_TYPE_SATELLITE);
-
-        // Add markers and move the camera
 
         LatLng thuPin =  new LatLng(48.40854643587451, 9.997882487120377);
         mMap.addMarker(new MarkerOptions().position(thuPin).title("Technische Hochschule Ulm"));

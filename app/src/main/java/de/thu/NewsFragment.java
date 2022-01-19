@@ -19,8 +19,15 @@ public class NewsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_news, container, false);
+
+        /**
+         * News are also hardcoded so far.
+         * A card view was created for each of them.
+         * One news card has 3 elements. Title,text and image.
+         * The news text can be shown fully or partly.
+         * With each click on the news elements the news text length is toggled.
+         */
 
         news1 = view.findViewById(R.id.news1text);
         news2 = view.findViewById(R.id.news2text);
@@ -146,22 +153,6 @@ public class NewsFragment extends Fragment {
             }
         });
 
-
-
         return view;
     }
 }
-
-
-// getting reference of ExpandableTextView
-//        ExpandableTextView expTextViewCoronaLargeText = (ExpandableTextView) view.findViewById(R.id.expand_text_view1).findViewById(R.id.expand_text_view1);
-//
-//        // calling setText on the ExpandableTextView so that
-//        // text content will be displayed to the user
-//        expTextViewCoronaLargeText.setText(getString(R.string.coronaNewsLargeText));
-//
-//        ExpandableTextView expTextViewRoboticsLargeText = (ExpandableTextView) view.findViewById(R.id.expand_text_view2).findViewById(R.id.expand_text_view2);
-//        expTextViewRoboticsLargeText.setText(getString(R.string.serviceRoboticsLargeText));
-//
-////        ExpandableTextView expTextViewRoboticsLargeText = (ExpandableTextView) view.findViewById(R.id.expand_text_view2).findViewById(R.id.expand_text_view2);
-////        expTextViewCoronaLargeText.setText(getString(R.string.serviceRoboticsLargeText));

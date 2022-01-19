@@ -35,10 +35,9 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Type here...."
-        android:paddingLeft="10dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="15dp" />
-
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/add_task_btn"
@@ -46,10 +45,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/add_task"
         android:layout_marginTop="10dp"
-        android:background="@color/thuColor"
+        android:background="@drawable/card_2"
+        android:fontFamily="@font/myfont2"
         android:text="Add"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 

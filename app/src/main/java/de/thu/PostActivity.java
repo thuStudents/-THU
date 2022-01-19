@@ -71,9 +71,9 @@ public class PostActivity extends AppCompatActivity  implements View.OnClickList
 
                 newPostNotifier.showNotification();
 
-                startActivity(new Intent(getApplicationContext()
-                        , ForumActivity.class));
-                overridePendingTransition(0, 0);
+                Intent intent = new Intent(PostActivity.this, ForumActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
 
                 break;
             default:

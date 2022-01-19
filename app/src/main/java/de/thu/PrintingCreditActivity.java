@@ -25,6 +25,18 @@ public class PrintingCreditActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_printing_credit);
 
+        /**
+         * How to add printing credit to your card video
+         * The video was recorded and edited by us.
+         * Get reference to the view of video player
+         * Here the youtube player is initialized using the api key.
+         * Two methods are declared. Depending on initialization success one of them is called.
+         * If the initialization was not successful, a toast message is shown to the user.
+         * In case the initialization was successful, cueVideo method is called with the video id.
+         * cueVideo method loads the specified video's thumbnail and prepares the player to play the video,
+         * but does not download any of the video stream until play() is called.
+         * play() is automatically called when the user plays the video.
+         */
         ytPlayerPrintCredit = findViewById(R.id.ytPlayerPrintCreditCard);
         ytPlayerPrintCredit.initialize(api_key_recharge, new YouTubePlayer.OnInitializedListener() {
             @Override  //handle play and pause here

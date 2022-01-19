@@ -35,10 +35,9 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Type here...."
-        android:paddingLeft="10dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="15dp" />
-
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
 
     <Button
         android:id="@+id/add_post_btn"
@@ -46,10 +45,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/add_post_txt"
         android:layout_marginTop="10dp"
-        android:background="@color/thuColor"
-        android:text="Add"
+        android:background="@drawable/card_2"
+        android:fontFamily="@font/myfont2"
+        android:text="Post"
+        android:textColor="@color/white"
         android:textAlignment="center"
-        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
 

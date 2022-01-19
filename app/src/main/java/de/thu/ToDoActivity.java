@@ -76,13 +76,7 @@ public class ToDoActivity extends AppCompatActivity {
                         , AddTask.class));
                 overridePendingTransition(0,0);
 
-                /*addNewTask.setVisibility(View.GONE);
-                AddNewTaskFragment addTaskFragment = new AddNewTaskFragment();
-                fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                fragmentTransaction.setReorderingAllowed(true);
-                fragmentTransaction.replace(R.id.frameLayoutToDo,addTaskFragment);
-                fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out).show(addTaskFragment).commit();*/
-            }
+                }
         });
 
 

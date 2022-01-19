@@ -26,8 +26,6 @@ public class CinemaAdapter extends RecyclerView.Adapter<CinemaAdapter.ViewHolder
         this.context = context;
     }
 
-
-
     //create view holder
     @NonNull
     @Override

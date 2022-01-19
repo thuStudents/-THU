@@ -20,19 +20,27 @@ import java.util.ArrayList;
 public class HochschuleGeneralActivity extends AppCompatActivity {
     ListView hochschuleGeneralMenu;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hochschule_general);
         hochschuleGeneralMenu = findViewById(R.id.hochschuleGeneralMenu);
-        
-        ArrayList<String> hsumenuGeneralList = new ArrayList<>();
 
-        hsumenuGeneralList.add("Offered Courses✓");
-        hsumenuGeneralList.add("Applying✓");
-        hsumenuGeneralList.add("Offices✓");
-        hsumenuGeneralList.add("Library✓");
-        hsumenuGeneralList.add("Cafeteria & Mensa✓");
+        /**
+         * Created an arraylist with strings.
+         * Each list entry represents a subtopic.
+         * Created an Array adapter which adapts the string array to the list view.
+         * A specific layout is set for each array element.
+         * onItemClickListener is set for the list.
+         * Each list entry when clicked redirects the user to the corresponding activity.
+         */
+        ArrayList<String> hsumenuGeneralList = new ArrayList<>();
+        hsumenuGeneralList.add("Offered Courses");
+        hsumenuGeneralList.add("Applying");
+        hsumenuGeneralList.add("Offices");
+        hsumenuGeneralList.add("Library");
+        hsumenuGeneralList.add("Cafeteria & Mensa");
 
         ArrayAdapter<String> hsumenuGeneralAdapter = new ArrayAdapter<>(
                 this,
@@ -41,7 +49,6 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
         );
 
         hochschuleGeneralMenu.setAdapter(hsumenuGeneralAdapter);
-
         hochschuleGeneralMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -74,9 +81,7 @@ public class HochschuleGeneralActivity extends AppCompatActivity {
         });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.home);
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

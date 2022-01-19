@@ -59,13 +59,22 @@ public class MyStudiesActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        /**
+         * Created an arraylist with strings.
+         * Each list entry represents a subtopic.
+         * Created an Array adapter which adapts the string array to the list view.
+         * A specific layout is set for each array element.
+         * onItemClickListener is set for the list.
+         * Each list entry when clicked redirects the user to the corresponding activity.
+         */
         ArrayList<String> mystudiesmenuList = new ArrayList<>();
 
         mystudiesmenuList.add("Timetable");
         mystudiesmenuList.add("To-Do List");
-        mystudiesmenuList.add("Links✓");
+        mystudiesmenuList.add("Links");
         mystudiesmenuList.add("IT-Services & THU-Card");
-        mystudiesmenuList.add("THU map✓");
+        mystudiesmenuList.add("THU map");
 
 
         ArrayAdapter<String> hsumenuAdapter = new ArrayAdapter<>(
