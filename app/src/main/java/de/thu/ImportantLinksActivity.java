@@ -32,7 +32,7 @@ public class ImportantLinksActivity extends AppCompatActivity {
          * For each text view a click listener was set.
          * In case the text view was clicked an Intent is created which redirects the user to the corresponding website.
          */
-        viewLink = findViewById(R.id.thuWebsiteLink);
+            viewLink = findViewById(R.id.thuWebsiteLink);
             viewLink1 = findViewById(R.id.verwaltungLink);
             viewLink2 = findViewById(R.id.lsfLink);
             viewLink3 = findViewById(R.id.webmailLink);
@@ -84,7 +84,7 @@ public class ImportantLinksActivity extends AppCompatActivity {
                 //START ACTIVITY
                 startActivity(intent3);
             }});
-        viewLink.setOnClickListener(new View.OnClickListener(){
+        viewLink4.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
 
                 Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fs.hs-ulm.de/public/"));
