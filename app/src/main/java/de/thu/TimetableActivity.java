@@ -2,6 +2,7 @@ package de.thu;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -112,70 +113,141 @@ public class TimetableActivity extends AppCompatActivity {
         rootnode = FirebaseDatabase.getInstance("https://thu-3f8f6-default-rtdb.europe-west1.firebasedatabase.app/");
         reference = rootnode.getReference().child("timetable").child(currentFirebaseUser.getUid());
 
+
+        Log.d("Reference tag", String.valueOf(reference));
+
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                String mondayClass1 = snapshot.child("monday1").getValue().toString();
-                String mondayClass2 = snapshot.child("monday2").getValue().toString();
-                String mondayClass3 = snapshot.child("monday3").getValue().toString();
-                String mondayClass4 = snapshot.child("monday4").getValue().toString();
-                String mondayClass5 = snapshot.child("monday5").getValue().toString();
+                if (snapshot.exists()) {
 
-                monday1.setText(mondayClass1, TextView.BufferType.EDITABLE);
-                monday2.setText(mondayClass2, TextView.BufferType.EDITABLE);
-                monday3.setText(mondayClass3, TextView.BufferType.EDITABLE);
-                monday4.setText(mondayClass4, TextView.BufferType.EDITABLE);
-                monday5.setText(mondayClass5, TextView.BufferType.EDITABLE);
+                    if (!((snapshot.child("monday1").getValue()) == null)) {
+                        String mondayClass1 = snapshot.child("monday1").getValue().toString();
+                        monday1.setText(mondayClass1, TextView.BufferType.EDITABLE);
+                    }
 
-                String tuesdayClass1 = snapshot.child("tuesday1").getValue().toString();
-                String tuesdayClass2 = snapshot.child("tuesday2").getValue().toString();
-                String tuesdayClass3 = snapshot.child("tuesday3").getValue().toString();
-                String tuesdayClass4 = snapshot.child("tuesday4").getValue().toString();
-                String tuesdayClass5 = snapshot.child("tuesday5").getValue().toString();
+                    if (!((snapshot.child("monday2").getValue()) == null)) {
+                        String mondayClass2 = snapshot.child("monday2").getValue().toString();
+                        monday2.setText(mondayClass2, TextView.BufferType.EDITABLE);
+                    }
 
-                tuesday1.setText(tuesdayClass1, TextView.BufferType.EDITABLE);
-                tuesday2.setText(tuesdayClass2, TextView.BufferType.EDITABLE);
-                tuesday3.setText(tuesdayClass3, TextView.BufferType.EDITABLE);
-                tuesday4.setText(tuesdayClass4, TextView.BufferType.EDITABLE);
-                tuesday5.setText(tuesdayClass5, TextView.BufferType.EDITABLE);
+                    if (!((snapshot.child("monday3").getValue()) == null)) {
+                        String mondayClass3 = snapshot.child("monday3").getValue().toString();
+                        monday3.setText(mondayClass3, TextView.BufferType.EDITABLE);
+                    }
 
-                String wednesdayClass1 = snapshot.child("wednesday1").getValue().toString();
-                String wednesdayClass2 = snapshot.child("wednesday2").getValue().toString();
-                String wednesdayClass3 = snapshot.child("wednesday3").getValue().toString();
-                String wednesdayClass4 = snapshot.child("wednesday4").getValue().toString();
-                String wednesdayClass5 = snapshot.child("wednesday5").getValue().toString();
+                    if (!((snapshot.child("monday4").getValue()) == null)) {
+                        String mondayClass4 = snapshot.child("monday4").getValue().toString();
+                        monday4.setText(mondayClass4, TextView.BufferType.EDITABLE);
+                    }
 
-                wednesday1.setText(wednesdayClass1, TextView.BufferType.EDITABLE);
-                wednesday2.setText(wednesdayClass2, TextView.BufferType.EDITABLE);
-                wednesday3.setText(wednesdayClass3, TextView.BufferType.EDITABLE);
-                wednesday4.setText(wednesdayClass4, TextView.BufferType.EDITABLE);
-                wednesday5.setText(wednesdayClass5, TextView.BufferType.EDITABLE);
+                    if (!((snapshot.child("monday5").getValue()) == null)) {
+                        String mondayClass5 = snapshot.child("monday5").getValue().toString();
+                        monday5.setText(mondayClass5, TextView.BufferType.EDITABLE);
+                    }
 
-                String thursdayClass1 = snapshot.child("thursday1").getValue().toString();
-                String thursdayClass2 = snapshot.child("thursday2").getValue().toString();
-                String thursdayClass3 = snapshot.child("thursday3").getValue().toString();
-                String thursdayClass4 = snapshot.child("thursday4").getValue().toString();
-                String thursdayClass5 = snapshot.child("thursday5").getValue().toString();
+                    if (!((snapshot.child("tuesday1").getValue()) == null)) {
+                        String tuesdayClass1 = snapshot.child("tuesday1").getValue().toString();
+                        tuesday1.setText(tuesdayClass1, TextView.BufferType.EDITABLE);
+                    }
 
-                thursday1.setText(thursdayClass1, TextView.BufferType.EDITABLE);
-                thursday2.setText(thursdayClass2, TextView.BufferType.EDITABLE);
-                thursday3.setText(thursdayClass3, TextView.BufferType.EDITABLE);
-                thursday4.setText(thursdayClass4, TextView.BufferType.EDITABLE);
-                thursday5.setText(thursdayClass5, TextView.BufferType.EDITABLE);
+                    if (!((snapshot.child("tuesday2").getValue()) == null)) {
+                        String tuesdayClass2 = snapshot.child("tuesday2").getValue().toString();
+                        tuesday2.setText(tuesdayClass2, TextView.BufferType.EDITABLE);
+                    }
 
-                String fridayClass1 = snapshot.child("friday1").getValue().toString();
-                String fridayClass2 = snapshot.child("friday2").getValue().toString();
-                String fridayClass3 = snapshot.child("friday3").getValue().toString();
-                String fridayClass4 = snapshot.child("friday4").getValue().toString();
-                String fridayClass5 = snapshot.child("friday5").getValue().toString();
+                    if (!((snapshot.child("tuesday3").getValue()) == null)) {
+                        String tuesdayClass3 = snapshot.child("tuesday3").getValue().toString();
+                        tuesday3.setText(tuesdayClass3, TextView.BufferType.EDITABLE);
+                    }
 
-                friday1.setText(fridayClass1, TextView.BufferType.EDITABLE);
-                friday2.setText(fridayClass2, TextView.BufferType.EDITABLE);
-                friday3.setText(fridayClass3, TextView.BufferType.EDITABLE);
-                friday4.setText(fridayClass4, TextView.BufferType.EDITABLE);
-                friday5.setText(fridayClass5, TextView.BufferType.EDITABLE);
+                    if (!((snapshot.child("tuesday4").getValue()) == null)) {
+                        String tuesdayClass4 = snapshot.child("tuesday4").getValue().toString();
+                        tuesday4.setText(tuesdayClass4, TextView.BufferType.EDITABLE);
+                    }
 
+                    if (!((snapshot.child("tuesday5").getValue()) == null)) {
+                        String tuesdayClass5 = snapshot.child("tuesday5").getValue().toString();
+                        tuesday5.setText(tuesdayClass5, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("wednesday1").getValue()) == null)) {
+                        String wednesdayClass1 = snapshot.child("wednesday1").getValue().toString();
+                        wednesday1.setText(wednesdayClass1, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("wednesday2").getValue()) == null)) {
+                        String wednesdayClass2 = snapshot.child("wednesday2").getValue().toString();
+                        wednesday2.setText(wednesdayClass2, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("wednesday3").getValue()) == null)) {
+                        String wednesdayClass3 = snapshot.child("wednesday3").getValue().toString();
+                        wednesday3.setText(wednesdayClass3, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("wednesday4").getValue()) == null)) {
+                        String wednesdayClass4 = snapshot.child("wednesday4").getValue().toString();
+                        wednesday4.setText(wednesdayClass4, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("wednesday5").getValue()) == null)) {
+                        String wednesdayClass5 = snapshot.child("wednesday5").getValue().toString();
+                        wednesday5.setText(wednesdayClass5, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("thursday1").getValue()) == null)) {
+                        String thursdayClass1 = snapshot.child("thursday1").getValue().toString();
+                        thursday1.setText(thursdayClass1, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("thursday2").getValue()) == null)) {
+                        String thursdayClass2 = snapshot.child("thursday2").getValue().toString();
+                        thursday2.setText(thursdayClass2, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("thursday3").getValue()) == null)) {
+                        String thursdayClass3 = snapshot.child("thursday3").getValue().toString();
+                        thursday3.setText(thursdayClass3, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("thursday4").getValue()) == null)) {
+                        String thursdayClass4 = snapshot.child("thursday4").getValue().toString();
+                        thursday4.setText(thursdayClass4, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("thursday5").getValue()) == null)) {
+                        String thursdayClass5 = snapshot.child("thursday5").getValue().toString();
+                        thursday5.setText(thursdayClass5, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("friday1").getValue()) == null)) {
+                        String fridayClass1 = snapshot.child("friday1").getValue().toString();
+                        friday1.setText(fridayClass1, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("friday2").getValue()) == null)) {
+                        String fridayClass2 = snapshot.child("friday2").getValue().toString();
+                        friday2.setText(fridayClass2, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("friday3").getValue()) == null)) {
+                        String fridayClass3 = snapshot.child("friday3").getValue().toString();
+                        friday3.setText(fridayClass3, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("friday4").getValue()) == null)) {
+                        String fridayClass4 = snapshot.child("friday4").getValue().toString();
+                        friday4.setText(fridayClass4, TextView.BufferType.EDITABLE);
+                    }
+
+                    if (!((snapshot.child("friday5").getValue()) == null)) {
+                        String fridayClass5 = snapshot.child("friday5").getValue().toString();
+                        friday5.setText(fridayClass5, TextView.BufferType.EDITABLE);
+                    }
+                }
             }
 
             @Override
