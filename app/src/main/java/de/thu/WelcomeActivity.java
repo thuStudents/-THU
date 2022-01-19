@@ -22,6 +22,17 @@ public class WelcomeActivity extends AppCompatActivity {
         signupBtn = findViewById(R.id.buttonSignupWelcome);
         guest = findViewById(R.id.guestTextClickable);
 
+        /**
+         * Here the handling for 2 buttons and 1 clickable text view are implemented.
+         * In the welcoming page, the user is required to login, sign up or continue as a guest.
+         * The login and signup buttons simply redirect the user to the corresponding activities.
+         * The guest text redirects the user to the homepage.
+         * Considering the user is a guest some parts of the app are not accessible for them.
+         * This is implemented by maintaining a variable which is true in case the user is a guest.
+         * The parts of the app the guest is not allowed to access,
+         * first check if the user is a guest through this variable, then show the content.
+         */
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

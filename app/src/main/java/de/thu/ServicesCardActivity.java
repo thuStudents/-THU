@@ -33,12 +33,21 @@ public class ServicesCardActivity extends AppCompatActivity {
 
         servicesMenu = findViewById(R.id.serivcesMenu);
 
+        /**
+         * Created an arraylist with strings.
+         * Each list entry represents a subtopic.
+         * Created an Array adapter which adapts the string array to the list view.
+         * A specific layout is set for each array element.
+         * onItemClickListener is set for the list.
+         * Each list entry when clicked redirects the user to the corresponding activity.
+         */
+
         ArrayList<String> servicesList = new ArrayList<>();
 
-        servicesList.add("Connect to VPN✓");
-        servicesList.add("Validate Student ID✓");
-        servicesList.add("Recharge Student ID✓");
-        servicesList.add("Printing Credit✓");
+        servicesList.add("Connect to VPN");
+        servicesList.add("Validate Student ID");
+        servicesList.add("Recharge Student ID");
+        servicesList.add("Printing Credit");
         servicesList.add("Printing");
 
         ArrayAdapter<String> servicesAdapter = new ArrayAdapter<>(

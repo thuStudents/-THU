@@ -23,8 +23,6 @@ public class LegalAdviceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_legal_advice);
 
 
-
-
 //        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 //        bottomNavigationView.setSelected(false);
 //        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {

@@ -24,7 +24,6 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
         editProfile();
-        changePassword();
         logout();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -98,21 +97,5 @@ public class Profile extends AppCompatActivity {
 
     }
 
-
-    public void changePassword() {
-        Button changePassword;
-        changePassword = findViewById(R.id.changepassword_bttn);
-        changePassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent changepasswordActivity;
-                changepasswordActivity = new Intent(Profile.this, ChangepasswordActivity.class);
-                startActivity(changepasswordActivity);
-            }
-        });
-
-
-
-    }
 
 }

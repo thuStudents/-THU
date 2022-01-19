@@ -12,7 +12,7 @@
     <color name="white">#FFFFFF</color>
     <color name="fragment1color">#49df89</color>
     <color name="fragment2color">#ffbd59</color>
-    <color name="lightblue">#366bba</color>
+    <color name="lightblue">#5A80B8</color>
     <color name="off_white">#FAF9F6</color>
     <color name="parchment">#FCF5E5</color>
     <color name="bone_white">#F9F6EE</color>
@@ -31,5 +31,5 @@
     <color name="light_green">#A7C957</color>
     <color name="sage_green">#C0CB77</color>
     <color name="may_green">#618B4A</color>
-    <color name="tash_green">#8EC732</color>
+    <color name="green_green">#8EC732</color>
 </resources>

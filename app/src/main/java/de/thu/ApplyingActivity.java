@@ -25,7 +25,18 @@ public class ApplyingActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applying);
 
-        // Get reference to the view of Video player
+/**
+ * How to apply video.
+ * Get reference to the view of video player
+ * The video content was taken from the university's youtube channel.
+ * Here the youtube player is initialized using the api key.
+ * Two methods are declared. Depending on initialization success one of them is called.
+ * If the initialization was not successful, a toast message is shown to the user.
+ * In case the initialization was successful, cueVideo method is called with the video id.
+ * cueVideo method loads the specified video's thumbnail and prepares the player to play the video,
+ * but does not download any of the video stream until play() is called.
+ * play() is automatically called when the user plays the video.
+ */
         ytPlayer = findViewById(R.id.ytPlayerApplying);
 
         ytPlayer.initialize(api_key, new YouTubePlayer.OnInitializedListener() {
