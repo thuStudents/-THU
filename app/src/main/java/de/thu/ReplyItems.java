@@ -1,5 +1,9 @@
 package de.thu;
 
+/**
+ * Constructor, getter and setter reply fields
+ */
+
 public class ReplyItems {
     private String date;
     private String email;

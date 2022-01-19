@@ -76,6 +76,12 @@ public class TimetableActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Get the entries from the database for the respective user
+     * Pass them onto the fields for the timetable so that the user can see his last saved timetable
+     * Validation for the null entries of the timetable
+     */
+
     private void getTimetable() {
 
         EditText monday1 = (EditText)findViewById(R.id.mondayClass1);
@@ -257,6 +263,11 @@ public class TimetableActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * Get the values inputted by the user of their timetable
+     * Save them in the database
+     */
 
     private void saveTimetable() {
 

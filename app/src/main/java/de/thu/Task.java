@@ -1,5 +1,9 @@
 package de.thu;
 
+/**
+ * Constructor, getter and setter for the to do tasks
+ */
+
 public class Task {
 
     private String task;

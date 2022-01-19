@@ -1,5 +1,9 @@
 package de.thu;
 
+/**
+ * Constructor, getter and setter for forum posts
+ */
+
 public class Post {
 
     private String date;

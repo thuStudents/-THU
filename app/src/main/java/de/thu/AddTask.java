@@ -17,6 +17,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+/**
+ * Get the database reference and instance
+ * Check the number of entries on the database and increment
+ * On button click send the task to database
+ */
+
 public class AddTask extends AppCompatActivity {
 
     Button addTask;

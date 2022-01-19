@@ -64,6 +64,9 @@ public class EditprofileActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *On button click change the user email on the firebase authentication database
+     */
 
     public void profile() {
         Button saveChanges;
@@ -98,10 +101,5 @@ public class EditprofileActivity extends AppCompatActivity {
                 startActivity(profileActivity);*/
             }
         });
-
-
     }
-
-
-
 }

@@ -45,7 +45,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +78,13 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Validation for the input fields
+     * Check if the user exist
+     * Check if password is correct
+     * Call the signInWithEmailAndPassword function
+     */
+
     private void login() {
         String email = loginEmail.getText().toString();
         String password = loginPassword.getText().toString();
@@ -101,6 +107,10 @@ public class LoginActivity extends AppCompatActivity {
                     });
         }
     }
+
+    /**
+     * After logging in, send the user to the homepage
+     */
 
     private void sendUserToNextActivity() {
 

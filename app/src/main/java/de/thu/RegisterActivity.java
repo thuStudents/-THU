@@ -69,6 +69,11 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Validation for the input fields
+     * Call the createUserWithEmailAndPassword function
+     */
+
     private void registerAuth() {
 
         String email = registerEmail.getText().toString();
@@ -113,6 +118,10 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
+
+    /**
+     * Function to send the user to the next activity
+     */
 
     private void sendUserToNextActivity() {
         //Intent flags used to clear the back stack so the user can not go back to this activity with the back button

@@ -61,6 +61,10 @@ public class Profile extends AppCompatActivity {
 
     }
 
+    /**
+     * Function to sign the user out
+     */
+
     private void logout() {
 
         Button buttonLogout;
@@ -81,6 +85,10 @@ public class Profile extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * Function to go the edit profile page
+     */
 
     public void editProfile() {
         Button editProfile;
