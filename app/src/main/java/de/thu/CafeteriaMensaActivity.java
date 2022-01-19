@@ -26,12 +26,19 @@ public class CafeteriaMensaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafeteria_mensa);
+
+
+        /**
+         * Two buttons are created and initialized with the buttons from the layout.
+         * OnClickListeners and corresponding handling methods are implemented for both buttons.
+         * When each of the buttons is clicked the corresponding fragment is replaced and shown.
+         * The colors of the buttons are toggled on button clicks.
+         */
         mensaBtn = findViewById(R.id.mensaFragmentbtn);
         cafeteriaBtn = findViewById(R.id.cafeteriaFragmentbtn);
         cafeteriaFrg = new CafeteriaFragment();
         newsFrg = new MensaFragment();
         replaceFragment(newsFrg);
-
 
         mensaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,12 +99,19 @@ public class CafeteriaMensaActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method replaces the current fragment in an activity with another.
+     * It receives the fragment as a parameter.
+     * It calls the Fragment Manager for interacting with fragments associated with this activity.
+     * It creates a fragment transaction and begins it.
+     * The fragment layout is replaced with the fragment received as parameter.
+     * The fragment transaction is then committed.
+     * @param fragment
+     */
     private void replaceFragment(Fragment fragment) {
-
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout,fragment);
         fragmentTransaction.commit();
-
     }
 }

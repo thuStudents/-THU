@@ -20,6 +20,11 @@ public class AccommodationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accommodation);
 
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark home as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV BAR that starts the corresponding intent
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -54,6 +59,11 @@ public class AccommodationActivity extends AppCompatActivity {
             }
         });
 
+        /**
+         * RESIDENTIAL BUILDING AND PRIVATE ROOM IMAGES
+         * find the images by ID and set an on click listener
+         * The on click listner starts the corresponding intent
+         */
 
         ImageView resbul_imageView = findViewById(R.id.private_rooms_image);
         ImageView privroom_imageView = findViewById(R.id.shared_room_image);

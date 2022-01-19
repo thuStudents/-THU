@@ -21,31 +21,37 @@ import java.util.ArrayList;
 import de.thu.R;
 import de.thu.TransportItems;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.ViewHolder> {
 
     private ArrayList<TransportItems> transportLocations = new ArrayList<>();
 
     private Context context;
 
+    /**
+     *pass in the data
+     */
     public TransportAdapter(Context context) {
         this.context = context;
     }
 
-    public TransportAdapter() {
-    }
-
-    //create view holder
+    /**
+     * inflates the row layout from xml when needed
+     * onCreateViewHolder(ViewGroup, int) method is called right when the adapter is created and is used to initialize the ViewHolders.
+     */
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        //create view obj
-        //view group parent of all the layout files, parent of rel layout, const layout... -> tells where we want to attach the view obj
-        //false cause redundancy i guess
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_transport, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.transport_name.setText(transportLocations.get(position).getTransportName());
@@ -55,6 +61,10 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
         boolean isExpanded = transportLocations.get(position).isExtended_t();
         holder.expandableLayout_transport.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
+        /**
+         * respond to click events
+         start the intent which links to the Google maps with the corresponding address
+         */
         holder.transport_des.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +78,9 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
     }
 
 
-    //return the count of different items in our adapter
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return  transportLocations.size();
@@ -79,7 +91,9 @@ public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.View
         notifyDataSetChanged();
     }
 
-    //inner class needed for generating View objects
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView transport_name, transport_des;

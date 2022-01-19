@@ -19,12 +19,17 @@ public class MensaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        /**Inflate the layout for this fragment
+         *
+         */
         view = inflater.inflate(R.layout.fragment_mensa, container, false);
 
+        viewLink =  view.findViewById(R.id.forthParagraph);
 
-        viewLink = (TextView) view.findViewById(R.id.forthParagraph);
-
+        /**
+         * New intent is created if the clickable link is clicked.
+         * It redirects the user to the corresponding webpage.
+         */
         viewLink.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
 

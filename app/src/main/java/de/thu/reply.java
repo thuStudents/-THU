@@ -91,9 +91,9 @@ public class reply extends AppCompatActivity {
 
                 reference.child(String.valueOf(maxid+1)).setValue(replyItems);
 
-                startActivity(new Intent(getApplicationContext()
-                        , ForumActivity.class));
-                overridePendingTransition(0,0);
+                Intent intent = new Intent(reply.this, ForumActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
 
             }
         });

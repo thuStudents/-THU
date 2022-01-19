@@ -25,6 +25,19 @@ public class ValidateCardActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_validate_card);
 
+        /**
+         * How to validate student ID video
+         * The video was recorded and edited by us.
+         * Get reference to the view of video player
+         * Here the youtube player is initialized using the api key.
+         * Two methods are declared. Depending on initialization success one of them is called.
+         * If the initialization was not successful, a toast message is shown to the user.
+         * In case the initialization was successful, cueVideo method is called with the video id.
+         * cueVideo method loads the specified video's thumbnail and prepares the player to play the video,
+         * but does not download any of the video stream until play() is called.
+         * play() is automatically called when the user plays the video.
+         */
+
         ytPlayerValidate = findViewById(R.id.ytPlayerValidateCard);
         ytPlayerValidate.initialize(api_key_validate, new YouTubePlayer.OnInitializedListener() {
             @Override  //handle play and pause here

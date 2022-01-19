@@ -19,15 +19,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ImportantLinksActivity extends AppCompatActivity {
-    View view;
     TextView viewLink, viewLink1, viewLink2, viewLink3, viewLink4;
-    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important_links);
 
+
+        /**
+         * Several text views are initialized from the layout.
+         * For each text view a click listener was set.
+         * In case the text view was clicked an Intent is created which redirects the user to the corresponding website.
+         */
             viewLink = findViewById(R.id.thuWebsiteLink);
             viewLink1 = findViewById(R.id.verwaltungLink);
             viewLink2 = findViewById(R.id.lsfLink);
@@ -38,7 +42,6 @@ public class ImportantLinksActivity extends AppCompatActivity {
                 public void onClick(View view) {
 
                     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://studium.hs-ulm.de"));
-
 
                     //Set flag
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -69,11 +72,11 @@ public class ImportantLinksActivity extends AppCompatActivity {
                 //START ACTIVITY
                 startActivity(intent2);
             }});
+
         viewLink3.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
 
                 Intent intent3 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://webmail.hs-ulm.de/"));
-
 
                 //Set flag
                 intent3.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -81,7 +84,7 @@ public class ImportantLinksActivity extends AppCompatActivity {
                 //START ACTIVITY
                 startActivity(intent3);
             }});
-        viewLink.setOnClickListener(new View.OnClickListener(){
+        viewLink4.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view) {
 
                 Intent intent4 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fs.hs-ulm.de/public/"));
@@ -93,8 +96,6 @@ public class ImportantLinksActivity extends AppCompatActivity {
                 //START ACTIVITY
                 startActivity(intent4);
             }});
-
-
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelected(false);

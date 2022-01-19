@@ -36,13 +36,20 @@ public class HochschuleMapsActivity extends FragmentActivity implements OnMapRea
         binding = ActivityHochschuleMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        /**
+         * Obtain the SupportMapFragment and get notified when the map is ready to be used.
+         */
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
     }
 
+    /**
+     * Manipulates the map once available.
+     * This callback is triggered when the map is ready to be used.
+     * This is where we can added markers, zoomed our view and moved the camera to the desired location.
+     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -75,7 +82,6 @@ public class HochschuleMapsActivity extends FragmentActivity implements OnMapRea
         mMap.addMarker(new MarkerOptions().position(bauE).icon(BitmapDescriptorFactory.fromResource(R.drawable.bau_e_text)));
         mMap.addMarker(new MarkerOptions().position(bauF).icon(BitmapDescriptorFactory.fromResource(R.drawable.bau_f_text)));
         mMap.addMarker(new MarkerOptions().position(bauG).icon(BitmapDescriptorFactory.fromResource(R.drawable.bau_g_text)));
-
 
         mMap.addMarker(new MarkerOptions().position(thuPin).icon(BitmapDescriptorFactory.fromResource(R.drawable.thu_text)));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(18.0f));

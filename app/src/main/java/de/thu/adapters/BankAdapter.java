@@ -16,14 +16,23 @@ import java.util.ArrayList;
 import de.thu.BankItems;
 import de.thu.R;
 
+/**
+ * The RecyclerView needs an adapter to populate the views in each row with data
+ */
 public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder> {
 
     ArrayList<BankItems> bankLocations;
 
+    /**
+     *pass in the data
+     */
     public BankAdapter(ArrayList<BankItems> bankLocations) {
         this.bankLocations = bankLocations;
     }
 
+    /**
+     *pass in the data
+     */
     @NonNull
     @Override
     public BankViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,6 +40,9 @@ public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder
         return new BankViewHolder(view);
     }
 
+    /**
+     * pass our data to our ViewHolders
+     */
     @Override
     public void onBindViewHolder(@NonNull BankViewHolder holder, int position) {
 
@@ -45,16 +57,19 @@ public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder
         boolean isExpanded = bankLocations.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
-
-
     }
 
+    /**
+     * total number of rows
+     */
     @Override
     public int getItemCount() {
         return bankLocations.size();
     }
 
-
+    /**
+     * stores and recycles views as they are scrolled off screen
+     */
     public class BankViewHolder extends RecyclerView.ViewHolder {
 
         TextView bankNameTxt, phoneTxt, addressTxt, emailTxt;
@@ -75,6 +90,9 @@ public class BankAdapter extends RecyclerView.Adapter<BankAdapter.BankViewHolder
             linearLayout = itemView.findViewById(R.id.linear_layout1);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
 
+            /**
+             * the setExpanded sets whether the layout is expanded or not, animating if it has already been laid out.
+             */
             linearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -60,9 +60,10 @@ public class AddTask extends AppCompatActivity {
 
                 reference.child(String.valueOf(maxid+1)).child("task").setValue(taskValue);
 
-                startActivity(new Intent(getApplicationContext()
-                        , ToDoActivity.class));
-                overridePendingTransition(0,0);
+
+                Intent intent = new Intent(AddTask.this, ToDoActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
+                startActivity(intent);
 
             }
         });

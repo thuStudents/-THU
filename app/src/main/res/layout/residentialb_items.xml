@@ -46,6 +46,7 @@
                 android:id="@+id/apartment_contact"
                 android:fontFamily="@font/myfont2"
                 android:textColor="@color/black"
+                android:textStyle="bold"
                 android:text="Contacts"/>
             <TextView
                 android:layout_width="match_parent"

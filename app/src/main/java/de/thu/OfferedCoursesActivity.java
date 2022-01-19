@@ -47,6 +47,15 @@ public class OfferedCoursesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offered_courses);
 
+        /**
+         * In this class plenty click handlers are implemented.
+         * In the Offered Courses Activity the general information about the each course is shown in a card view.
+         * There are 2 buttons for perquisites and course schedule.
+         * If one of them is clicked a card view is shown on top of the current view.
+         * If this new card is clicked then it is made invisible again.
+         * This action is implemented with click handlers for each button and view.
+         */
+
         //ComputerScience
         CourseScheduleCtsBtn = findViewById(R.id.CourseScheduleComputerScienceButton);
         CourseScheduleCardCtsCard = findViewById(R.id.computerScienceMiniCard1);

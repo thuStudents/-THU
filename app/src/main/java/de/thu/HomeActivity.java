@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,21 +26,36 @@ import de.thu.adapters.AutoScrollAdapter;
 
 public class HomeActivity extends AppCompatActivity {
 
+    RelativeLayout login;
+
     BottomNavigationView bottomNavigationView;
 
     AutoScrollAdapter autoScrollAdapter;
     RecyclerView latest_updates;
     LinearLayoutManager layoutManager;
     LinearLayout forumBtn;
-
+    RelativeLayout school, mystudies, news,city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.new_homepage_activity);
 
+        login = findViewById(R.id.buttonLoginHomepage);
+
+        /**
+         * instantiate view for image slideshow
+         */
+
         latest_updates=findViewById(R.id.latest_updates);
         latest_updates();
+
+        /**
+         * BOTTOM NAVIGATION
+         * find the bottom navigation bar by ID and mark find as selected as if it was tapped.
+         * set an on click listener for the three buttons of the BOTTOM NAV that starts the corresponding intent
+         */
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -72,23 +89,48 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageView schoolInfoImageView= findViewById(R.id.HP_school);
-        ImageView cityInfoImageView= findViewById(R.id.HP_city);
-        ImageView forumImageView= findViewById(R.id.HP_Forum);
-        ImageView newsEventsImageView= findViewById(R.id.HP_news);
-        ImageView myStudiesImageView = findViewById(R.id.HP_my_studies);
-        forumBtn = findViewById(R.id.ll_forum);
-        schoolInfoImageView.setOnClickListener(new View.OnClickListener() {
+         school = findViewById(R.id.hochschuleBtn);
+         city = findViewById(R.id.cityBtn);
+         news = findViewById(R.id.newsBtn);
+         mystudies = findViewById(R.id.mystudiesBtn);
+         forumBtn = findViewById(R.id.forumButton);
+
+        /**
+         * The log in button is shown only if the user continued as guest.
+         * First is checked if the user is a guest and it handles the button click.
+         * Then if the user is not a guest, it hides the log in button
+         */
+        if(WelcomeActivity.signedAsGuest){
+            forumBtn.setBackgroundResource(R.drawable.card_grey);
+            mystudies.setBackgroundResource(R.drawable.card_grey);
+            news.setBackgroundResource(R.drawable.card_grey);
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getApplicationContext()
+                            , LoginActivity.class));
+                    overridePendingTransition(0,0);
+                }
+            });
+        } else {
+            login.setVisibility(View.INVISIBLE);
+            forumBtn.setBackgroundResource(R.drawable.card_2);
+            mystudies.setBackgroundResource(R.drawable.card_2);
+            news.setBackgroundResource(R.drawable.card_2);
+
+        }
+
+        school.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
-                        , HochschuleInfoActivity.class));
+                        , HochschuleGeneralActivity.class));
                 overridePendingTransition(0,0);
 
             }
         });
 
-        cityInfoImageView.setOnClickListener(new View.OnClickListener() {
+        city.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext()
@@ -111,25 +153,45 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        newsEventsImageView.setOnClickListener(new View.OnClickListener() {
+        news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext()
-                        , NewsEventActivity.class));
-                overridePendingTransition(0,0);
+
+                if(WelcomeActivity.signedAsGuest){
+                    Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                }else {
+                    startActivity(new Intent(getApplicationContext()
+                            , NewsEventActivity.class));
+                    overridePendingTransition(0, 0);
+                }
             }
         });
 
-        myStudiesImageView.setOnClickListener(new View.OnClickListener() {
+        mystudies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext()
-                        , MyStudiesActivity.class));
-                overridePendingTransition(0,0);
+                if(WelcomeActivity.signedAsGuest){
+                    Toast.makeText(HomeActivity.this, "You are not Logged In", Toast.LENGTH_SHORT).show();
+                }else {
+                    startActivity(new Intent(getApplicationContext()
+                            , MyStudiesActivity.class));
+                    overridePendingTransition(0,0);
+                }
             }
         });
 
     }
+
+    /**
+     * set the AutoScroll Adapter
+     * set a Layout Manager for the Recycler View
+     * pass a Linear Layout Manager which displayes the items in the recycler view in a Linear fashion
+     * make the layout HORIZONTAL
+     * create adapter istance
+     * set the adapter to the recycler view
+     * snapping any child view of the RecyclerView.
+     * create a new Timer
+     */
         private void latest_updates(){
 
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
