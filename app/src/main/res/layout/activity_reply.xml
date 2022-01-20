@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".reply">
+    tools:context=".forum.reply">
 
     <LinearLayout
         android:id="@+id/my_reply_toolbar"

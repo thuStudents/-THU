@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -22,7 +20,15 @@ import com.google.android.material.navigation.NavigationBarView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import de.thu.adapters.AutoScrollAdapter;
+import de.thu.city.UlmInformationActivity;
+import de.thu.city.adapters.AutoScrollAdapter;
+import de.thu.forum.ForumActivity;
+import de.thu.forum.PostActivity;
+import de.thu.hochschule.HochschuleGeneralActivity;
+import de.thu.myStudies.MyStudiesActivity;
+import de.thu.newsEvents.NewsEventActivity;
+import de.thu.profile.LoginActivity;
+import de.thu.profile.Profile;
 
 public class HomeActivity extends AppCompatActivity {
 

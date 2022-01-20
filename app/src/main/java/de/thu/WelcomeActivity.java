@@ -8,10 +8,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import de.thu.profile.LoginActivity;
+import de.thu.profile.RegisterActivity;
+
 public class WelcomeActivity extends AppCompatActivity {
     Button loginBtn, signupBtn;
     TextView guest;
-    static boolean signedAsGuest = false;
+    public static boolean signedAsGuest = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
