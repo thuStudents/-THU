@@ -20,34 +20,34 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_thu_dajena"
+        android:icon="@mipmap/ic_launcher_thu_new_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_thu_dajena_round"
+        android:roundIcon="@mipmap/ic_launcher_thu_new_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".AddTask"
+            android:name=".myStudies.AddTask"
             android:exported="true" />
         <activity
-            android:name=".Answers"
+            android:name=".forum.Answers"
             android:exported="true" />
         <activity
-            android:name=".reply"
+            android:name=".forum.reply"
             android:exported="true" />
         <activity
-            android:name=".PrintingActivity"
+            android:name=".myStudies.PrintingActivity"
             android:exported="false" />
         <activity
-            android:name=".PrintingCreditActivity"
+            android:name=".myStudies.PrintingCreditActivity"
             android:exported="false" />
         <activity
-            android:name=".RechargeCardActivity"
+            android:name=".myStudies.RechargeCardActivity"
             android:exported="false" />
         <activity
-            android:name=".ValidateCardActivity"
+            android:name=".myStudies.ValidateCardActivity"
             android:exported="false" />
         <activity
-            android:name=".ConnectToVPN_Activity"
+            android:name=".myStudies.ConnectToVPN_Activity"
             android:exported="false" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -62,91 +62,91 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".HochschuleMapsActivity"
+            android:name=".myStudies.HochschuleMapsActivity"
             android:exported="false"
             android:label="@string/title_activity_hochschule_maps"></activity>
         <activity
-            android:name=".CityMapActivity"
+            android:name=".city.CityMapActivity"
             android:exported="false"></activity>
         <activity
-            android:name=".CafeActivity"
+            android:name=".city.CafeActivity"
             android:exported="false" />
         <activity
-            android:name=".PrivateBuildingActivity"
+            android:name=".city.PrivateBuildingActivity"
             android:exported="false" />
         <activity
-            android:name=".RensidentialBuildingsActivity"
+            android:name=".city.RensidentialBuildingsActivity"
             android:exported="false" />
         <activity
-            android:name=".ClubActivity"
+            android:name=".city.ClubActivity"
             android:exported="false" />
         <activity
-            android:name=".BarActivity"
+            android:name=".city.BarActivity"
             android:exported="false" />
         <activity
-            android:name=".TimetableActivity"
+            android:name=".myStudies.TimetableActivity"
             android:exported="false" />
         <activity
-            android:name=".ImportantLinksActivity"
+            android:name=".myStudies.ImportantLinksActivity"
             android:exported="false" />
         <activity
-            android:name=".NightLifeActivity"
+            android:name=".city.NightLifeActivity"
             android:exported="false" />
         <activity
-            android:name=".MarketsActivity"
+            android:name=".city.MarketsActivity"
             android:exported="false" />
         <activity
-            android:name=".TransportActivity"
+            android:name=".city.TransportActivity"
             android:exported="false" />
         <activity
-            android:name=".LegalAdviceActivity"
+            android:name=".city.LegalAdviceActivity"
             android:exported="false" />
         <activity
-            android:name=".BankingActivity"
+            android:name=".city.BankingActivity"
             android:exported="false" />
         <activity
-            android:name=".AccommodationActivity"
+            android:name=".city.AccommodationActivity"
             android:exported="false" >
         </activity>
         <activity
-            android:name=".LibraryActivity"
+            android:name=".hochschule.LibraryActivity"
             android:exported="false" />
         <activity
-            android:name=".ServicesCardActivity"
+            android:name=".myStudies.ServicesCardActivity"
             android:exported="false" />
         <activity
-            android:name=".CafeteriaMensaActivity"
+            android:name=".hochschule.CafeteriaMensaActivity"
             android:exported="false" />
         <activity
-            android:name=".OfficesActivity"
+            android:name=".hochschule.OfficesActivity"
             android:exported="false" />
         <activity
-            android:name=".ApplyingActivity"
+            android:name=".hochschule.ApplyingActivity"
             android:exported="false" />
         <activity
-            android:name=".OfferedCoursesActivity"
+            android:name=".hochschule.OfferedCoursesActivity"
             android:exported="false" />
         <activity
-            android:name=".NewsEventActivity"
+            android:name=".newsEvents.NewsEventActivity"
             android:exported="false" />
         <activity
-            android:name=".UlmInformationActivity"
+            android:name=".city.UlmInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".HochschuleGeneralActivity"
+            android:name=".hochschule.HochschuleGeneralActivity"
             android:exported="false" />
         <activity
-            android:name=".PostActivity"
+            android:name=".forum.PostActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".profile.LoginActivity"
             android:exported="true">
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".profile.RegisterActivity"
             android:exported="true"></activity>
         <activity
-            android:name=".ForumActivity"
+            android:name=".forum.ForumActivity"
             android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
@@ -158,7 +158,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Profile"
+            android:name=".profile.Profile"
             android:exported="true"></activity>
         <activity
             android:name=".HomeActivity"
@@ -169,21 +169,21 @@
             android:exported="true">
         </activity>
 
-        <activity android:name=".RestaurantActivity"
+        <activity android:name=".city.RestaurantActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".CinemaActivity"
+        <activity android:name=".city.CinemaActivity"
             android:exported="true">
         </activity>
 
         <activity
-            android:name=".MyStudiesActivity"
+            android:name=".myStudies.MyStudiesActivity"
             android:exported="true" />
         <activity
-            android:name=".ToDoActivity"
+            android:name=".myStudies.ToDoActivity"
             android:exported="true" />
         <activity
-            android:name=".EditprofileActivity"
+            android:name=".profile.EditprofileActivity"
             android:exported="true" />
     </application>
 
